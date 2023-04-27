@@ -1,23 +1,42 @@
 .cabecalho {
-    background-color: white;
+    background-color: rgb(207, 204, 204);
     padding: 1em;
-
     display: flex;
-    align-items: center;
-    justify-content: center;
+    border-bottom: 10px solid darkblue;
 }
 
 .logo_header {
     width: 15%;
+
+    white-space: nowrap; /* não quebra a linha */
+    animation: typing 2s steps(10, end); /* animação de 3 segundos (se colocar infinit no final ele não para */
+    animation-delay: 1s;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 15% }
 }
 
 .container_botao {
-    
+    margin: 2em 0 0 45em;
 }
 
 .new-guia {
     border: none;
     background-color: white;
-    left: 20%;
+    font-size: 20px;
+    background-color: dodgerblue;
+    padding: 9px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
 }
+
+.new-guia:hover {
+    background-color: rgb(3, 111, 218);
+    box-shadow: 2px 1px 8px 1px dodgerblue;
+}
+
 

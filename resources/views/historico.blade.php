@@ -11,8 +11,38 @@
     <header class="cabecalho">
             <img src="img/logo_transparente.png" alt="logo" class="logo_header">
         <div class="container_botao">
-            <button class="new-guia">Nova guia</button>
+            <a class="new-guia" href="#">Nova guia</a>
         </div>
     </header>
+
+    <section class="container_titulo"> 
+        <h1>Guias de recolhimento</h1>
+    </section>
+        
+  <section class="container">
+    <div class="cabecalho_container">
+      <span style="backgraound-color:">Cadastro de animais</span>
+    </div>
+    <hr>
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th class="th_tipo">Tipo</th>
+            <th class="th_empresa">Empresa</th>
+            <th class="th_valor">Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+    <div class="containerbotoes">
+        <button class="botao">Imprimir</button>
+        <button class="botao">Voltar</button>
+    </div>
+
 </body>
 </html>
