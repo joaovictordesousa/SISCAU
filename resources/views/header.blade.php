@@ -8,6 +8,11 @@
     <title>SISCAU</title>
 </head>
 <body>
-
+    <header class="cabecalho">
+        <div class="container_cabecalho">
+            <img src="img/logo_transparente.png" alt="logo" class="logo_header">
+            <button>Nova guia</button>
+        </div>
+    </header>
 </body>
 </html>

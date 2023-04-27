@@ -1,0 +1,23 @@
+.cabecalho {
+    background-color: white;
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_header {
+    width: 15%;
+}
+
+.container_botao {
+    
+}
+
+.new-guia {
+    border: none;
+    background-color: white;
+    left: 20%;
+}
+
