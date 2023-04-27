@@ -8,6 +8,7 @@
     <title>SISCAU</title>
 </head>
 <body>
-    <h1>Olá mundo!</h1>
+   <a href="#">Login</a>
+   <a href="#">historico</a>
 </body>
 </html>
