@@ -17,24 +17,21 @@
 <section class="container_cadastro">
     <div class="cadastro_titulo">
         <h1>Guias de recolhimento</h1><br>
-        <button>+ Nova Guia de Recolhimento</button>
     </div>
     <div id="FormBox">
         <div class="conteiner_quatro">
-            <div>
-                <label>Numero</label>
-                <input></input> 
-            </div>
-            <div>
-                <label>Contrato</label>
-                <input></input> 
-            </div>
-            <div>
-                <label>Documento</label>
-                <input></input> 
-            </div>
         <div>
-            <label>Tipo de recolhimento</label>
+        <label>Tipo de recolhimento</label>
+            <select id="m-documentos" name="documentos" required>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+            </select>
+    </div>
+    <div>
+            <label>Instituição financeira</label>
             <select id="m-documentos" name="documentos" required>
                 <option value="documentos">documentos</option>
                 <option value="documentos">documentos</option>
@@ -59,11 +56,15 @@
                 </select>
             </div>
             <div>
-                <label>Processos de baixa</label>
+                <label>Conta</label>
                 <input></input> 
             </div>
             <div>
-                <label>CPF/CNPJ</label>
+                <label>Contrato</label>
+                <input></input> 
+            </div>
+            <div>
+                <label>Aditivo</label>
                 <input></input> 
             </div>
             <!---->
@@ -72,23 +73,77 @@
         <br><br>
 
     <div class="conteiner_quatro">
-        <div class="dividir">
+        <div>
             <label>Data do GR</label>
             <input></input> 
-            <span>a</span>
+        </div>
+        <div>    
+            <label>Data de validade</label>
             <input></input> 
         </div>
-    
         <div>
-        <label>Data de validade</label>
+            <label>Tipo de documento</label>
+                <select>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+        <div>    
+            <label>Número</label>
             <input></input>
-             <span>a</span>
-            <input></input> 
         </div>
     </div>
+    <br><br>
+    
+    <div class="conteiner_quatro">
+    <div>
+            <label>Empresa</label>
+                <select>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+    </div>
+    <div>    
+            <label>Valor</label>
+            <input></input>
+        </div>
+</div>
+<br><br>
+
+<div class="conteiner_quatro">
+        <div>
+            <label>Documento</label>
+            <input></input> 
+        </div>
+        <div>    
+            <label>Numero da NL</label>
+            <input></input> 
+        </div>
+</div>
+<br><br>
+
+<div class="conteiner_quatro">
+        <div>
+            <label>Histórico</label>
+            <input></input> 
+        </div>
+</div>
+<br><br><br>
+
+<div class="button">
+<div>
+    <button class="botao-cadastro">Salvar</button>
+</div>
+<div>
+    <button class="botao-cadastro">Cancelar</button>
+</div>
+</div>
+
 </section>
-
-</body>
-</html>
-
-
+<br><br><br><br>        
