@@ -11,73 +11,82 @@
     <header class="cabecalho">
             <img src="img/logo_transparente.png" alt="logo" class="logo_header">
         <div class="container_botao">
-            <a class="new-guia" href="#">Nova guia</a>
         </div>
     </header>
 
-    <div id="PrimaryItens">
-    <h1>Guias de recolhimento</h1>
-    <hr></hr>
-    <button>+ Nova Guia de Recolhimento</button>
-</div>
-<div id="FormBox">
-    <div class="conteiner_quatro">
-        <div>
-            <label>Numero</label>
-            <input></input> 
-        </div>
-        <div>
-            <label>Contrato</label>
-            <input></input> 
-        </div>
-        <div>
-            <label>Documento</label>
-            <input></input> 
-        </div>
+<section class="container_cadastro">
+    <div class="cadastro_titulo">
+        <h1>Guias de recolhimento</h1><br>
+        <button>+ Nova Guia de Recolhimento</button>
     </div>
+    <div id="FormBox">
+        <div class="conteiner_quatro">
+            <div>
+                <label>Numero</label>
+                <input></input> 
+            </div>
+            <div>
+                <label>Contrato</label>
+                <input></input> 
+            </div>
+            <div>
+                <label>Documento</label>
+                <input></input> 
+            </div>
+        <div>
+            <label>Tipo de recolhimento</label>
+            <select id="m-documentos" name="documentos" required>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+                <option value="documentos">documentos</option>
+            </select>
+            </div>
+        </div>
 
-    <div>
-        <label>Tipo de recolhimento</label>
-        <select>
-            <options value=" "></options>
-            <options value=" "></options>
-            <options value=" "></options>
-            <options value=" "></options>
-            <options value=" "></options>
-        </select>
+        <br><br>
+
+        <div class="conteiner_quatro">
+        <div>
+            <label>Agência</label>
+                <select>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div>
+                <label>Processos de baixa</label>
+                <input></input> 
+            </div>
+            <div>
+                <label>CPF/CNPJ</label>
+                <input></input> 
+            </div>
+            <!---->
+        </div>
+
+        <br><br>
+        
+    <div class="conteiner_quatro">
+        <div class="dividir">
+            <label>Data do GR</label>
+            <input></input> 
+            <span>a</span>
+            <input></input> 
+        </div>
+    
+        <div>
+        <label>Data de validade</label>
+            <input></input>
+             <span>a</span>
+            <input></input> 
+        </div>
     </div>
-    <div>
-    <label>Agência</label>
-        <select>
-            <options value" "></options>
-            <options value" "></options>
-            <options value" "></options>
-            <options value" "></options>
-            <options value" "></options>
-        </select>
-    </div>
-    <div>
-        <label>Processos de baixa</label>
-        <input></input> 
-    </div>
-    <div>
-        <label>CPF/CNPJ</label>
-        <input></input> 
-    </div>
-    <div>
-        <label>Data do GR</label>
-        <input></input> 
-        <label>a</label>
-        <input></input> 
-    </div>
-    <div>
-    <label>Data de validade</label>
-        <input></input> 
-        <label>a</label>
-        <input></input> 
-    </div>
-</div>
-    </section>
+</section>
 
 </body>
 </html>

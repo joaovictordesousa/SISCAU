@@ -9,11 +9,10 @@
 </head>
 <body>
     <header class="cabecalho">
-            <img src="img/logo_transparente.png" alt="logo" class="logo_header">
-        <div class="container_botao">
-            <a class="new-guia" href="#">Nova guia</a>
-        </div>
+        <img src="img/logo_transparente.png" alt="logo" class="logo_header">
     </header>
+
+    <main>
 
     <section class="container_titulo"> 
         <h1>Guias de recolhimento</h1>
@@ -39,10 +38,12 @@
     </div>
   </section>
 
-  <div class="containerbotoes">
-        <button class="botao">Imprimir</button>
-        <button class="botao">Voltar</button>
-  </div>
+      <div class="containerbotoes">
+          <button class="botao">Imprimir</button>
+          <button class="botao">Voltar</button>
+      </div>
+
+    </main>
  
 </body>
 </html>
