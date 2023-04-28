@@ -1,3 +1,5 @@
+<!-- Onde vai pesquisar é levar para o relatorio-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +72,7 @@
         </div>
 
         <br><br>
-        
+
     <div class="conteiner_quatro">
         <div class="dividir">
             <label>Data do GR</label>
