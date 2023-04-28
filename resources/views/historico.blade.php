@@ -39,10 +39,10 @@
     </div>
   </section>
 
-    <div class="containerbotoes">
+  <div class="containerbotoes">
         <button class="botao">Imprimir</button>
         <button class="botao">Voltar</button>
-    </div>
-
+  </div>
+ 
 </body>
 </html>

@@ -1,21 +1,12 @@
 .cabecalho {
-    background-color: rgb(207, 204, 204);
+    background-color: white;
     padding: 1em;
     display: flex;
     border-bottom: 10px solid darkblue;
 }
 
 .logo_header {
-    width: 15%;
-
-    white-space: nowrap; /* não quebra a linha */
-    animation: typing 2s steps(10, end); /* animação de 3 segundos (se colocar infinit no final ele não para */
-    animation-delay: 1s;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 15% }
+    width: 13%;
 }
 
 .container_botao {
