@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logoicon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <title>SISCAU</title>
 </head>
@@ -16,11 +17,14 @@
         </div>
     </header>
 
-<section class="container_cadastro">
-    <div class="cadastro_titulo">
-        <h1>Guias de recolhimento</h1><br>
-        <button>+ Nova Guia de Recolhimento</button>
+
+    <div class="pesquisa_titulo">
+        <h1>Guias de recolhimento</h1><br><br>
+        <a href="#" id="NovaGuia">+ Nova Guia de Recolhimento</a>
     </div>
+    <br><br>
+
+<section class="container_cadastro">
     <div id="FormBox">
         <div class="conteiner_quatro">
             <div>
@@ -47,7 +51,7 @@
             </div>
         </div>
 
-        <br><br>
+        <br><br><br>
 
         <div class="conteiner_quatro">
         <div>
@@ -71,7 +75,7 @@
             <!---->
         </div>
 
-        <br><br>
+        <br><br><br>
 
     <div class="conteiner_quatro">
         <div class="dividir">
@@ -88,7 +92,56 @@
             <input></input> 
         </div>
     </div>
-</section>
 
+    <br><br><br>
+
+    <div class="conteiner_quatro">
+        <div>
+            <label>Data de validade</label>
+            <input></input>
+            <span>a</span>
+            <input></input> 
+        </div>
+
+        <div class="espacamento_select">
+            <label>Tipo do Documento</label>
+                <select>
+                    <option value="">Tipo do Documento</option>
+                    <option value="">teste</option>
+                    <option value="">teste</option>
+                    <option value="">teste</option>
+                    <option value="">teste</option>
+                </select>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="conteiner_quatro">
+        <div>
+            <label>Numero</label>
+            <input></input> 
+        </div>
+
+        <div class="espaco_div_5">
+
+        <label>Tipo do Documento</label>
+            <select>
+                <option value="">Tipo de Consulta</option>
+                <option value="">teste</option>
+                <option value="">teste</option>
+                <option value="">teste</option>
+                <option value="">teste</option>
+            </select>
+        </div>
+
+    </div>
+</section>
+<br><br><br>
+
+    <div>
+        <button>Pesquisar</button>
+    </div>
+   
 </body>
 </html>

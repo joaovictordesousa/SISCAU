@@ -1,15 +1,16 @@
 .container_cadastro {
-    margin: 2em 5em;
+    margin: 2em 6em;
+    padding: 2em;
 }
 
 .conteiner_quatro {
     display: flex;
     gap: 20px;
-    color: black;
 }
 
-.cadastro_titulo {
-    padding: 2em 0;
+.pesquisa_titulo {
+   text-align: center;
+   padding: 2em 0;
 }
 
 .conteiner_quatro label {
@@ -25,8 +26,18 @@
     padding: 7px 25px;
     border-radius: 10px;
     outline: none;
+    border: 2px solid gray;
 }
 
 .dividir {
     padding: 0 5em 0 0;
+}
+
+.espacamento_select {
+    padding: 0 10em;
+}
+
+
+.espaco_div_5 {
+    margin: 0 15em;
 }
