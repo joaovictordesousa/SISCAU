@@ -1,12 +1,12 @@
 .container_titulo {
-    margin: 3em 0 0 1em;
+    margin: 5em 0 0 1em;
     padding: 1em;
     color: black;
 }
 
 .container {
-    margin: 1em 20em;
-    padding: 2em;
+    margin: 1.5em 20em;
+    padding: 2.5em;
     border-radius: 10px;
     /* border: 2px solid green; */
     background-color: white;

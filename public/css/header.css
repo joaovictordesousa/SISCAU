@@ -2,11 +2,11 @@
     background-color: white;
     padding: 1em;
     display: flex;
-    border-bottom: 10px solid darkblue;
+    border-bottom: 6px solid darkblue;
 }
 
 .logo_header {
-    width: 13%;
+    width: 18%;
 }
 
 .container_botao {
