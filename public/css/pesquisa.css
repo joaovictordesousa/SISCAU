@@ -2,28 +2,28 @@
     margin: 2em 5em;
 }
 
-.conteiner_quatro {
+.container_quatro {
     display: flex;
     gap: 20px;
     color: black;
 }
 
 .cadastro_titulo {
-    padding: 2em 0;
+    padding: 2.5em 0;
 }
 
-.conteiner_quatro label {
+.container_quatro label {
     display: block;
 }
 
-.conteiner_quatro input {
-    padding: 7px 15px;
-    border-radius: 10px;
+.container_quatro input {
+    padding: 7px 80px;
+    border-radius: 4px;
 }
 
-.conteiner_quatro select {
-    padding: 7px 25px;
-    border-radius: 10px;
+.container_quatro select {
+    padding: 7px 110px;
+    border-radius: 4px;
     outline: none;
 }
 
