@@ -17,9 +17,21 @@
     display: block;
 }
 
+.tipo_recolhimento {
+    width: 20em;
+}
+
+.instituicao_financeira {
+    padding-left: 10em;
+}
+
 .container_quatro input {
     padding: 7px 80px;
     border-radius: 4px;
+}
+
+.valor {
+    padding-left: 14em;
 }
 
 .container_quatro select {
