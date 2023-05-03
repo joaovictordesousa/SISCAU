@@ -1,5 +1,7 @@
 .container_cadastro {
-    margin: 2em 5em;
+    margin: 1em 3em;
+    border: 2px solid black;
+    padding: 2em;
 }
 
 .container_quatro {
@@ -10,7 +12,7 @@
 
 .cadastro_titulo {
     padding: 2.5em 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .container_quatro label {
@@ -22,16 +24,16 @@
 }
 
 .instituicao_financeira {
-    padding-left: 10em;
+    padding-left: 8.5em;
 }
 
 .container_quatro input {
-    padding: 7px 80px;
+    padding: 7px 70px;
     border-radius: 4px;
 }
 
 .valor {
-    padding-left: 14em;
+    padding-left: 13em;
 }
 
 .numero_nl {
