@@ -1,25 +1,26 @@
 /* João */
 
 .container_cadastro {
-    margin: 2em 6em;
+    margin: 2em 3em;
     padding: 2em;
 }
 
-.conteiner_quatro {
+.container_quatro {
     display: flex;
     gap: 20px;
 }
 
-.conteiner_quatro label {
-    display: block;
+.container_quatro label {
+    display: flex;
+    padding: ;
 }
 
-.conteiner_quatro input {
+.container_quatro input {
     padding: 7px 70px;
     border-radius: 4px;
 }
 
-.conteiner_quatro select {
+.container_quatro select {
     padding: 7px 110px;
     border-radius: 4px;
     outline: none;

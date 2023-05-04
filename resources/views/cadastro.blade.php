@@ -14,7 +14,7 @@
         </div>
     </header>
 
-<section class="\">
+<section class="container_cadastro">
     <div class="cadastro_titulo">
         <h1>Guias de recolhimento</h1><br>
     </div>

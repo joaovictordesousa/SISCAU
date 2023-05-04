@@ -26,7 +26,7 @@
 
 <section class="container_cadastro">
     <div id="FormBox">
-        <div class="conteiner_quatro">
+        <div class="container_quatro">
             <div>
                 <label>Numero</label>
                 <input></input> 
@@ -53,7 +53,7 @@
 
         <br><br><br>
 
-        <div class="conteiner_quatro">
+        <div class="container_quatro">
         <div>
             <label>Agência</label>
                 <select>
@@ -77,7 +77,7 @@
 
         <br><br><br>
 
-    <div class="conteiner_quatro">
+    <div class="container_quatro">
         <div class="dividir">
             <label>Data do GR</label>
             <input></input> 
@@ -95,7 +95,7 @@
 
     <br><br><br>
 
-    <div class="conteiner_quatro">
+    <div class="container_quatro">
         <div>
             <label>Data de validade</label>
             <input></input>
@@ -117,7 +117,7 @@
 
     <br><br><br>
 
-    <div class="conteiner_quatro">
+    <div class="container_quatro">
         <div>
             <label>Numero</label>
             <input></input> 
