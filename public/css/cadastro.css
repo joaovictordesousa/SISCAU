@@ -1,7 +1,26 @@
+/* Bill */
+
 .cadastro_titulo {
    padding: 2.5em 0;
    font-size: 18px;
 }
+
+.tipo_recolhimento {
+    width: 20em;
+}
+
+.instituicao_financeira {
+    padding-left: 8.5em;
+}
+
+.valor {
+    padding-left: 13em;
+}
+
+.numero_nl {
+    padding-left: 8.5em;
+}
+
 
 .button {
    display: flex;
