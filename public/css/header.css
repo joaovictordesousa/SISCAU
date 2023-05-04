@@ -2,11 +2,11 @@
     background-color: rgb(198, 197, 197);
     padding: 1em;
     display: flex;
-    border-bottom: 10px solid darkblue;
+    border-bottom: 4px solid darkblue;
 }
 
 .logo_header {
-    width: 13%;
+    width: 18%;
 }
 
 .container_botao {

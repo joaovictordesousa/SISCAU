@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 <body>
     <header class="cabecalho">
             <img src="img/logo_transparente.png" alt="logo" class="logo_header">
-        <div class="container_botao">
+        <div class="conteiner_botao">
         </div>
     </header>
 
@@ -19,33 +19,33 @@
         <h1>Guias de recolhimento</h1><br>
     </div>
     <div id="FormBox">
-        <div class="conteiner_quatro">
-        <div>
+        <div class="container_quatro">
+        <div class="tipo_recolhimento">
         <label>Tipo de recolhimento</label>
-            <select id="m-documentos" name="documentos" required>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
+            <select id="m-documentos" name="" required>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
             </select>
     </div>
-    <div>
+    <div class="instituicao_financeira">
             <label>Instituição financeira</label>
-            <select id="m-documentos" name="documentos" required>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
+            <select id="m-documentos" name="" required>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
             </select>
             </div>
         </div>
 
         <br><br>
 
-        <div class="conteiner_quatro">
-        <div>
+        <div class="container_quatro">
+        <div class="agencia">
             <label>Agência</label>
                 <select>
                     <option value=""></option>
@@ -55,15 +55,15 @@
                     <option value=""></option>
                 </select>
             </div>
-            <div>
+            <div class="conta">
                 <label>Conta</label>
                 <input></input> 
             </div>
-            <div>
+            <div class="contrato">
                 <label>Contrato</label>
                 <input></input> 
             </div>
-            <div>
+            <div class="aditivo">
                 <label>Aditivo</label>
                 <input></input> 
             </div>
@@ -72,7 +72,7 @@
 
         <br><br>
 
-    <div class="conteiner_quatro">
+    <div class="container_quatro">
         <div>
             <label>Data do GR</label>
             <input></input> 
@@ -98,8 +98,8 @@
     </div>
     <br><br>
     
-    <div class="conteiner_quatro">
-    <div>
+    <div class="container_quatro">
+    <div class="empresa">
             <label>Empresa</label>
                 <select>
                     <option value=""></option>
@@ -109,27 +109,27 @@
                     <option value=""></option>
                 </select>
     </div>
-    <div>    
+    <div class="valor">    
             <label>Valor</label>
             <input></input>
         </div>
 </div>
 <br><br>
 
-<div class="conteiner_quatro">
-        <div>
+<div class="container_quatro">
+        <div class="documento">
             <label>Documento</label>
             <input></input> 
         </div>
-        <div>    
+        <div class="numero_nl">    
             <label>Numero da NL</label>
             <input></input> 
         </div>
 </div>
 <br><br>
 
-<div class="conteiner_quatro">
-        <div>
+<div class="container_quatro">
+        <div="historico">
             <label>Histórico</label>
             <input></input> 
         </div>
