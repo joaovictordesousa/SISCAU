@@ -129,7 +129,7 @@
 <br><br>
 
 <div class="container_quatro">
-        <div="historico">
+        <div class="historico">
             <label>Histórico</label>
             <input></input> 
         </div>
