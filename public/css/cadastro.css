@@ -1,3 +1,52 @@
+.container_cadastro {
+   margin: 1em 3em;
+}
+
+.container_quatro {
+   display: flex;
+   gap: 20px;
+   color: black;
+}
+
+.cadastro_titulo {
+   padding: 2.5em 0;
+   font-size: 18px;
+}
+
+.container_quatro label {
+   display: block;
+}
+
+.tipo_recolhimento {
+   width: 20em;
+}
+
+.instituicao_financeira {
+   padding-left: 8.5em;
+}
+
+.container_quatro input {
+   padding: 7px 70px;
+   border-radius: 4px;
+}
+
+.valor {
+   padding-left: 13em;
+}
+
+.numero_nl {
+   padding-left: 8.5em;
+}
+
+.container_quatro select {
+   padding: 7px 110px;
+   border-radius: 4px;
+   outline: none;
+}
+
+.dividir {
+   padding: 0 5em 0 0;
+}
 
 .button {
    display: flex;
