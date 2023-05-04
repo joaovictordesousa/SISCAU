@@ -28,14 +28,14 @@
 }
 
 .botao-cadastro {
-background: dodgerblue;
-padding: 1em;
-color: white;
-border-radius: 10px;
-border: none;
+    background: dodgerblue;
+    padding: 1em;
+    color: white;
+    border-radius: 10px;
+    border: none;
 }
 
 .botao-cadastro.botao-cadastro:hover{
-background-color: rgb(11, 96, 182);
-box-shadow: 2px 1px 8px 1px rgb(3, 116, 230);
+    background-color: rgb(11, 96, 182);
+    box-shadow: 2px 1px 8px 1px rgb(3, 116, 230);
 }
