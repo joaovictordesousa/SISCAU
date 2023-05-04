@@ -1,3 +1,8 @@
+.cadastro_titulo {
+   padding: 2.5em 0;
+   font-size: 18px;
+}
+
 .button {
    display: flex;
    gap: 1em;
@@ -15,5 +20,3 @@ border: none;
 background-color: rgb(11, 96, 182);
 box-shadow: 2px 1px 8px 1px rgb(3, 116, 230);
 }
-
-
