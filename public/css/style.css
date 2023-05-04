@@ -14,16 +14,7 @@ html {
 }
 
 body {
-<<<<<<< HEAD
     background-color: white;
 
-=======
-    background: rgb(2, 0, 36);
-    background-color: whitesmoke;
-    height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
->>>>>>> 1bc4caefa66b0f5436b0e6089bafe2dc2ceaefb0
     font-family: Arial, Helvetica, sans-serif;
 }
