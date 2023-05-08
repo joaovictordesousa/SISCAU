@@ -17,31 +17,32 @@
         </div>
     </header>
 
+<section class="container_pesquisa">
 
     <div class="pesquisa_titulo">
         <h1>Guias de recolhimento</h1><br><br>
         <a href="#" id="NovaGuia">+ Nova Guia de Recolhimento</a>
     </div>
-    <br><br>
 
-<section class="container_cadastro">
+    <br><br><br>
+
     <div id="FormBox">
         <div class="container_quatro">
             <div>
                 <label>Numero</label>
-                <input></input> 
+                <input class="CampoInput"></input> 
             </div>
             <div>
                 <label>Contrato</label>
-                <input></input> 
+                <input class="CampoInput"></input> 
             </div>
             <div>
-                <label>Documento</label>
-                <input></input> 
+                <label>Documento</label>   
+                <input class="CampoInput"></input> 
             </div>
         <div>
             <label>Tipo de recolhimento</label>
-            <select id="m-documentos" name="documentos" required>
+            <select class="CampoSelect" required>
                 <option value="documentos">documentos</option>
                 <option value="documentos">documentos</option>
                 <option value="documentos">documentos</option>
@@ -56,7 +57,7 @@
         <div class="container_quatro">
         <div>
             <label>Agência</label>
-                <select>
+                <select class="CampoSelect">
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -66,11 +67,11 @@
             </div>
             <div>
                 <label>Processos de baixa</label>
-                <input></input> 
+                <input class="CampoInput"></input> 
             </div>
             <div>
                 <label>CPF/CNPJ</label>
-                <input></input> 
+                <input class="CampoInput"></input> 
             </div>
             <!---->
         </div>
@@ -80,16 +81,16 @@
     <div class="container_quatro">
         <div class="dividir">
             <label>Data do GR</label>
-            <input></input> 
+            <input class="campodual"></input> 
             <span>a</span>
-            <input></input> 
+            <input class="campodual"></input> 
         </div>
     
         <div>
         <label>Data de validade</label>
-            <input></input>
+            <input class="campodual"></input>
              <span>a</span>
-            <input></input> 
+            <input class="campodual"></input> 
         </div>
     </div>
 
@@ -98,14 +99,14 @@
     <div class="container_quatro">
         <div>
             <label>Data de validade</label>
-            <input></input>
+            <input class="campodual"></input>
             <span>a</span>
-            <input></input> 
+            <input class="campodual"></input> 
         </div>
 
         <div class="espacamento_select">
             <label>Tipo do Documento</label>
-                <select>
+                <select class="CampoSelect">
                     <option value="">Tipo do Documento</option>
                     <option value="">teste</option>
                     <option value="">teste</option>
@@ -120,13 +121,13 @@
     <div class="container_quatro">
         <div>
             <label>Numero</label>
-            <input></input> 
+            <input class="CampoInput"></input> 
         </div>
 
         <div class="espaco_div_5">
 
         <label>Tipo do Documento</label>
-            <select>
+            <select class="CampoSelect">
                 <option value="">Tipo de Consulta</option>
                 <option value="">teste</option>
                 <option value="">teste</option>
@@ -136,12 +137,13 @@
         </div>
 
     </div>
-</section>
-<br><br><br>
+
+    <br><br><br>
 
     <div>
-        <button>Pesquisar</button>
+        <button class="btn" onclick=()>Pesquisar</button>
     </div>
-   
+</section>
+
 </body>
 </html>

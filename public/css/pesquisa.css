@@ -1,6 +1,6 @@
 /* João */
 
-.container_cadastro {
+.container_pesquisa {
     margin: 2em 3em;
     padding: 2em;
 }
@@ -14,16 +14,20 @@
     display: flex;
 }
 
-.container_quatro input {
-    padding: 7px 70px;
+.CampoInput {
+    padding: 10px 60px;
     border-radius: 4px;
 }
 
-.container_quatro select {
-    padding: 7px 110px;
+.campodual {
+    padding: 10px 50px;
     border-radius: 4px;
     outline: none;
     border: 2px solid gray;
+}
+
+.CampoSelect {
+    padding: 10px 10px;
 }
 
 .dividir {
@@ -31,10 +35,21 @@
 }
 
 .espacamento_select {
-    padding: 0 10em;
+    padding: 0 7em;
 }
 
 
 .espaco_div_5 {
-    margin: 0 15em;
+    margin: 0 7em;
+}
+
+.btn {
+    background-color: dodgerblue;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    box-shadow: 2px 3px 5px 3px dodgerblue;
 }
