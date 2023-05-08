@@ -1,5 +1,19 @@
 /* João */
 
+#NovaGuia {
+    border: none;
+    background-color: dodgerblue;
+    padding: 9px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#NovaGuia:hover {
+    background-color: rgb(4, 106, 209);
+    box-shadow: 2px 1px 8px 1px dodgerblue;
+}
+
 .container_pesquisa {
     margin: 0 auto;
     padding: 2em 0 2em 20em;
@@ -47,12 +61,14 @@
 }
 
 .btn {
+    font-size: 20px;
     background-color: dodgerblue;
-    padding: 1em 2em;
+    padding: 16px 20px;
     border: none;
     border-radius: 10px;
 }
 
 .btn:hover {
+    background-color: rgb(4, 106, 209);
     box-shadow: 2px 3px 5px 3px dodgerblue;
 }
