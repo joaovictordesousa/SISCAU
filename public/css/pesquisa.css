@@ -1,8 +1,9 @@
 /* João */
 
 .container_pesquisa {
-    margin: 2em 3em;
-    padding: 2em;
+    margin: 0 auto;
+    padding: 2em 0 2em 20em;
+
 }
 
 .container_quatro {
@@ -15,19 +16,21 @@
 }
 
 .CampoInput {
-    padding: 10px 60px;
+    padding: 10px 20px;
     border-radius: 4px;
+    border: 2px solid gray;
+    outline: none;
 }
 
 .campodual {
-    padding: 10px 50px;
+    padding: 10px 20px;
     border-radius: 4px;
     outline: none;
     border: 2px solid gray;
 }
 
 .CampoSelect {
-    padding: 10px 10px;
+    padding: 10px;
 }
 
 .dividir {
@@ -45,7 +48,7 @@
 
 .btn {
     background-color: dodgerblue;
-    padding: 1em;
+    padding: 1em 2em;
     border: none;
     border-radius: 10px;
 }
