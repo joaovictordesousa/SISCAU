@@ -33,7 +33,11 @@
     <div class="instituicao_financeira">
             <label>Instituição financeira</label>
             <select class="CampoSelect" id="m-documentos" name="" required>
+<<<<<<< HEAD
+                <option value="">Empresas</option>
+=======
                 <option value="">Documentos</option>
+>>>>>>> d76bd1cce0d0c34a47d9b9725f2f2891a515fc39
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
@@ -48,7 +52,11 @@
         <div class="agencia">
             <label>Agência</label>
                 <select class="CampoSelect">
+<<<<<<< HEAD
+                    <option value="">00000000</option>
+=======
                     <option value="">0000000</option>
+>>>>>>> d76bd1cce0d0c34a47d9b9725f2f2891a515fc39
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -102,7 +110,11 @@
     <div class="empresa">
             <label>Empresa</label>
                 <select class="CampoSelect">
+<<<<<<< HEAD
+                    <option value="">NomeEmpresa</option>
+=======
                     <option value="">Empresa</option>
+>>>>>>> d76bd1cce0d0c34a47d9b9725f2f2891a515fc39
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
