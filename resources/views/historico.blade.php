@@ -21,10 +21,6 @@
     </section>
         
   <section class="container">
-    <div class="cabecalho_container">
-      <span style="backgraound-color:">Cadastro de animais</span>
-    </div>
-    <hr>
     <div class="divTable">
       <table>
         <thead>

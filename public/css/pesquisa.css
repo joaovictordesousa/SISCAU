@@ -1,8 +1,23 @@
 /* João */
 
-.container_cadastro {
-    margin: 2em 3em;
-    padding: 2em;
+#NovaGuia {
+    border: none;
+    background-color: dodgerblue;
+    padding: 9px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#NovaGuia:hover {
+    background-color: rgb(4, 106, 209);
+    box-shadow: 2px 1px 8px 1px dodgerblue;
+}
+
+.container_pesquisa {
+    margin: 0 auto;
+    padding: 2em 0 2em 20em;
+
 }
 
 .container_quatro {
@@ -14,15 +29,22 @@
     display: flex;
 }
 
-.container_quatro input {
-    padding: 7px 70px;
+.CampoInput {
+    padding: 10px 20px;
     border-radius: 4px;
+    border: 2px solid gray;
+    outline: none;
 }
 
-.container_quatro select {
-    padding: 7px 110px;
+.campodual {
+    padding: 10px 20px;
     border-radius: 4px;
     outline: none;
+    border: 2px solid gray;
+}
+
+.CampoSelect {
+    padding: 10px;
     border: 2px solid gray;
 }
 
@@ -31,10 +53,23 @@
 }
 
 .espacamento_select {
-    padding: 0 10em;
+    padding: 0 7em;
 }
 
 
 .espaco_div_5 {
-    margin: 0 15em;
+    margin: 0 7em;
+}
+
+.btn {
+    font-size: 20px;
+    background-color: dodgerblue;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: rgb(4, 106, 209);
+    box-shadow: 2px 3px 5px 3px dodgerblue;
 }

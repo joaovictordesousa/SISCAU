@@ -13,18 +13,5 @@
     margin: 2em 0 0 45em;
 }
 
-#NovaGuia {
-    border: none;
-    background-color: dodgerblue;
-    padding: 9px 25px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.new-guia:hover {
-    background-color: rgb(3, 111, 218);
-    box-shadow: 2px 1px 8px 1px dodgerblue;
-}
 
 
