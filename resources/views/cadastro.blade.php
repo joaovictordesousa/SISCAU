@@ -22,8 +22,8 @@
         <div class="container_quatro">
         <div class="tipo_recolhimento">
         <label>Tipo de recolhimento</label>
-            <select id="m-documentos" name="" required>
-                <option value=""></option>
+            <select class="CampoSelect" id="m-documentos" name="" required>
+                <option value="">Documentos</option>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
@@ -32,8 +32,8 @@
     </div>
     <div class="instituicao_financeira">
             <label>Instituição financeira</label>
-            <select id="m-documentos" name="" required>
-                <option value=""></option>
+            <select class="CampoSelect" id="m-documentos" name="" required>
+                <option value="">Empresas</option>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
@@ -47,8 +47,8 @@
         <div class="container_quatro">
         <div class="agencia">
             <label>Agência</label>
-                <select>
-                    <option value=""></option>
+                <select class="CampoSelect">
+                    <option value="">00000000</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -57,15 +57,15 @@
             </div>
             <div class="conta">
                 <label>Conta</label>
-                <input></input> 
+                <input class="CampoInput"></input> 
             </div>
             <div class="contrato">
                 <label>Contrato</label>
-                <input></input> 
+                <input class="CampoInput"></input> 
             </div>
             <div class="aditivo">
                 <label>Aditivo</label>
-                <input></input> 
+                <input class="CampoInput"></input> 
             </div>
             <!---->
         </div>
@@ -83,8 +83,8 @@
         </div>
         <div>
             <label>Tipo de documento</label>
-                <select>
-                    <option value=""></option>
+                <select class="CampoSelect">
+                    <option value="">Documentos</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -93,7 +93,7 @@
             </div>
         <div>    
             <label>Número</label>
-            <input></input>
+            <input class="CampoInput"></input>
         </div>
     </div>
     <br><br>
@@ -101,8 +101,8 @@
     <div class="container_quatro">
     <div class="empresa">
             <label>Empresa</label>
-                <select>
-                    <option value=""></option>
+                <select class="CampoSelect">
+                    <option value="">NomeEmpresa</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -111,7 +111,7 @@
     </div>
     <div class="valor">    
             <label>Valor</label>
-            <input></input>
+            <input class="CampoInput"></input>
         </div>
 </div>
 <br><br>
@@ -119,11 +119,11 @@
 <div class="container_quatro">
         <div class="documento">
             <label>Documento</label>
-            <input></input> 
+            <input class="CampoInput"></input> 
         </div>
         <div class="numero_nl">    
             <label>Numero da NL</label>
-            <input></input> 
+            <input class="CampoInput"></input> 
         </div>
 </div>
 <br><br>
@@ -131,7 +131,7 @@
 <div class="container_quatro">
         <div class="historico">
             <label>Histórico</label>
-            <input></input> 
+            <input class="CampoInput"></input> 
         </div>
 </div>
 <br><br><br>
