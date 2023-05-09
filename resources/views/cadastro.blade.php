@@ -75,11 +75,11 @@
     <div class="container_quatro">
         <div>
             <label>Data do GR</label>
-            <input></input> 
+            <input class="CampoInput"></input> 
         </div>
         <div>    
             <label>Data de validade</label>
-            <input></input> 
+            <input class="CampoInput"></input> 
         </div>
         <div>
             <label>Tipo de documento</label>
