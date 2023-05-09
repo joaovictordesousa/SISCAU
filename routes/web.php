@@ -32,5 +32,3 @@ Route::get('/cadastro', function (){
 Route::get('/login', function (){
     return view('login');
 });
-
-
