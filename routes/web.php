@@ -14,23 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pesquisa');
-});
-
-Route::get('/historico', function (){
-    return view('historico');
-});
-
-Route::get('/pesquisa', function (){
-    return view('pesquisa');
-});
-
-Route::get('/cadastro', function (){
     return view('cadastro');
-});
-
-Route::get('/login', function (){
-    return view('login');
 });
 
 

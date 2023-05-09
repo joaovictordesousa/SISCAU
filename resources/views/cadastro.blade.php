@@ -10,7 +10,7 @@
 <body>
     <header class="cabecalho">
             <img src="img/logo_transparente.png" alt="logo" class="logo_header">
-        <div class="conteiner_botao">
+        <div class="container_botao">
         </div>
     </header>
 
@@ -22,8 +22,8 @@
         <div class="container_quatro">
         <div class="tipo_recolhimento">
         <label>Tipo de recolhimento</label>
-            <select id="m-documentos" name="" required>
-                <option value=""></option>
+            <select class="CampoSelect" id="m-documentos" name="" required>
+                <option value="">Documentos</option>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
@@ -32,8 +32,8 @@
     </div>
     <div class="instituicao_financeira">
             <label>Instituição financeira</label>
-            <select id="m-documentos" name="" required>
-                <option value=""></option>
+            <select class="CampoSelect" id="m-documentos" name="" required>
+                <option value="">Documentos</option>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
@@ -47,8 +47,8 @@
         <div class="container_quatro">
         <div class="agencia">
             <label>Agência</label>
-                <select>
-                    <option value=""></option>
+                <select class="CampoSelect">
+                    <option value="">0000000</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -83,8 +83,8 @@
         </div>
         <div>
             <label>Tipo de documento</label>
-                <select>
-                    <option value=""></option>
+                <select class="CampoSelect">
+                    <option value="">Documentos</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -101,8 +101,8 @@
     <div class="container_quatro">
     <div class="empresa">
             <label>Empresa</label>
-                <select>
-                    <option value=""></option>
+                <select class="CampoSelect">
+                    <option value="">Empresa</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
