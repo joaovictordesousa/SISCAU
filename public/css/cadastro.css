@@ -10,8 +10,8 @@
    font-size: 18px;
 }
 
-.tipo_recolhimento {
-    width: 20em;
+.CampoSelect {
+    border-radius: 5px;
 }
 
 .instituicao_financeira {
