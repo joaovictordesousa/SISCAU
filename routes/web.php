@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PesquisaController;
+use Illuminate\Support\Facades\Cadastro;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,6 @@ Route::get('/cadastro', function (){
 Route::get('/login', function (){
     return view('login');
 });
+
+Route::get('/cadastro', [PesquisaController::class, 'cadastro'])->name('cadastro');
+

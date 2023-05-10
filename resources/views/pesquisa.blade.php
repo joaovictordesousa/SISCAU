@@ -21,7 +21,7 @@
 
     <div class="pesquisa_titulo">
         <h1>Guias de recolhimento</h1><br><br>
-        <a href="#" id="NovaGuia">+ Nova Guia de Recolhimento</a>
+        <a href="{{ route('cadastro') }}" id="NovaGuia">+ Nova Guia de Recolhimento</a>
     </div>
 
     <br><br><br>
