@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Historico;
 
 
-class PesquisaControllers extends Controller
+class PesquisaController extends Controller
 {
-    public function pesquisa()
-        {
-            return view ('cadastro');
-        }
+    public function cadastro()
+    {
+        return view('cadastro');
+    }
 }
 
