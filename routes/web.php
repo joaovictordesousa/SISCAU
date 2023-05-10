@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Cadastro;
 */
 
 Route::get('/', function () {
-    return view('cadastro');
+    return view('pesquisa');
 });
 
 Route::get('/historico', function (){
