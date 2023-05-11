@@ -58,15 +58,15 @@
             </div>
             <div class="conta">
                 <label>Conta</label>
-                <input class="CampoInput"></input> 
+                <input type="number" class="CampoInput"></input> 
             </div>
             <div class="contrato">
                 <label>Contrato</label>
-                <input class="CampoInput"></input> 
+                <input type="number" class="CampoInput"></input> 
             </div>
             <div class="aditivo">
                 <label>Aditivo</label>
-                <input class="CampoInput"></input> 
+                <input type="number" class="CampoInput"></input> 
             </div>
             <!---->
         </div>
@@ -76,11 +76,11 @@
     <div class="container_quatro">
         <div>
             <label>Data do GR</label>
-            <input class="CampoInput"></input> 
+            <input type="date" class="CampoInput"></input> 
         </div>
         <div>    
             <label>Data de validade</label>
-            <input class="CampoInput"></input> 
+            <input type="date" class="CampoInput"></input> 
         </div>
         <div>
             <label>Tipo de documento</label>
@@ -94,7 +94,7 @@
             </div>
         <div>    
             <label>Número</label>
-            <input class="CampoInput"></input>
+            <input type="number" class="CampoInput"></input>
         </div>
     </div>
     <br><br>
@@ -112,7 +112,7 @@
     </div>
     <div class="valor">    
             <label>Valor</label>
-            <input class="CampoInput"></input>
+            <input type="Number" class="CampoInput"></input>
         </div>
 </div>
 <br><br>
@@ -120,11 +120,11 @@
 <div class="container_quatro">
         <div class="documento">
             <label>Documento</label>
-            <input class="CampoInput"></input> 
+            <input type="text" class="CampoInput"></input> 
         </div>
         <div class="numero_nl">    
             <label>Numero da NL</label>
-            <input class="CampoInput"></input> 
+            <input type="number" class="CampoInput"></input> 
         </div>
 </div>
 <br><br>
@@ -132,7 +132,7 @@
 <div class="container_quatro">
         <div class="historico">
             <label>Histórico</label>
-            <input class="CampoInput"></input> 
+            <input type="text" class="CampoInput"></input> 
         </div>
 </div>
 <br><br><br>
