@@ -43,11 +43,11 @@
         <div>
             <label>Tipo de recolhimento</label>
             <select class="CampoSelect" required>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
-                <option value="documentos">documentos</option>
+                <option value="documentos">Documentos</option>
+                <option value="documentos">teste</option>
+                <option value="documentos">teste</option>
+                <option value="documentos">teste</option>
+                <option value="documentos">teste</option>
             </select>
             </div>
         </div>
@@ -58,7 +58,7 @@
         <div>
             <label>Agência</label>
                 <select class="CampoSelect">
-                    <option value=""></option>
+                    <option value="">0000000</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -128,7 +128,7 @@
 
         <label>Tipo do Documento</label>
             <select class="CampoSelect">
-                <option value="">Tipo de Consulta</option>
+                <option value="">Tipo de Documento</option>
                 <option value="">teste</option>
                 <option value="">teste</option>
                 <option value="">teste</option>
