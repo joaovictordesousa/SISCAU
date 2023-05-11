@@ -1,17 +1,36 @@
 .cabecalho {
-    background-color: rgb(198, 197, 197);
+    background-color: #002776;
     padding: 1em;
     display: flex;
     border-bottom: 5px solid darkblue;
 }
 
 .logo_header {
-    width: 13%;
+    width: 5%;
 }
 
 .container_botao {
     margin: 2em 0 0 45em;
 }
 
+.tituloHeader {
+    color: white;
+    font-size: 20px;
+}
 
+@media only screen and (min-width: 1600px){
+
+    .cabecalho {
+        padding: 0;
+    }
+
+    .tituloHeader  {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .logo_header {
+        width: 7%;
+    }
+}
 
