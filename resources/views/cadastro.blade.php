@@ -66,7 +66,7 @@
             </div>
             <div class="aditivo">
                 <label>Aditivo</label>
-                <input type="number" class="CampoInput"></input> 
+                <input type="text" class="CampoInput"></input> 
             </div>
             <!---->
         </div>
@@ -76,11 +76,11 @@
     <div class="container_quatro">
         <div>
             <label>Data do GR</label>
-            <input type="date" class="CampoInput"></input> 
+            <input type="number" class="CampoInput"></input> 
         </div>
         <div>    
             <label>Data de validade</label>
-            <input type="date" class="CampoInput"></input> 
+            <input type="number" class="CampoInput"></input> 
         </div>
         <div>
             <label>Tipo de documento</label>
@@ -112,7 +112,7 @@
     </div>
     <div class="valor">    
             <label>Valor</label>
-            <input type="Number" class="CampoInput"></input>
+            <input type="number" class="CampoInput"></input>
         </div>
 </div>
 <br><br>
