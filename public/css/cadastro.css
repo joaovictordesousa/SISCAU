@@ -34,11 +34,11 @@
 
 .botao-salvar {
     background: #002776;
-    padding: 1em;
+    padding: 0.98em;
     color: white;
     border-radius: 10px;
     border: none;
-    margin-top: -16px;
+    margin-top: -20px;
     font-size: 18px;
 }
 
