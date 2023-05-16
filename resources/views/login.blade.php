@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/logoicon.jpg">
     <title>SISCAU</title>
    
 </head>
@@ -23,17 +24,5 @@
             
         </form>
     </div>
-    <script>
-    function logar(){
-        var nome = documente.getElementById('Nome').value;
-        var senha = document.getElementById('senha').value;
-        if(nome == "bill" && senha == "123"){
-             alert('Sucesso');
-        }
-        else{
-            alert('ERRO')
-        }
-    }
-</script>
 </body>
 </html>
