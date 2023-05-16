@@ -2,7 +2,7 @@
     background-color: #002776;
     padding: 1em;
     display: flex;
-    border-bottom: 5px solid darkblue;
+    /*border-bottom: 5px solid darkblue;*/
 }
 
 .logo_header {
@@ -31,5 +31,11 @@
 
     .logo_header {
         width: 7%;
+    }
+}
+
+@media only screen and (min-width: 1480px) {
+    .tituloHeader  {
+        margin-top: 10px;
     }
 }

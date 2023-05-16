@@ -2,11 +2,11 @@
 
 #NovaGuia {
     border: none;
-    background-color: dodgerblue;
+    background-color:#002776;
     padding: 9px 25px;
     border-radius: 10px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #NovaGuia:hover {
@@ -63,7 +63,8 @@
 
 .btn {
     font-size: 20px;
-    background-color: dodgerblue;
+    background-color: #002776;
+    color: white;
     padding: 16px 20px;
     border: none;
     border-radius: 10px;

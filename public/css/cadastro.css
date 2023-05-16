@@ -1,7 +1,5 @@
 /* Bill */
 
-/*testbill*/
-
 .container_cadastro {
     margin: 0 auto;
     padding: 2em 0 2em 20em;
@@ -35,7 +33,7 @@
 }
 
 .botao-cadastro {
-    background: dodgerblue;
+    background: #002776;
     padding: 1em;
     color: white;
     border-radius: 10px;
