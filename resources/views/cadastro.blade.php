@@ -10,8 +10,7 @@
 </head>
 <body>
     <header class="cabecalho">
-        <img src="img/logoicon.jpg" alt="logo" class="logo_header">
-        <h1 class="tituloHeader"><br>NOVACAP</h1>
+        <img src="img/logo_branca.png" alt="logo" class="logo_header">
         <div class="container_botao"></div>
     </header>
 
