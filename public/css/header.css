@@ -6,27 +6,17 @@
 }
 
 .logo_header {
-    width: 5%;
+    width: 13%;
 }
 
 .container_botao {
     margin: 2em 0 0 45em;
 }
 
-.tituloHeader {
-    color: white;
-    font-size: 20px;
-}
-
 @media only screen and (min-width: 1600px){
 
     .cabecalho {
         padding: 0;
-    }
-
-    .tituloHeader  {
-        margin-top: 25px;
-        font-size: 25px;
     }
 
     .logo_header {

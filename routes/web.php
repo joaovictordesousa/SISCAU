@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PesquisaController;
 use App\Http\Controllers\CadastroController;
+use App\Http\Controllers\HistoricoController;
 use Illuminate\Support\Facades\Cadastro;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +41,5 @@ Route::get('/login', function (){
 Route::get('/cadastro', [PesquisaController::class, 'cadastro'])->name('cadastro');
 
 Route::get('/pesquisa', [CadastroController::class, 'pesquisa'])->name('pesquisa');
+
+Route::get('/pesquisa', [HistoricoController::class, 'pesquisa'])->name('pesquisa');
