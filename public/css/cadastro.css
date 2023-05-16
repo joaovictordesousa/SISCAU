@@ -32,15 +32,31 @@
    gap: 1em;
 }
 
+.botao-salvar {
+    background: #002776;
+    padding: 1em;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-top: -16px;
+    font-size: 18px;
+}
+
 .botao-cadastro {
     background: #002776;
     padding: 1em;
     color: white;
     border-radius: 10px;
     border: none;
+    text-decoration: none;
 }
 
-.botao-cadastro.botao-cadastro:hover{
+.botao-cadastro:hover{
+    background-color: rgb(2, 81, 161);
+    box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
+}
+
+.botao-salvar:hover {
     background-color: rgb(2, 81, 161);
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }

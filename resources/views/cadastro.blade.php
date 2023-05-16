@@ -139,10 +139,10 @@
 
 <div class="button">
 <div>
-    <button class="botao-cadastro">Salvar</button>
+    <button class="botao-salvar">Salvar</button>
 </div>
 <div>
-    <button class="botao-cadastro">Cancelar</button>
+    <a href="{{ route('pesquisa')}}" class="botao-cadastro">Cancelar</a>
 </div>
 </div>
 

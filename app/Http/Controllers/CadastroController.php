@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 class CadastroController extends Controller
 {
     //
-
+    public function pesquisa()
+    {
+        return view('pesquisa');
+    }
 }
