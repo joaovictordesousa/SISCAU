@@ -16,11 +16,15 @@
 @media only screen and (min-width: 1600px){
 
     .cabecalho {
-        padding: 0;
+        padding: 1em;
     }
 
     .logo_header {
         width: 7%;
+    }
+
+    .logo_header {
+        width: 13%;
     }
 }
 
