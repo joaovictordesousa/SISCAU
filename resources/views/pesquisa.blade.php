@@ -142,7 +142,7 @@
     <br><br><br>
 
     <div>
-        <button type="submit" class="btn">Pesquisar</button>   
+        <button class="btn">Pesquisar</button>   
     </div>
 </section>
 
