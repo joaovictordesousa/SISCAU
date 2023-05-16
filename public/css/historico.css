@@ -109,13 +109,24 @@ td button i:first-child {
     margin-right: 10px;
 }
 
-.containerbotoes {
-    margin: 1em 20em;
+.container_botoes {
+    margin: 0 20em;
 }
 
-.botao {
+.botao_voltar {
     padding: 1em 2em;
-    margin: 1em;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #002776;
+    color: white;
+    font-size: 17px;
+    border: none;
+    text-decoration: none;
+}
+
+.botao_imprimir {
+    padding: 1em 2em;
+    gap: 10px;
     border-radius: 10px;
     background-color: #002776;
     color: white;
@@ -123,9 +134,18 @@ td button i:first-child {
     border: none;
 }
 
-.botao:hover {
+.botao_imprimir:hover {
     background-color: rgb(2, 81, 161);
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
+@media only screen and (max-width: 1600px){
+    .container {
+        margin: 1.5em 10em;
+        padding: 2.5em;
+    }
 
+    .container_botoes {
+        margin: 0 10em;
+    }
+}

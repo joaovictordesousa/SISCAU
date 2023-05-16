@@ -12,8 +12,7 @@
 </head>
 <body>
     <header class="cabecalho">
-      <img src="img/logoicon.jpg" alt="logo" class="logo_header">
-      <h1 class="tituloHeader"><br>NOVACAP</h1>
+      <img src="img/logo_branca.png" alt="logo" class="logo_header">
     </header>
 
     <main>
@@ -38,9 +37,9 @@
     </div>
   </section>
 
-      <div class="containerbotoes">
-          <button class="botao">Imprimir</button>
-          <button class="botao">Voltar</button>
+      <div class="container_botoes">
+          <button class="botao_imprimir">Imprimir</button>
+          <a href="{{ route('pesquisa')}}" class="botao_voltar">Voltar</a>
       </div>
 
     </main>
