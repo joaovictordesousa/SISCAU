@@ -17,14 +17,14 @@
         </div> 
     </header>
 
-<section class="container_pesquisa">
-
     <div class="pesquisa_titulo">
         <h1>Guias de recolhimento</h1><br><br>
         <a href="{{ route('cadastro') }}" id="NovaGuia">+ Nova guia de recolhimento</a>
     </div>
 
-    <br><br><br>
+    <br><br><br> 
+
+<section class="container_pesquisa">
 
     <div id="FormBox">
         <div class="container_quatro">

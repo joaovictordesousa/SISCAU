@@ -139,6 +139,11 @@ td button i:first-child {
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
+.botao_voltar:hover {
+    background-color: rgb(2, 81, 161);
+    box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
+}
+
 @media only screen and (max-width: 1600px){
     .container {
         margin: 1.5em 10em;
