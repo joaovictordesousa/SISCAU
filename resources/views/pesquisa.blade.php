@@ -22,7 +22,7 @@
         <a href="{{ route('cadastro') }}" id="NovaGuia">+ Nova guia de recolhimento</a>
     </div>
 
-    <br><br><br>
+    <br><br><br> 
 
 <section class="container_pesquisa">
 
