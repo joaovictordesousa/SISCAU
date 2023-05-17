@@ -93,6 +93,15 @@
 
 @media only screen and (max-width: 1600px){ 
     .pesquisa_titulo {
-        margin: 1em 5em 0 15.5em;
+        margin: 1em 5em 0 20em;
         }
 }
+
+@media only screen and (max-width: 1617px){ 
+    .pesquisa_titulo {
+        margin: 1em 5em 0 20em;
+        }
+}
+
+
+
