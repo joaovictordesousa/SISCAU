@@ -14,14 +14,18 @@
     box-shadow: 2px 1px 8px 1px dodgerblue;
 }
 
+.titulo_recolhimento {
+    margin: 1em 0;
+}
+
+.pesquisa_titulo {
+    margin: 1em 5em 5em 15em;
+}
+
 .container_pesquisa {
     display: flex;
     justify-content: center; /* Alinha horizontalmente ao centro */
     align-items: center; /* Alinha verticalmente ao centro */    
-}
-
-.pesquisa_titulo {
-    margin: 1em 5em 0 15em;
 }
 
 .container_quatro {
@@ -81,18 +85,20 @@
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (min-width: 1920px) { 
+/* Bill */
+ @media (min-width: 1830px){ 
     .pesquisa_titulo {
-        margin: 1em 5em 0 29em;
+        margin: 1em 5em 3em 20em;
         }
 }
 
-/* Bill */
-/* @media (min-width: 1617px){ 
+
+@media (min-width: 1830px) and (min-width: 1920px) { 
     .pesquisa_titulo {
-        margin: 1em 5em 0 20em;
+        margin: 1em 5em 3em 29em;
         }
-} */
+}
+
 
 
 

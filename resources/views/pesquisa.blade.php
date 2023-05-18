@@ -17,12 +17,10 @@
         </div> 
     </header>
 
-    <div class="pesquisa_titulo">
-        <h1>Guias de recolhimento</h1><br><br>
+    <section class="pesquisa_titulo">
+        <h1 class="titulo_recolhimento" >Guias de recolhimento</h1>
         <a href="{{ route('cadastro') }}" id="NovaGuia">+ Nova guia de recolhimento</a>
-    </div>
-
-    <br><br><br> 
+    </section>
 
 <section class="container_pesquisa">
 
@@ -75,9 +73,7 @@
             </div>
             <!---->
         </div>
-
         <br><br><br>
-
     <div class="container_quatro">
         <div class="dividir">
             <label>Data do GR</label>
@@ -93,9 +89,7 @@
             <input type="date" class="campodual"></input> 
         </div>
     </div>
-
     <br><br><br>
-
     <div class="container_quatro">
         <div>
             <label>Data de validade</label>
@@ -115,9 +109,7 @@
                 </select>
         </div>
     </div>
-
     <br><br><br>
-
     <div class="container_quatro">
         <div>
             <label>Numero da NL</label>
