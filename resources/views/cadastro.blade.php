@@ -14,10 +14,11 @@
         <div class="container_botao"></div>
     </header>
 
-<section class="container_cadastro">
     <div class="cadastro_titulo">
         <h1>Guias de recolhimento</h1><br>
     </div>
+
+<section class="container_cadastro">
     <div id="FormBox">
         <div class="container_quatro">
         <div class="tipo_recolhimento">
