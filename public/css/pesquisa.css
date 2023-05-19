@@ -36,10 +36,8 @@
 
 .container_pesquisa {
     display: flex;
-    justify-content: center;
-    /* Alinha horizontalmente ao centro */
-    align-items: center;
-    /* Alinha verticalmente ao centro */
+    justify-content: center;/* Alinha horizontalmente ao centro */
+    align-items: center;/* Alinha verticalmente ao centro */
 }
 
 .container_quatro {
@@ -71,10 +69,6 @@
     padding: 10px;
     border: 2px solid gray;
 }
-
-/* .dividir {
-    padding: 0 5em 0 0;
-} */
 
 .espacamento_select {
     padding: 0 7em;
