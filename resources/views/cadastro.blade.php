@@ -20,7 +20,7 @@
             </div>
 
             <div id="FormBox">
-                <div class="container_quatro">
+                <div class="container_fileira">
                 <div class="tipo_recolhimento">
                 <label>Tipo de recolhimento</label>
                     <select class="CampoSelect" id="m-documentos" name="" required>
@@ -45,7 +45,7 @@
 
                 <br><br>
 
-                <div class="container_quatro">
+                <div class="container_fileira">
                 <div class="agencia">
                     <label>Agência</label>
                         <select class="CampoSelect">
@@ -73,7 +73,7 @@
 
                 <br><br>
 
-            <div class="container_quatro">
+            <div class="container_fileira">
                 <div>
                     <label>Data do GR</label>
                     <input type="number" class="CampoInput"></input> 
@@ -99,7 +99,7 @@
             </div>
             <br><br>
             
-            <div class="container_quatro">
+            <div class="container_fileira">
             <div class="empresa">
                     <label>Empresa</label>
                         <select class="CampoSelect">
@@ -117,7 +117,7 @@
         </div>
         <br><br>
 
-        <div class="container_quatro">
+        <div class="container_fileira">
                 <div class="documento">
                     <label>Documento</label>
                     <input type="text" class="CampoInput"></input> 
@@ -129,7 +129,7 @@
         </div>
         <br><br>
 
-        <div class="container_quatro">
+        <div class="container_fileira">
                 <div class="historico">
                     <label>Histórico</label>
                     <input type="text" class="CampoInput"></input> 
