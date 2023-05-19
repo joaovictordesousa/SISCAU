@@ -2,7 +2,7 @@
 
 #NovaGuia {
     border: none;
-    background-color:#002776;
+    background-color: #002776;
     padding: 9px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -24,7 +24,7 @@
     margin: 0 0 3em 0;
 }
 
-.container_completo{
+.container_completo {
     border-radius: 30px;
     margin: 3em 0;
     background: #e0e0e0;
@@ -36,8 +36,10 @@
 
 .container_pesquisa {
     display: flex;
-    justify-content: center; /* Alinha horizontalmente ao centro */
-    align-items: center; /* Alinha verticalmente ao centro */    
+    justify-content: center;
+    /* Alinha horizontalmente ao centro */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
 }
 
 .container_quatro {
@@ -98,7 +100,7 @@
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
 
     body {
         background-color: white;
@@ -107,7 +109,6 @@
     .container_completo {
         box-shadow: none;
         background: none;
-
         text-align: center;
     }
 
@@ -123,7 +124,6 @@
         text-align: center;
         display: flex;
         justify-content: center;
-
         margin-top: 25px;
     }
 
@@ -136,4 +136,3 @@
     }
 
 }
-
