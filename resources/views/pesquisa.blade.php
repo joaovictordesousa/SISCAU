@@ -19,7 +19,7 @@
 
 <section class="container_pesquisa">
 
-    <div class="container">
+    <div class="container_completo">
 
     <div class="pesquisa_titulo">
         <h1 class="titulo_recolhimento" >Guias de recolhimento</h1>
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <br><br><br>
+        <br><br>
 
         <div class="container_quatro">
         <div>
@@ -75,23 +75,23 @@
             </div>
             <!---->
         </div>
-        <br><br><br>
+        <br><br>
     <div class="container_quatro">
-        <div class="dividir">
+        <div>
             <label>Data do GR</label>
             <input type="date" class="campodual"></input> 
             <span>a</span>
             <input type="date" class="campodual"></input> 
         </div>
-    
+        <br>
         <div>
         <label>Data de validade</label>
             <input type="date" class="campodual"></input>
-             <span>a</span>
+            <span>a</span>
             <input type="date" class="campodual"></input> 
         </div>
     </div>
-    <br><br><br>
+    <br><br>
     <div class="container_quatro">
         <div>
             <label>Data de validade</label>
