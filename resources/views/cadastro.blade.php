@@ -14,137 +14,136 @@
         <div class="container_botao"></div>
     </header>
 
-    <div class="cadastro_titulo">
-        <h1>Guias de recolhimento</h1><br>
-    </div>
-
 <section class="container">
-    <div id="FormBox">
-        <div class="container_quatro">
-        <div class="tipo_recolhimento">
-        <label>Tipo de recolhimento</label>
-            <select class="CampoSelect" id="m-documentos" name="" required>
-                <option value="">Documentos</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-    </div>
-    <div class="instituicao_financeira">
-            <label>Instituição financeira</label>
-            <select class="CampoSelect" id="m-documentos" name="" required>
-                <option value="">Documentos</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
+            <div class="cadastro_titulo">
+                <h1>Guias de recolhimento</h1><br>
             </div>
-        </div>
 
+            <div id="FormBox">
+                <div class="container_quatro">
+                <div class="tipo_recolhimento">
+                <label>Tipo de recolhimento</label>
+                    <select class="CampoSelect" id="m-documentos" name="" required>
+                        <option value="">Documentos</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+            </div>
+            <div class="instituicao_financeira">
+                    <label>Instituição financeira</label>
+                    <select class="CampoSelect" id="m-documentos" name="" required>
+                        <option value="">Documentos</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="container_quatro">
+                <div class="agencia">
+                    <label>Agência</label>
+                        <select class="CampoSelect">
+                            <option value="">0000000</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="conta">
+                        <label>Conta</label>
+                        <input type="number" class="CampoInput"></input> 
+                    </div>
+                    <div class="contrato">
+                        <label>Contrato</label>
+                        <input type="number" class="CampoInput"></input> 
+                    </div>
+                    <div class="aditivo">
+                        <label>Aditivo</label>
+                        <input type="text" class="CampoInput"></input> 
+                    </div>
+                    <!---->
+                </div>
+
+                <br><br>
+
+            <div class="container_quatro">
+                <div>
+                    <label>Data do GR</label>
+                    <input type="number" class="CampoInput"></input> 
+                </div>
+                <div>    
+                    <label>Data de validade</label>
+                    <input type="number" class="CampoInput"></input> 
+                </div>
+                <div>
+                    <label>Tipo de documento</label>
+                        <select class="CampoSelect">
+                            <option value="">Documentos</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                <div>    
+                    <label>Número</label>
+                    <input type="number" class="CampoInput"></input>
+                </div>
+            </div>
+            <br><br>
+            
+            <div class="container_quatro">
+            <div class="empresa">
+                    <label>Empresa</label>
+                        <select class="CampoSelect">
+                            <option value="">Empresa</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+            </div>
+            <div class="valor">    
+                    <label>Valor</label>
+                    <input type="number" class="CampoInput"></input>
+                </div>
+        </div>
         <br><br>
 
         <div class="container_quatro">
-        <div class="agencia">
-            <label>Agência</label>
-                <select class="CampoSelect">
-                    <option value="">0000000</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </div>
-            <div class="conta">
-                <label>Conta</label>
-                <input type="number" class="CampoInput"></input> 
-            </div>
-            <div class="contrato">
-                <label>Contrato</label>
-                <input type="number" class="CampoInput"></input> 
-            </div>
-            <div class="aditivo">
-                <label>Aditivo</label>
-                <input type="text" class="CampoInput"></input> 
-            </div>
-            <!---->
+                <div class="documento">
+                    <label>Documento</label>
+                    <input type="text" class="CampoInput"></input> 
+                </div>
+                <div class="numero_nl">    
+                    <label>Numero da NL</label>
+                    <input type="number" class="CampoInput"></input> 
+                </div>
         </div>
-
         <br><br>
 
-    <div class="container_quatro">
+        <div class="container_quatro">
+                <div class="historico">
+                    <label>Histórico</label>
+                    <input type="text" class="CampoInput"></input> 
+                </div>
+        </div>
+        <br><br><br>
+
+        <div class="button">
         <div>
-            <label>Data do GR</label>
-            <input type="number" class="CampoInput"></input> 
-        </div>
-        <div>    
-            <label>Data de validade</label>
-            <input type="number" class="CampoInput"></input> 
+            <button class="botao-salvar">Salvar</button>
         </div>
         <div>
-            <label>Tipo de documento</label>
-                <select class="CampoSelect">
-                    <option value="">Documentos</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </div>
-        <div>    
-            <label>Número</label>
-            <input type="number" class="CampoInput"></input>
+            <a href="{{ route('pesquisa')}}" class="botao-cadastro">Cancelar</a>
         </div>
-    </div>
-    <br><br>
-    
-    <div class="container_quatro">
-    <div class="empresa">
-            <label>Empresa</label>
-                <select class="CampoSelect">
-                    <option value="">Empresa</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-    </div>
-    <div class="valor">    
-            <label>Valor</label>
-            <input type="number" class="CampoInput"></input>
         </div>
-</div>
-<br><br>
-
-<div class="container_quatro">
-        <div class="documento">
-            <label>Documento</label>
-            <input type="text" class="CampoInput"></input> 
-        </div>
-        <div class="numero_nl">    
-            <label>Numero da NL</label>
-            <input type="number" class="CampoInput"></input> 
-        </div>
-</div>
-<br><br>
-
-<div class="container_quatro">
-        <div class="historico">
-            <label>Histórico</label>
-            <input type="text" class="CampoInput"></input> 
-        </div>
-</div>
-<br><br><br>
-
-<div class="button">
-<div>
-    <button class="botao-salvar">Salvar</button>
-</div>
-<div>
-    <a href="{{ route('pesquisa')}}" class="botao-cadastro">Cancelar</a>
-</div>
-</div>
-
 </section>
 <br><br><br><br>        
