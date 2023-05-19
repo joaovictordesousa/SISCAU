@@ -12,6 +12,16 @@
    margin: 3em 0 5em 0;
 }
 
+.container_fileira {
+    display: flex;
+    gap: 50px;
+}
+
+.container_fileira label {
+    display: flex;
+    font-size: 18px;
+}
+
 .CampoSelect {
     border-radius: 5px;
 }
