@@ -19,7 +19,12 @@
 }
 
 .pesquisa_titulo {
-    margin: 1em 5em 5em 15em;
+    margin: 0 0 2em 0;
+}
+
+.container_tudo {
+    display: block;
+    padding: 1em;
 }
 
 .container_pesquisa {
@@ -84,21 +89,5 @@
     background-color: rgb(2, 81, 161);
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
-
-/* Bill */
- @media (min-width: 1830px){ 
-    .pesquisa_titulo {
-        margin: 1em 5em 3em 20em;
-        }
-}
-
-
-@media (min-width: 1830px) and (min-width: 1920px) { 
-    .pesquisa_titulo {
-        margin: 1em 5em 3em 29em;
-        }
-}
-
-
 
 
