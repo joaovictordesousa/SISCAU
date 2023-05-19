@@ -1,4 +1,5 @@
 .container_titulo {
+    text-align: center;
     margin: 5em 0 0 1em;
     padding: 1em;
     color: black;
@@ -144,13 +145,51 @@ td button i:first-child {
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (max-width: 1600px){
+@media (max-width: 800px) and (max-width: 1400px){
+    body {
+        background-color: white;
+    }
+
+    .cabecalho {
+        padding: 1em 3em;
+    }
+
     .container {
-        margin: 1.5em 10em;
+        box-shadow: none;
+        background: none;
+        text-align: center;
+        margin: -50px;
+    }
+
+    .divTable {
+        margin: none;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .container_botoes {
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    .botao_voltar {
+        padding: 15px;
+    }
+
+    .botao_imprimir {
+        padding: 15px;
+    }
+}
+
+
+/* @media (max-width: 1400px){
+    .container {
+        margin: 1.5em 5em;
         padding: 2.5em;
     }
 
     .container_botoes {
         margin: 0 10em;
     }
-}
+} */
