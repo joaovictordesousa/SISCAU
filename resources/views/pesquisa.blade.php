@@ -17,12 +17,14 @@
         </div> 
     </header>
 
-    <section class="pesquisa_titulo">
+<section class="container_pesquisa">
+
+    <div class="container">
+
+    <div class="pesquisa_titulo">
         <h1 class="titulo_recolhimento" >Guias de recolhimento</h1>
         <a href="{{ route('cadastro') }}" id="NovaGuia">+ Nova guia de recolhimento</a>
-    </section>
-
-<section class="container_pesquisa">
+    </div>
 
     <div id="FormBox">
         <div class="container_quatro">
@@ -134,6 +136,8 @@
 
     <div>
         <button class="btn">Pesquisar</button>   
+    </div>
+     
     </div>
 </section>
 

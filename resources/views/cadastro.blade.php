@@ -18,7 +18,7 @@
         <h1>Guias de recolhimento</h1><br>
     </div>
 
-<section class="container_cadastro">
+<section class="container">
     <div id="FormBox">
         <div class="container_quatro">
         <div class="tipo_recolhimento">
