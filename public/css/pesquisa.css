@@ -2,7 +2,7 @@
 
 #NovaGuia {
     border: none;
-    background-color: #002776;
+    background-color:#002776;
     padding: 9px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -89,5 +89,7 @@
     background-color: rgb(2, 81, 161);
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
+
+
 
 
