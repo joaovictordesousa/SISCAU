@@ -14,15 +14,24 @@
     box-shadow: 2px 1px 8px 1px dodgerblue;
 }
 
+.titulo_recolhimento {
+    margin: 1em 0;
+}
+
+.pesquisa_titulo {
+    margin: 0 0 2em 0;
+}
+
+.container{
+    display: block;
+    padding: 3em;
+}
+
 .container_pesquisa {
     display: flex;
     justify-content: center; /* Alinha horizontalmente ao centro */
     align-items: center; /* Alinha verticalmente ao centro */    
 }
-
-.pesquisa_titulo {
-    margin: 1em 5em 0 20em;
-    }
 
 .container_quatro {
     display: flex;
@@ -81,28 +90,6 @@
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (min-width: 1600px){
-    #NovaGuia {
-        padding: 13px 25px;
-    }
-
-    .pesquisa_titulo {
-        margin: 1em 5em 0 29em;
-        }
-}
-
-@media only screen and (max-width: 1600px){ 
-    .pesquisa_titulo {
-        margin: 1em 5em 0 20em;
-        }
-}
-
-/* Bill */
-@media only screen and (max-width: 1617px){ 
-    .pesquisa_titulo {
-        margin: 1em 5em 0 20em;
-        }
-}
 
 
 
