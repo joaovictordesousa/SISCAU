@@ -2,7 +2,7 @@
 
 #NovaGuia {
     border: none;
-    background-color: #002776;
+    background-color:#002776;
     padding: 9px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -21,8 +21,8 @@
 }
 
 .pesquisa_titulo {
-    margin: 1em 5em 0 15em;
-}
+    margin: 1em 5em 0 20em;
+    }
 
 .container_quatro {
     display: flex;
@@ -81,18 +81,28 @@
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (min-width: 1920px) { 
+@media only screen and (min-width: 1600px){
+    #NovaGuia {
+        padding: 13px 25px;
+    }
+
     .pesquisa_titulo {
         margin: 1em 5em 0 29em;
         }
 }
 
-/* Bill */
-/* @media (min-width: 1617px){ 
+@media only screen and (max-width: 1600px){ 
     .pesquisa_titulo {
         margin: 1em 5em 0 20em;
         }
-} */
+}
+
+/* Bill */
+@media only screen and (max-width: 1617px){ 
+    .pesquisa_titulo {
+        margin: 1em 5em 0 20em;
+        }
+}
 
 
 
