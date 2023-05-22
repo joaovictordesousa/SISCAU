@@ -40,13 +40,18 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 
 .container_fileira label {
     display: flex;
     font-size: 18px;
+}
+
+.historico {
+    margin-right: 22em;
+    padding: 1em; 
 }
 
 .CampoInput {
