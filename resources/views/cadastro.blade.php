@@ -14,7 +14,9 @@
         <div class="container_botao"></div>
     </header>
 
-<section class="container">
+<section class="container_cadastro">
+
+    <div class="container_completo_cadastro">
 
     <div class="cadastro_titulo">
         <h1>Guias de recolhimento</h1><br>
@@ -146,5 +148,6 @@
             <a href="{{ route('pesquisa')}}" class="botao-cadastro">Cancelar</a>
         </div>
         </div>
+    </div>
 </section>
 <br><br><br><br>        

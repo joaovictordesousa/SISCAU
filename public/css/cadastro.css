@@ -1,6 +1,12 @@
 /* Bill */
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
+    padding: 1em 5em;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
                -15px -15px 30px #ffffff;
@@ -12,15 +18,29 @@
     align-items: center; /* Alinha verticalmente ao centro */    
 }
 
+.container_completo_cadastro {
+    display: block;
+    text-align: center;
+    margin: 2em 0; 
+    padding: 2em;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+
+}
+
 .cadastro_titulo {
+    display: block;
    font-size: 18px;
-   text-align: center;
-   margin: 3em 0 5em 0;
+   margin: 3em 0; 
 }
 
 .container_fileira {
+    justify-content: center;
+    align-items: center;
     display: flex;
-    gap: 50px;
+    gap: 25px;
 }
 
 
