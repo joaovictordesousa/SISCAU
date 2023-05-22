@@ -14,8 +14,8 @@
 
 .container_cadastro {
     display: flex;
-    justify-content: center;/* Alinha horizontalmente ao centro */
-    align-items: center;/* Alinha verticalmente ao centro */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center;    /* Alinha verticalmente ao centro */
 }
 
 .container_completo_cadastro {
@@ -171,8 +171,14 @@
         padding: 1em;
     }
 
+    .historico {
+        margin-right: 0.4em;
+        padding: 1em;
+    }
+
     .button {
         display: flex;
         justify-content: center;
     }
+
 }
