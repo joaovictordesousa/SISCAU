@@ -14,8 +14,8 @@
 
 .container_cadastro {
     display: flex;
-    justify-content: center;/* Alinha horizontalmente ao centro */
-    align-items: center;/* Alinha verticalmente ao centro */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center;    /* Alinha verticalmente ao centro */
 }
 
 .container_completo_cadastro {
@@ -180,4 +180,5 @@
         display: flex;
         justify-content: center;
     }
+
 }
