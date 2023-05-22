@@ -145,7 +145,7 @@ td button i:first-child {
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media (max-width: 800px) and (max-width: 1400px){
+@media only screen and (max-width: 500px){
     body {
         background-color: white;
     }

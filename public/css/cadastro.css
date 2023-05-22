@@ -1,5 +1,11 @@
 /* Bill */
 
+.container {
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+}
+
 .container_cadastro {
     display: flex;
     justify-content: center; /* Alinha horizontalmente ao centro */
@@ -16,6 +22,7 @@
     display: flex;
     gap: 50px;
 }
+
 
 .container_fileira label {
     display: flex;
