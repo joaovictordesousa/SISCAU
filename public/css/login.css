@@ -61,7 +61,7 @@ input {
         color: black;
     }
 
-    div {
+    .container_login {
         background: none;
     }
 
@@ -69,7 +69,12 @@ input {
         border: 1px solid black;
     }
 
+    input::placeholder {
+        font-size: 20px;
+    }
+
     div h1 {
         color: black;
     }
+
 }
