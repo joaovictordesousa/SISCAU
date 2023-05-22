@@ -14,10 +14,8 @@
 
 .container_cadastro {
     display: flex;
-    justify-content: center;
-    /* Alinha horizontalmente ao centro */
-    align-items: center;
-    /* Alinha verticalmente ao centro */
+    justify-content: center;/* Alinha horizontalmente ao centro */
+    align-items: center;/* Alinha verticalmente ao centro */
 }
 
 .container_completo_cadastro {
@@ -43,12 +41,17 @@
     align-items: center;
     display: flex;
     gap: 30px;
+    padding: 0.2em;
 }
 
 
 .container_fileira label {
     display: flex;
     font-size: 18px;
+}
+
+.empresa {
+    margin-right: 2em;
 }
 
 .historico {
