@@ -15,9 +15,10 @@
     </header>
 
 <section class="container">
-            <div class="cadastro_titulo">
-                <h1>Guias de recolhimento</h1><br>
-            </div>
+
+    <div class="cadastro_titulo">
+        <h1>Guias de recolhimento</h1><br>
+    </div>
 
             <div id="FormBox">
                 <div class="container_fileira">

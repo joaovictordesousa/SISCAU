@@ -13,6 +13,12 @@
     margin: 2em 0 0 45em;
 }
 
+@media only screen and (max-width: 800px){
+    .logo_header {
+        width: 42%;
+    }
+}
+
 @media only screen and (min-width: 1600px){
 
     .cabecalho {

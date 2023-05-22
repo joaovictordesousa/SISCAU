@@ -52,3 +52,24 @@ input {
     color: white;
     margin: 0;
 }
+
+@media (max-width: 800px){
+
+    body {
+        background: none;
+        background-color: white;
+        color: black;
+    }
+
+    div {
+        background: none;
+    }
+
+    input {
+        border: 1px solid black;
+    }
+
+    div h1 {
+        color: black;
+    }
+}
