@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class conecBanco extends Model
  {
-//     protected $table = 'sua_tabela';
-//     protected $connection = 'sqlsrv';
+    protected $table = 'AuxAgencias';
+    protected $connection = 'pgsql';
  }
