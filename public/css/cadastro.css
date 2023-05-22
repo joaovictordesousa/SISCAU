@@ -171,6 +171,11 @@
         padding: 1em;
     }
 
+    .historico {
+        margin-right: 0.4em;
+        padding: 1em;
+    }
+
     .button {
         display: flex;
         justify-content: center;
