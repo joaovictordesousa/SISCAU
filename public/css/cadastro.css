@@ -9,31 +9,33 @@
     padding: 1em 5em;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
-               -15px -15px 30px #ffffff;
+        -15px -15px 30px #ffffff;
 }
 
 .container_cadastro {
     display: flex;
-    justify-content: center; /* Alinha horizontalmente ao centro */
-    align-items: center; /* Alinha verticalmente ao centro */    
+    justify-content: center;
+    /* Alinha horizontalmente ao centro */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
 }
 
 .container_completo_cadastro {
     display: block;
     text-align: center;
-    margin: 2em 0; 
+    margin: 2em 0;
     padding: 2em;
     border-radius: 30px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
-               -15px -15px 30px #ffffff;
+        -15px -15px 30px #ffffff;
 
 }
 
 .cadastro_titulo {
     display: block;
-   font-size: 18px;
-   margin: 3em 0; 
+    font-size: 18px;
+    margin: 3em 0;
 }
 
 .container_fileira {
@@ -51,7 +53,7 @@
 
 .historico {
     margin-right: 22em;
-    padding: 1em; 
+    padding: 1em;
 }
 
 .CampoInput {
@@ -85,8 +87,8 @@
 }
 
 .button {
-   display: flex;
-   gap: 1em;
+    display: flex;
+    gap: 1em;
 }
 
 .botao-salvar {
@@ -109,7 +111,7 @@
     text-decoration: none;
 }
 
-.botao-cadastro:hover{
+.botao-cadastro:hover {
     background-color: rgb(2, 81, 161);
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
@@ -129,12 +131,12 @@
         font-size: 18px;
         text-align: center;
         margin: 2em 3em 1em 3em;
-     }
+    }
 
     .container_fileira {
         display: block;
     }
-    
+
     #FormBox {
         display: block;
     }
@@ -157,11 +159,11 @@
     .campodual {
         margin: 0 0;
     }
-    
+
     .valor {
         padding: 0.1em;
     }
-    
+
     .numero_nl {
         padding: 1em;
     }
