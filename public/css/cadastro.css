@@ -153,11 +153,16 @@
         text-align: center;
         display: flex;
         justify-content: center;
-        margin-top: 0;
+        margin-top: 10px;
+    }
+
+    .CampoSelect {
+        border-radius: 5px;
+        padding: 10px 0px 10px 9em;
     }
 
     .CampoInput {
-        margin: 0.2 0;
+        margin: 10px 0 10px 0;
     }
 
     .campodual {
@@ -165,7 +170,7 @@
     }
 
     .valor {
-        padding: 0.1em;
+        padding: 1em;
     }
 
     .numero_nl {
