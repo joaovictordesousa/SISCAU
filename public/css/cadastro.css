@@ -54,11 +54,6 @@
     margin-right: 1.3em;
 }
 
-.historico {
-    margin-right: 22.2em;
-    padding: 1em;
-}
-
 .CampoInput {
     padding: 10px 20px;
     border-radius: 4px;
@@ -75,6 +70,7 @@
 
 .CampoSelect {
     border-radius: 5px;
+    padding: 10px 0 9px 90px;
 }
 
 .instituicao_financeira {
@@ -82,11 +78,16 @@
 }
 
 .valor {
-    padding-left: 13em;
+    padding-left: 9.2em;
 }
 
 .numero_nl {
     padding-left: 8.1em;
+}
+
+.historico {
+    margin-right: 21.5em;
+    padding: 1em;
 }
 
 .button {
