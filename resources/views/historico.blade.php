@@ -16,31 +16,27 @@
     </header>
 
     <main>
-    
-    <div class="container_titulo">
-      <span>Guias de recolhimento</span>
-    </div>
 
-
-
-  <div class="container_historico">
-
+    <section class="container_titulo"> 
+        <h1>Guias de recolhimento</h1>
+    </section>
+        
+  <section class="container">
     <div class="divTable">
       <table>
         <thead>
           <tr>
-            <th>Tipo</th>
-            <th>Empresa</th>
-            <th>Valor</th>
+            <th class="th_tipo">Tipo</th>
+            <th class="th_empresa">Empresa</th>
+            <th class="th_valor">Valor</th>
           </tr>
         </thead>
         <tbody>
         </tbody>
       </table>
     </div>
-</div>
+  </section>
 
-    <br><br><br>
       <div class="container_botoes">
           <button class="botao_imprimir">Imprimir</button>
           <a href="{{ route('pesquisa')}}" class="botao_voltar">Voltar</a>
