@@ -127,12 +127,12 @@
 
     .CampoInput {
         margin: 1em 0;
-        width: 100%;
+        width: 80%;
     }
 
     .campodual {
         margin: 0;
-        width: 50%;
+        width: 30%;
     }
 
 }
