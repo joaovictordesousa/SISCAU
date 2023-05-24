@@ -1,3 +1,8 @@
+main {
+    justify-content: center;
+    align-items: center;
+}
+
 .container_titulo {
     text-align: center;
     margin: 5em 0 0 1em;
@@ -5,17 +10,16 @@
     color: black;
 }
 
-.container {
-    margin: 1.5em 20em;
-    padding: 2.5em;
+.container_historico{
+    width: 90%;
+    /* height: 80%; */
     border-radius: 10px;
-    /* border: 2px solid green; */
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-               -15px -15px 30px #ffffff;
+    background: white;
   
     /* box-shadow: 1px 3px 8px 10px gray; Qual lado| Qual altura | Transparencia | Tamanho da Sombra  */
+
+    align-items: center;
+    justify-content: center;
 }
   
 .cabecalho_container {
@@ -33,13 +37,10 @@
 }
 
 .divTable {
-    padding: 24px;
+    padding: 10px;
     width: auto; 
-    height: inherit; 
-    overflow: auto;
-    text-align: center;
-    color: black;
-    font-size: 20px;
+    height:inherit; 
+    overflow:auto;
 }
   
 .divTable::-webkit-scrollbar {
@@ -63,10 +64,10 @@ thead {
     background-color: rgb(162, 160, 160);
 }
 
-.th_empresa {
+/* .th_empresa {
     padding: 0 10px;
     text-align: none;
-}
+} */
   
 tr {
     border-bottom: 1px solid rgb(238, 235, 235)!important;
@@ -111,7 +112,10 @@ td button i:first-child {
 }
 
 .container_botoes {
-    margin: 0 20em;
+    /* margin: 0 20em; */
+    display: flex;
+    margin-bottom: 1em;
+    margin: 0 auto;
 }
 
 .botao_voltar {
@@ -154,11 +158,11 @@ td button i:first-child {
         padding: 1em 3em;
     }
 
-    .container {
-        box-shadow: none;
-        background: none;
-        text-align: center;
-        margin: -50px;
+    .container_historico {
+        width: 90%;
+        height: 80%;
+        border-radius: 10px;
+        background: white;
     }
 
     .divTable {
@@ -169,8 +173,9 @@ td button i:first-child {
     }
 
     .container_botoes {
-        margin: 1em 0;
-        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 1em;
     }
 
     .botao_voltar {
@@ -180,6 +185,7 @@ td button i:first-child {
     .botao_imprimir {
         padding: 15px;
     }
+
 }
 
 

@@ -29,7 +29,7 @@
     margin: 3em 0;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe;
-
+    flex-wrap: wrap;
     display: block;
     padding: 2em 3em;
 }
@@ -96,7 +96,8 @@
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (max-width: 800px) {
+
+@media screen and (max-width: 960px) {
 
     body {
         background-color: white;
@@ -106,6 +107,7 @@
         box-shadow: none;
         background: none;
         text-align: center;
+        margin: 0;
     }
 
     #FormBox {
@@ -113,7 +115,7 @@
     }
 
     .container_quatro {
-        display: block;
+        flex-direction: column;
     }
 
     .container_quatro label {
@@ -125,10 +127,31 @@
 
     .CampoInput {
         margin: 1em 0;
+        width: 100%;
     }
 
     .campodual {
         margin: 0;
+        width: 50%;
     }
 
 }
+
+/* @media screen and (max-width: 800px) {
+    .container_completo {
+        width: 50%;
+        margin: none;
+    }
+} */
+
+@media screen and (max-width: 1130px) {
+
+    .container_completo {
+        box-shadow: none;
+        background: none;
+        text-align: center;
+        margin: 1em 0 0 3em;
+    }
+
+}
+

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: url("../img/imgnov.jpeg");
+    background: url("../img/imgnov.jpeg") no-repeat;
     background-size: cover;
 
 }
@@ -53,7 +53,7 @@ input {
     margin: 0;
 }
 
-@media (max-width: 800px){
+@media (max-width: 991px){
 
     body {
         background: none;
@@ -77,5 +77,9 @@ input {
         color: black;
     }
 
-}
+    .ResetPassword {
+        color: black;
+        font-size: 16px;
+    }
 
+}
