@@ -9,9 +9,9 @@ return [
     | Default Database Connection Name
     |--------------------------------------------------------------------------
     |
-    | Here you may specify which of the database connections below you wish
-    | to use as your default connection for all database work. Of course
-    | you may use many connections at once using the Database library.
+    | Aqui você pode especificar qual das conexões de banco de dados abaixo você deseja
+    | para usar como sua conexão padrão para todo o trabalho de banco de dados. Claro
+    | você pode usar várias conexões ao mesmo tempo usando a biblioteca de banco de dados.
     |
     */
 
@@ -22,14 +22,14 @@ return [
     | Database Connections
     |--------------------------------------------------------------------------
     |
-    | Here are each of the database connections setup for your application.
-    | Of course, examples of configuring each database platform that is
-    | supported by Laravel is shown below to make development simple.
+    | Aqui estão cada uma das conexões de banco de dados configuradas para seu aplicativo.
+    | Claro, exemplos de configuração de cada plataforma de banco de dados que é
+    | suportado pelo Laravel é mostrado abaixo para simplificar o desenvolvimento.
     |
     |
-    | All database work in Laravel is done through the PHP PDO facilities
-    | so make sure you have the driver for your particular database of
-    | choice installed on your machine before you begin development.
+    | Todo o trabalho de banco de dados no Laravel é feito através das instalações do PHP PDO
+    | portanto, certifique-se de ter o driver para seu banco de dados específico de
+    | choice instalado em sua máquina antes de iniciar o desenvolvimento.
     |
     */
 
