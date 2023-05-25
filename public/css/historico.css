@@ -6,15 +6,13 @@
 }
 
 .container {
-    margin: 1.5em 20em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     padding: 2.5em;
     border-radius: 10px;
     /* border: 2px solid green; */
     border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-               -15px -15px 30px #ffffff;
-  
     /* box-shadow: 1px 3px 8px 10px gray; Qual lado| Qual altura | Transparencia | Tamanho da Sombra  */
 }
   
@@ -33,8 +31,11 @@
 }
 
 .divTable {
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
     padding: 24px;
-    width: auto; 
+    width: 70%; 
     height: inherit; 
     overflow: auto;
     text-align: center;
@@ -111,7 +112,9 @@ td button i:first-child {
 }
 
 .container_botoes {
-    margin: 0 20em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
 }
 
 .botao_voltar {
@@ -145,27 +148,33 @@ td button i:first-child {
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 800px){
     body {
         background-color: white;
     }
 
+    .container_titulo {
+        margin: 1em 0;
+    }
+
     .cabecalho {
-        padding: 1em 3em;
+        padding: 2em 0;
     }
 
     .container {
+        padding: 0;
+        margin: 0;
         box-shadow: none;
         background: none;
-        text-align: center;
-        margin: -50px;
-    }
-
-    .divTable {
-        margin: none;
         display: flex;
         justify-content: center;
         align-items: center; 
+    }
+
+    .divTable {   
+        width: 100%;
+        box-shadow: none;
+        background: none;
     }
 
     .container_botoes {

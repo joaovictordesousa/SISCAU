@@ -20,8 +20,10 @@
     <section class="container_titulo"> 
         <h1>Guias de recolhimento</h1>
     </section>
-        
+    
   <section class="container">
+
+  
     <div class="divTable">
       <table>
         <thead>
@@ -35,6 +37,7 @@
         </tbody>
       </table>
     </div>
+
   </section>
 
       <div class="container_botoes">
