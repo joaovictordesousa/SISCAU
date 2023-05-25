@@ -5,17 +5,11 @@
     padding: 0;
 }
 
-.container {
-    padding: 1em 5em;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-        -15px -15px 30px #ffffff;
-}
-
 .container_cadastro {
     display: flex;
     justify-content: center; /* Alinha horizontalmente ao centro */
     align-items: center;    /* Alinha verticalmente ao centro */
+    padding: 1em 5em;
 }
 
 .container_completo_cadastro {
@@ -128,6 +122,11 @@
 
     body {
         background-color: white;
+    }
+
+    .container_completo_cadastro  {
+        box-shadow: none;
+        background: none;
     }
 
     .cadastro_titulo {

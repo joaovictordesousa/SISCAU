@@ -99,6 +99,11 @@
 
 @media screen and (max-width: 960px) {
 
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
     body {
         background-color: white;
     }
@@ -107,7 +112,6 @@
         box-shadow: none;
         background: none;
         text-align: center;
-        margin: 0;
     }
 
     #FormBox {
@@ -126,13 +130,12 @@
     }
 
     .CampoInput {
-        margin: 1em 0;
-        width: 80%;
+        width: 60%;
     }
 
     .campodual {
         margin: 0;
-        width: 30%;
+        width: 20%;
     }
 
 }
@@ -149,8 +152,7 @@
     .container_completo {
         box-shadow: none;
         background: none;
-        text-align: center;
-        margin: 1em 0 0 3em;
+        margin: 0 auto;
     }
 
 }
