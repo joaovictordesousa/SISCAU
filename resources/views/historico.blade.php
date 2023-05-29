@@ -19,7 +19,7 @@
     <main>
 
     <section class="container_titulo"> 
-        <h1>Guias de recolhimento</h1>
+        <h1><b>Guias de recolhimento</b></h1>
     </section>
     
   <section class="container">
@@ -35,6 +35,26 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td value="Tipo">Documento</td>
+            <td value="Empresa">NewCodeTek</td>
+            <td value="Valor">500.000,00</td>
+          </tr>
+          <tr>
+            <td value="Tipo">Documento</td>
+            <td value="Empresa">NewCodeTek</td>
+            <td value="Valor">500.000,00</td>
+          </tr>
+          <tr>
+            <td value="Tipo">Documento</td>
+            <td value="Empresa">NewCodeTek</td>
+            <td value="Valor">500.000,00</td>
+          </tr>
+          <tr>
+            <td value="Tipo">Documento</td>
+            <td value="Empresa">NewCodeTek</td>
+            <td value="Valor">500.000,00</td>
+          </tr>
         </tbody>
       </table>
     </div>
