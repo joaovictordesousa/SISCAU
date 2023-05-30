@@ -15,8 +15,8 @@
 .container_completo_cadastro {
     display: block;
     text-align: center;
-    margin: 2em 0;
-    padding: 2em;
+    margin: 3em 0;
+    padding: 3em;
     border-radius: 30px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
@@ -45,12 +45,7 @@
 }
 
 .empresa {
-    margin-right: 2em;
-}
-
-.historico {
-    margin-right: 22em;
-    padding: 1em;
+    margin-right: 1.3em;
 }
 
 .CampoInput {
@@ -69,6 +64,7 @@
 
 .CampoSelect {
     border-radius: 5px;
+    padding: 10px 0 9px 90px;
 }
 
 .instituicao_financeira {
@@ -76,11 +72,16 @@
 }
 
 .valor {
-    padding-left: 13em;
+    padding-left: 9.2em;
 }
 
 .numero_nl {
-    padding-left: 8.5em;
+    padding-left: 9.9em;
+}
+
+.historico {
+    margin-right: 21.5em;
+    padding: 1em;
 }
 
 .button {
@@ -151,11 +152,16 @@
         text-align: center;
         display: flex;
         justify-content: center;
-        margin-top: 0;
+        margin-top: 10px;
+    }
+
+    .CampoSelect {
+        border-radius: 5px;
+        padding: 10px 0px 10px 9em;
     }
 
     .CampoInput {
-        margin: 0.2 0;
+        margin: 10px 0 10px 0;
     }
 
     .campodual {
@@ -163,7 +169,7 @@
     }
 
     .valor {
-        padding: 0.1em;
+        padding: 1em;
     }
 
     .numero_nl {
