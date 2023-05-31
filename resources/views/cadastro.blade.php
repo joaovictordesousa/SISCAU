@@ -23,11 +23,13 @@
         <h1>Guias de recolhimento</h1><br>
     </div>
 
+        <form action="/events" method="POST">
+            @csrf
             <div id="FormBox">
                 <div class="container_fileira">
                 <div class="tipo_recolhimento">
                 <label>Tipo de recolhimento</label>
-                    <select class="CampoSelect" id="m-documentos" name="" required>
+                    <select class="CampoSelect" id="recolhimento" name="recolhimento" required>
                         <option value="">Documentos</option>
                         <option value=""></option>
                         <option value=""></option>
@@ -37,8 +39,8 @@
             </div>
             <div class="instituicao_financeira">
                     <label>Instituição financeira</label>
-                    <select class="CampoSelect" id="m-documentos" name="" required>
-                        <option value="">Documentos</option>
+                    <select class="CampoSelect" id="financeira" name="financeira" required>
+                        <option value="$">Documentos</option>
                         <option value=""></option>
                         <option value=""></option>
                         <option value=""></option>
@@ -52,7 +54,7 @@
                 <div class="container_fileira">
                 <div class="agencia">
                     <label>Agência</label>
-                        <select class="CampoSelect">
+                        <select class="CampoSelect" id="agencias" name="agencias">
                             <option value="">0000000</option>
                             <option value=""></option>
                             <option value=""></option>
@@ -62,15 +64,15 @@
                     </div>
                     <div class="conta">
                         <label>Conta</label>
-                        <input type="number" class="CampoInput"></input> 
+                        <input type="number" id="contas" name="contas" class="CampoInput"></input> 
                     </div>
                     <div class="contrato">
                         <label>Contrato</label>
-                        <input type="number" class="CampoInput"></input> 
+                        <input type="number" id="contatos" name="contatos" class="CampoInput"></input> 
                     </div>
                     <div class="aditivo">
                         <label>Aditivo</label>
-                        <input type="text" class="CampoInput"></input> 
+                        <input type="text" id="aditivos" name="aditivos" class="CampoInput"></input> 
                     </div>
                     <!---->
                 </div>
@@ -80,15 +82,15 @@
             <div class="container_fileira">
                 <div>
                     <label>Data do GR</label>
-                    <input type="number" class="CampoInput"></input> 
+                    <input type="number" id="datas_grs" name="datas_grs" class="CampoInput"></input> 
                 </div>
                 <div>    
                     <label>Data de validade</label>
-                    <input type="number" class="CampoInput"></input> 
+                    <input type="number" id="data_validade" name="data_validade" class="CampoInput"></input> 
                 </div>
                 <div>
                     <label>Tipo de documento</label>
-                        <select class="CampoSelect">
+                        <select class="CampoSelect" name="documentos" id="documentos">
                             <option value="">Documentos</option>
                             <option value=""></option>
                             <option value=""></option>
@@ -98,7 +100,7 @@
                     </div>
                 <div>    
                     <label>Número</label>
-                    <input type="number" class="CampoInput"></input>
+                    <input type="number" id="numeros" name="numeros" class="CampoInput"></input>
                 </div>
             </div>
             <br><br>
@@ -106,7 +108,7 @@
             <div class="container_fileira">
             <div class="empresa">
                     <label>Empresa</label>
-                        <select class="CampoSelect">
+                        <select class="CampoSelect" id="empresa" name="empresa">
                             <option value="">Empresa</option>
                             <option value=""></option>
                             <option value=""></option>
@@ -116,7 +118,7 @@
             </div>
             <div class="valor">    
                     <label>Valor</label>
-                    <input type="number" class="CampoInput"></input>
+                    <input type="number" id="valores" name="valores" class="CampoInput"></input>
                 </div>
         </div>
         <br><br>
@@ -124,11 +126,11 @@
         <div class="container_fileira">
                 <div class="documento">
                     <label>Documento</label>
-                    <input type="text" class="CampoInput"></input> 
+                    <input type="text" id="documentos" name="documentos" class="CampoInput"></input> 
                 </div>
                 <div class="numero_nl">    
                     <label>Numero da NL</label>
-                    <input type="number" class="CampoInput"></input> 
+                    <input type="number" id="numeros_nls" name="numeros_nls" class="CampoInput"></input> 
                 </div>
         </div>
         <br><br>
@@ -136,10 +138,11 @@
         <div class="container_fileira">
                 <div class="historico">
                     <label>Histórico</label>
-                    <input type="text" class="CampoInput"></input> 
+                    <input type="text" id="historicos" name="historicos" class="CampoInput"></input> 
                 </div>
         </div>
         <br><br><br>
+    </form>
 
         <div class="button">
         <div>
