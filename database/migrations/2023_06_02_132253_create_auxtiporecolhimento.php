@@ -11,22 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('historico', function (Blueprint $table) {
+        Schema::create('auxtiporecolhimento', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo');
-            $table->string('empresa');
-            $table->integer('valor');
+            $table->string('descricao', 30);
+            $table->string('codigocontabil', 10);
             $table->timestamps();
-            // Acima são as tabelas que seram criadas ou pegadas.
         });
-
     }
 
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('historico');
+        Schema::dropIfExists('auxtiporecolhimento');
     }
 };
