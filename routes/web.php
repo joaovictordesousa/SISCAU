@@ -47,7 +47,7 @@ Route::get('/pesquisa', [HistoricoController::class, 'pesquisa'])->name('pesquis
 Route::get('/events', [CadastroController::class, 'store']);
 
 
-  /*Route::get('/verificar-conexao', function () {
+  Route::get('/verificar-conexao', function () {
       try {
           \DB::connection()->getPdo();
           if (\DB::connection()->getDatabaseName()) {
@@ -59,14 +59,6 @@ Route::get('/events', [CadastroController::class, 'store']);
       } catch (\Exception $e) {
          return "Falha na conexão: " . $e->getMessage();
       }
-  });*/
+  });
 
-  try{
-    $conn = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=postgres', 'postgres','password');
-    if($conn) {
-    echo "database conectado";
-    }
-    }catch (PDOException $e){
-    // report error message
-    echo $e->getMessage();
-    }
+  
