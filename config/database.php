@@ -68,7 +68,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '10.115.1.76'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'Siscau'),
+            'database' => env('DB_DATABASE', 'Homologacao'),
             'username' => env('DB_USERNAME', 'UserSiscau'),
             'password' => env('DB_PASSWORD', 'M#vc7AEK'),
             'charset' => 'utf8',
