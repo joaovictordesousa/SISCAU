@@ -60,3 +60,4 @@ Route::post('/cadastro', [CadastroController::class, 'store']);
 //          return "Falha na conexão: " . $e->getMessage();
 //       }
 //   });
+
