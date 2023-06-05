@@ -44,29 +44,20 @@ Route::get('/pesquisa', [CadastroController::class, 'pesquisa'])->name('pesquisa
 
 Route::get('/pesquisa', [HistoricoController::class, 'pesquisa'])->name('pesquisa');
 
-Route::get('/events', [CadastroController::class, 'store']);
+Route::post('/cadastro', [CadastroController::class, 'store']);
 
 
-  /*Route::get('/verificar-conexao', function () {
-      try {
-          \DB::connection()->getPdo();
-          if (\DB::connection()->getDatabaseName()) {
-              return "Conexão bem-sucedida. Banco de dados: " . \DB::connection()->getDatabaseName();
-          } else {
-              return "Conexão bem-sucedida, mas o banco de dados não foi encontrado.";
-          }
+//   Route::get('/verificar-conexao', function () {
+//       try {
+//           \DB::connection()->getPdo();
+//           if (\DB::connection()->getDatabaseName()) {
+//               return "Conexão bem-sucedida. Banco de dados: " . \DB::connection()->getDatabaseName();
+//           } else {
+//               return "Conexão bem-sucedida, mas o banco de dados não foi encontrado.";
+//           }
          
-      } catch (\Exception $e) {
-         return "Falha na conexão: " . $e->getMessage();
-      }
-  });*/
+//       } catch (\Exception $e) {
+//          return "Falha na conexão: " . $e->getMessage();
+//       }
+//   });
 
-  try{
-    $conn = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=postgres', 'postgres','password');
-    if($conn) {
-    echo "database conectado";
-    }
-    }catch (PDOException $e){
-    // report error message
-    echo $e->getMessage();
-    }
