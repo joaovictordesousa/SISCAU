@@ -13,28 +13,49 @@ class CadastroController extends Controller
         return view('pesquisa');
     }
 
-    public function store(request $request) {
-        
-        $Cadastro = new Cadastro;
+    public function store(Request $request)
+    {
+        // Validação dos dados recebidos do formulário
+        $request->validate([
+            'recolhimento' => 'required',
+            'financeira' => 'required',
+            'agencias' => 'required',
+            'contas' => 'required',
+            'contatos' => 'required',
+            'aditivos' => 'required',
+            'datas_grs' => 'required',
+            'data_validade' => 'required',
+            'documentos' => 'required',
+            'numeros' => 'required',
+            'empresa' => 'required',
+            'valores' => 'required',
+            'numeros_nls' => 'required',
+            'historicos' => 'required',
+        ]);
 
-        $Cadastro->recolhimento = $request->recolhimento;
-        $Cadastro->financeira = $request->financeira;
-        $Cadastro->agencias = $request->agencias;
-        $Cadastro->contas = $request->contas;
-        $Cadastro->contatos = $request->contatos;
-        $Cadastro->aditivos = $request->aditivos;
-        $Cadastro->datas_grs = $request->datas_grs;
-        $Cadastro->data_validade = $request->data_validade;
-        $Cadastro->documentos = $request->documentos;
-        $Cadastro->numeros = $request->numeros;
-        $Cadastro->empresa = $request->empresa;
-        $Cadastro->valores = $request->valores;
-        $Cadastro->documentos = $request->documentos;
-        $Cadastro->numeros_nls = $request->numeros_nls;
-        $Cadastro->historicos = $request->historicos;
+        // Criação de um novo registro no banco de dados
+        $cadastrar = new \App\Models\Cadastro; 
 
-        $Cadastro->save();
+        // Atribuição dos valores dos campos
+        $cadastrar->recolhimento = $request->recolhimento;
+        $cadastrar->financeira = $request->financeira;
+        $cadastrar->agencias = $request->agencias;
+        $cadastrar->contas = $request->contas;
+        $cadastrar->contatos = $request->contatos;
+        $cadastrar->aditivos = $request->aditivos;
+        $cadastrar->datas_grs = $request->datas_grs;
+        $cadastrar->data_validade = $request->data_validade;
+        $cadastrar->documentos = $request->documentos;
+        $cadastrar->numeros = $request->numeros;
+        $cadastrar->empresa = $request->empresa;
+        $cadastrar->valores = $request->valores;
+        $cadastrar->numeros_nls = $request->numeros_nls;
+        $cadastrar->historicos = $request->historicos;
 
-        return redirect('/');
+        // Salva o registro no banco de dados
+        $cadastrar->save();
+
+        // Redireciona para uma rota ou retorna uma resposta de sucesso
+        return redirect()->route('cadastro'); 
     }
 }

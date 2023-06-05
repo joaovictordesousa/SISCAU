@@ -23,7 +23,7 @@
         <h1>Guias de recolhimento</h1><br>
     </div>
 
-        <form action="/events" method="POST">
+        <form action="/cadastrar" method="POST">
             @csrf
             <div id="FormBox">
                 <div class="container_fileira">
@@ -31,20 +31,20 @@
                 <label>Tipo de recolhimento</label>
                     <select class="CampoSelect" id="recolhimento" name="recolhimento" required>
                         <option value="">Documentos</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="teste1">teste1</option>
+                        <option value="teste2">teste2</option>
+                        <option value="teste3">teste3</option>
+                        <option value="teste4">teste4</option>
                     </select>
             </div>
             <div class="instituicao_financeira">
                     <label>Instituição financeira</label>
                     <select class="CampoSelect" id="financeira" name="financeira" required>
                         <option value="$">Documentos</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="teste">teste</option>
+                        <option value="teste">teste</option>
+                        <option value="teste">teste</option>
+                        <option value="teste">teste</option>
                     </select>
                     </div>
                 </div>
@@ -56,10 +56,10 @@
                     <label>Agência</label>
                         <select class="CampoSelect" id="agencias" name="agencias">
                             <option value="">0000000</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
+                            <option value="teste">teste</option>
+                            <option value="teste">teste</option>
+                            <option value="teste">teste</option>
+                            <option value="teste">teste</option>
                         </select>
                     </div>
                     <div class="conta">
@@ -82,20 +82,20 @@
             <div class="container_fileira">
                 <div>
                     <label>Data do GR</label>
-                    <input type="number" id="datas_grs" name="datas_grs" class="CampoInput"></input> 
+                    <input type="date" id="datas_grs" name="datas_grs" class="CampoInput"></input> 
                 </div>
                 <div>    
                     <label>Data de validade</label>
-                    <input type="number" id="data_validade" name="data_validade" class="CampoInput"></input> 
+                    <input type="date" id="data_validade" name="data_validade" class="CampoInput"></input> 
                 </div>
                 <div>
                     <label>Tipo de documento</label>
                         <select class="CampoSelect" name="documentos" id="documentos">
                             <option value="">Documentos</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
+                            <option value="">teste</option>
+                            <option value="">teste</option>
+                            <option value="">teste</option>
+                            <option value="">teste</option>
                         </select>
                     </div>
                 <div>    
@@ -110,10 +110,10 @@
                     <label>Empresa</label>
                         <select class="CampoSelect" id="empresa" name="empresa">
                             <option value="">Empresa</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
+                            <option value="teste">teste</option>
+                            <option value="teste">teste</option>
+                            <option value="teste">teste</option>
+                            <option value="teste">teste</option>
                         </select>
             </div>
             <div class="valor">    
