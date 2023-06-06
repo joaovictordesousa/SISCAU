@@ -8,15 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cadastro extends Model
 {
     use HasFactory;
-
-    protected $table = 'GuiasRecolhimento';
     protected $fillable = [
-        'recolhimento',
-        'financeira',
-        'agencias',
-        'contas',
-        'contatos',
-        'aditivos',
         'datas_grs',
         'data_validade',
         'documentos',
@@ -27,3 +19,4 @@ class Cadastro extends Model
         'historicos',
     ];
 }
+                                   

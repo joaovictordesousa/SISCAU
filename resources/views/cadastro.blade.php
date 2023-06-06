@@ -30,7 +30,7 @@
                 <div class="tipo_recolhimento">
                 <label>Tipo de recolhimento</label>
                     <select class="CampoSelect" id="recolhimento" name="recolhimento" required>
-                        <option value="">Documentos</option>
+                        <option value="">Tipo de recolhimento</option>
                         <option value="teste1">teste1</option>
                         <option value="teste2">teste2</option>
                         <option value="teste3">teste3</option>
@@ -40,7 +40,7 @@
             <div class="instituicao_financeira">
                     <label>Instituição financeira</label>
                     <select class="CampoSelect" id="financeira" name="financeira" required>
-                        <option value="$">Documentos</option>
+                        <option value="">Instituição financeira</option>
                         <option value="teste">teste</option>
                         <option value="teste">teste</option>
                         <option value="teste">teste</option>
@@ -55,7 +55,7 @@
                 <div class="agencia">
                     <label>Agência</label>
                         <select class="CampoSelect" id="agencias" name="agencias">
-                            <option value="">0000000</option>
+                            <option value="">Agência</option>
                             <option value="teste">teste</option>
                             <option value="teste">teste</option>
                             <option value="teste">teste</option>
@@ -64,15 +64,15 @@
                     </div>
                     <div class="conta">
                         <label>Conta</label>
-                        <input type="number" id="contas" name="contas" class="CampoInput"></input> 
+                        <input type="number" id="numeroconta" name="numeroconta" class="CampoInput"></input> 
                     </div>
                     <div class="contrato">
                         <label>Contrato</label>
-                        <input type="number" id="contatos" name="contatos" class="CampoInput"></input> 
+                        <input type="number" id="numerocontrato" name="numerocontrato" class="CampoInput"></input> 
                     </div>
-                    <div class="aditivo">
+                    <div class="aditivos">
                         <label>Aditivo</label>
-                        <input type="text" id="aditivos" name="aditivos" class="CampoInput"></input> 
+                        <input type="text" id="aditivo" name="aditivo" class="CampoInput"></input> 
                     </div>
                     <!---->
                 </div>
@@ -82,16 +82,16 @@
             <div class="container_fileira">
                 <div>
                     <label>Data do GR</label>
-                    <input type="date" id="datas_grs" name="datas_grs" class="CampoInput"></input> 
+                    <input type="date" id="datagr" name="datagr" class="CampoInput"></input> 
                 </div>
                 <div>    
                     <label>Data de validade</label>
-                    <input type="date" id="data_validade" name="data_validade" class="CampoInput"></input> 
+                    <input type="date" id="datavalidade" name="datavalidade" class="CampoInput"></input> 
                 </div>
                 <div>
                     <label>Tipo de documento</label>
                         <select class="CampoSelect" name="documentos" id="documentos">
-                            <option value="">Documentos</option>
+                            <option value="">Tipo de documento</option>
                             <option value="">teste</option>
                             <option value="">teste</option>
                             <option value="">teste</option>
@@ -100,7 +100,7 @@
                     </div>
                 <div>    
                     <label>Número</label>
-                    <input type="number" id="numeros" name="numeros" class="CampoInput"></input>
+                    <input type="number" id="numero" name="numero" class="CampoInput"></input>
                 </div>
             </div>
             <br><br>
@@ -109,8 +109,7 @@
             <div class="empresa">
                     <label>Empresa</label>
                         <select class="CampoSelect" id="empresa" name="empresa">
-                            <option value="">Empresa</option>
-                            <option value="teste">teste</option>
+                            <option value="">Empresa</option>       <option value="teste000000000000000000">teste</option>
                             <option value="teste">teste</option>
                             <option value="teste">teste</option>
                             <option value="teste">teste</option>
@@ -118,7 +117,7 @@
             </div>
             <div class="valor">    
                     <label>Valor</label>
-                    <input type="number" id="valores" name="valores" class="CampoInput"></input>
+                    <input type="number" id="valor" name="valor" class="CampoInput"></input>
                 </div>
         </div>
         <br><br>
@@ -126,7 +125,7 @@
         <div class="container_fileira">
                 <div class="documento">
                     <label>Documento</label>
-                    <input type="text" id="documentos" name="documentos" class="CampoInput"></input> 
+                    <input type="text" id="numerodocumento" name="numerodocumento" class="CampoInput"></input> 
                 </div>
                 <div class="numero_nl">    
                     <label>Numero da NL</label>
@@ -136,9 +135,9 @@
         <br><br>
 
         <div class="container_fileira">
-                <div class="historico">
+                <div class="historicos">
                     <label>Histórico</label>
-                    <input type="text" id="historicos" name="historicos" class="CampoInput"></input> 
+                    <input type="text" id="historico" name="historico" class="CampoInput"></input> 
                 </div>
         </div>
         <br><br><br>
