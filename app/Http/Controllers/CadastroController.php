@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Cadastro;
+use App\Models\GuiasRecolhimento;
 
 class CadastroController extends Controller
 {
@@ -13,28 +14,53 @@ class CadastroController extends Controller
         return view('pesquisa');
     }
 
-    public function store(request $request) {
-        
-        $Cadastro = new Cadastro;
+    public function store(Request $request)
+    {
+        // Validação dos dados recebidos do formulário
+        $request->validate([
+            'auxtiporecolhimentoid' => 'required',
+            'auxinstituicaofinanceiraid' => 'required',
+            'auxagenciaid' => 'required',
+            'auxempresaid' => 'required',
+            'datagr' => 'required',
+            'datavalidade' => 'required',
+            'auxtipodocumentoid' => 'required',
+            'numero' => 'required',
+            'numeroconta' => 'required',
+            'numerocontrato' => 'required',
+            'aditivo' => 'required',
+            'valor' => 'required',
+            'numerodocumento' => 'required',
+            'numeronl' => 'required',
+            'historico' => 'required',
+        ]);
 
-        $Cadastro->recolhimento = $request->recolhimento;
-        $Cadastro->financeira = $request->financeira;
-        $Cadastro->agencias = $request->agencias;
-        $Cadastro->contas = $request->contas;
-        $Cadastro->contatos = $request->contatos;
-        $Cadastro->aditivos = $request->aditivos;
-        $Cadastro->datas_grs = $request->datas_grs;
-        $Cadastro->data_validade = $request->data_validade;
-        $Cadastro->documentos = $request->documentos;
-        $Cadastro->numeros = $request->numeros;
-        $Cadastro->empresa = $request->empresa;
-        $Cadastro->valores = $request->valores;
-        $Cadastro->documentos = $request->documentos;
-        $Cadastro->numeros_nls = $request->numeros_nls;
-        $Cadastro->historicos = $request->historicos;
+        // Criação de um novo registro no banco de dados 
+        $cadastrar = GuiasRecolhimento::create([
+            'auxtiporecolhimentoid' => $request->input('auxtiporecolhimentoid'),
+            'auxinstituicaofinanceiraid' => $request->input('auxinstituicaofinanceiraid'),
+            'auxagenciaid' => $request->input('auxagenciaid'),
+            'auxempresaid' => $request->input('auxempresaid'),
+            'datagr' => $request->input('datagr'),
+            'datavalidade' => $request->input('datavalidade'),
+            'auxtipodocumentoid' => $request->input('auxtipodocumentoid'),
+            'numero' => $request->input('numero'),
+            'numeroconta' => $request->input('numeroconta'),
+            'numerocontrato' => $request->input('numerocontrato'),
+            'aditivo' => $request->input('aditivo'),
+            'valor' => $request->input('valor'),
+            'numerodocumento' => $request->input('numerodocumento'),
+            'numeronl' => $request->input('numeronl'),
+            'historico' => $request->input('historico'),
+        ]);
 
-        $Cadastro->save();
+        // Atribuição dos valores dos campos
+       
 
-        return redirect('/');
+        // Salva o registro no banco de dados
+        $cadastrar->save();
+
+        // Redireciona para uma rota ou retorna uma resposta de sucesso
+        return redirect()->route('cadastro'); 
     }
 }
