@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Baixas extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'guiarecolhimento',
+        'processo',
+        'data',
+        'numeronl',
+        'mensagem',
+        'datamensagem',
+    ];
+
 }

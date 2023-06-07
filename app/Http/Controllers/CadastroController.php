@@ -51,7 +51,7 @@ class CadastroController extends Controller
             'valor' => $request->input('valor'),
             'numerodocumento' => $request->input('numerodocumento'),
             'numeronl' => $request->input('numeronl'),
-            'historico' => $request->input('historico'),
+            'c' => $request->input('historico'),
         ]);
 
         // Atribuição dos valores dos campos
