@@ -36,7 +36,7 @@ class CadastroController extends Controller
         ]);
 
         // Criação de um novo registro no banco de dados 
-        $cadastrar = GuiasRecolhimento::create([
+        $cadastro = GuiasRecolhimento::create([
             'auxtiporecolhimentoid' => $request->input('auxtiporecolhimentoid'),
             'auxinstituicaofinanceiraid' => $request->input('auxinstituicaofinanceiraid'),
             'auxagenciaid' => $request->input('auxagenciaid'),
@@ -58,9 +58,9 @@ class CadastroController extends Controller
        
 
         // Salva o registro no banco de dados
-        $cadastrar->save();
+        $cadastro->save();
 
         // Redireciona para uma rota ou retorna uma resposta de sucesso
-        return redirect()->route('cadastro'); 
+        return redirect()->route('/cadastro'); 
     }
 }

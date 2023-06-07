@@ -15,12 +15,6 @@ class HistoricoController extends Controller
 
     public function index(Request $request)
     {
-        $historicos = Historico::query()
-            ->when($request->filled('nome'), function ($query) use ($request) {
-                $query->where('nome', 'like', '%' . $request->nome . '%');
-            })
-            ->get();
 
-        return view('historico.index', compact('historicos'));
     }
 }

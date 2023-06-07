@@ -23,7 +23,7 @@
         <h1>Guias de recolhimento</h1><br>
     </div>
 
-        <form action="/cadastrar" method="POST">
+        <form action="/cadastro" method="POST">
             @csrf
             <div id="FormBox">
                 <div class="container_fileira">
