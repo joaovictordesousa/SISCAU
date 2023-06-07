@@ -45,19 +45,3 @@ Route::get('/pesquisa', [CadastroController::class, 'pesquisa'])->name('pesquisa
 Route::get('/pesquisa', [HistoricoController::class, 'pesquisa'])->name('pesquisa');
 
 Route::post('/cadastro', [CadastroController::class, 'store']);
-
-
-//   Route::get('/verificar-conexao', function () {
-//       try {
-//           \DB::connection()->getPdo();
-//           if (\DB::connection()->getDatabaseName()) {
-//               return "Conexão bem-sucedida. Banco de dados: " . \DB::connection()->getDatabaseName();
-//           } else {
-//               return "Conexão bem-sucedida, mas o banco de dados não foi encontrado.";
-//           }
-         
-//       } catch (\Exception $e) {
-//          return "Falha na conexão: " . $e->getMessage();
-//       }
-//   });
-
