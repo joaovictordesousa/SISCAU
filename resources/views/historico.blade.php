@@ -23,7 +23,6 @@
     </section>
     
   <section class="container">
-
   
     <div class="divTable">
       <table>

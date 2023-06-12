@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Cadastro;
+use App\Models\AuxTipoRecolhimento;
 use App\Models\GuiasRecolhimento;
 
 class CadastroController extends Controller
@@ -14,9 +15,23 @@ class CadastroController extends Controller
         return view('pesquisa');
     }
 
+    public function cadastro()
+    {
+
+        $auxtiporecolhimento = AuxTipoRecolhimento::all();
+        dd($auxtiporecolhimento);
+        // return view('cadastro', [
+        //   'auxtiporecolhimento' => $auxtiporecolhimento,
+        // ]);
+
+       
+    }
+
+
     public function store(Request $request)
     {
         // Validação dos dados recebidos do formulário
+
         $request->validate([
             'auxtiporecolhimentoid' => 'required',
             'auxinstituicaofinanceiraid' => 'required',
@@ -51,7 +66,7 @@ class CadastroController extends Controller
             'valor' => $request->input('valor'),
             'numerodocumento' => $request->input('numerodocumento'),
             'numeronl' => $request->input('numeronl'),
-            'c' => $request->input('historico'),
+            'historico' => $request->input('historico'),
         ]);
 
         // Atribuição dos valores dos campos
@@ -62,5 +77,6 @@ class CadastroController extends Controller
 
         // Redireciona para uma rota ou retorna uma resposta de sucesso
         return redirect()->route('/cadastro'); 
+        
     }
 }

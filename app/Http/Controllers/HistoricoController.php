@@ -3,18 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Controllers\Historico;
 
 class HistoricoController extends Controller
 {
     //
-    public function pesquisa()
+    public function historico()
     {
-        return view('pesquisa');
+        // Method logic goes here
     }
 
-    public function index(Request $request)
-    {
-
-    }
 }
