@@ -45,5 +45,3 @@ Route::get('/pesquisa', [CadastroController::class, 'pesquisa'])->name('pesquisa
 Route::get('/historico', [HistoricoController::class, 'historico'])->name('historico');
 //
 Route::post('/cadastro', [CadastroController::class, 'store']);
-//
-
