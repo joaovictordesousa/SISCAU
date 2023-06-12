@@ -11,5 +11,7 @@ class PesquisaController extends Controller
     {
         return view('cadastro');
     }
+
+
 }
 

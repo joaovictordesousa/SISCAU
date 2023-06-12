@@ -23,7 +23,7 @@
         <h1>Guias de recolhimento</h1><br>
     </div>
 
-        <form action="/cadastrar" method="POST">
+        <form action="/cadastro" method="POST">
             @csrf
             <div id="FormBox">
                 <div class="container_fileira">
@@ -31,12 +31,12 @@
                 <label>Tipo de recolhimento</label>
                     <select class="CampoSelect" id="recolhimento" name="recolhimento" required>
                         <option value="">Tipo de recolhimento</option>
-                        <option value="teste1">teste1</option>
-                        <option value="teste2">teste2</option>
-                        <option value="teste3">teste3</option>
-                        <option value="teste4">teste4</option>
+                        @foreach ($auxtiporecolhimento as $item)
+                        <option value="{{ $item->id }}">{{ $item->nome }}</option>
+                        @endforeach
                     </select>
             </div>
+            
             <div class="instituicao_financeira">
                     <label>Instituição financeira</label>
                     <select class="CampoSelect" id="financeira" name="financeira" required>

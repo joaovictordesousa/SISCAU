@@ -15,7 +15,7 @@ class Baixas extends Model
         'data',
         'numeronl',
         'mensagem',
-        'datamensagem',
+        'datamensagem'
     ];
 
 }

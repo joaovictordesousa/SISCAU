@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class AuxInstituicoesFinanceiras extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'descricao'
+    ];
 }
