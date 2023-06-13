@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('auxtiporecolhimento', function (Blueprint $table) {
             $table->id();
-            $table->string('descricao', 30);
-            $table->string('codigocontabil', 10);
+            $table->string('descricao');
+            $table->string('codigocontabil');
             $table->timestamps();
         });
     }

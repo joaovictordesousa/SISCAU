@@ -10,6 +10,8 @@ use App\Models\DB;
 class AuxTipoRecolhimento extends Model
 {
     use HasFactory;
+
+    protected $table = 'auxtiporecolhimento';
     protected $fillable = [
         'descricao',
         'codigocontabil'
