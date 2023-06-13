@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,19 +11,31 @@
    
 </head>
 <body>
+  <section>
     <div class="container_login">
+      <div class="row">
         <h1>Login</h1>
-        <form action="testLogin.php" method="POST">
-            <input type="Text" name="nome-sobrenome" placeholder="Nome e Sobrenome">
+        <div class="col-md-6 offset-md-3">
+         <form method="POST" action="{{route('auth.user')}}">
+            @csrf
+            <div class="form-group">
+             <label for="exampleInputEmail">Email de acesso</label>    
+             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
             <br><br>
-            <input type="Password" name="senha" placeholder="Senha">
+            <div class="form-group">
+             <label for="exampleInputEmail">Password</label>
+             <input type="Password" name="password" class="form-control" id="exampleInputEmail1">
+            </div>
             <br><br>
             <a class="ResetPassword" href="#">Esqueci minha senha</a>
             <br><br>
-            <input class="InputSubmit" type="submit" name="submit" value="Entrar">
+            <button type="submit" class="btn btn-primary">Login</button>
             <br>
-            
-        </form>
+         </form>
+        </div>
+      </div>
     </div>
+  </section>
 </body>
 </html>
