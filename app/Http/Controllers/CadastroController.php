@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Cadastro;
 use App\Models\AuxTipoRecolhimento;
 use App\Models\GuiasRecolhimento;
+use App\Models\AuxInstituicoesFinanceiras;
 
 class CadastroController extends Controller
 {
@@ -19,13 +20,18 @@ class CadastroController extends Controller
     {
 
         $auxtiporecolhimento = AuxTipoRecolhimento::all();
-        dd($auxtiporecolhimento);
-        // return view('cadastro', [
-        //   'auxtiporecolhimento' => $auxtiporecolhimento,
-        // ]);
+            return view('cadastro', [
+            'auxtiporecolhimento' => $auxtiporecolhimento
+        ]);
 
-       
     }
+
+    // public function cadastro1() {
+    //     $auxinstituicoesfinanceiras = AuxInstituicoesFinanceiras::all();
+    //     return view('cadastro', [
+    //     'auxinstituicoesfinanceiras' => $auxinstituicoesfinanceiras
+    // ]);
+    // }
 
 
     public function store(Request $request)
