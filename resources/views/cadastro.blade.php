@@ -21,7 +21,6 @@
 
     <div class="cadastro_titulo">
         <h1>Guias de recolhimento</h1><br>
-        <hr>
     </div>
 
         <form action="/cadastro" method="POST">
@@ -154,3 +153,8 @@
     </div>
 </section>
 <br><br><br><br>        
+
+
+
+
+
