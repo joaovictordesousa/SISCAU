@@ -25,25 +25,28 @@
 
         <form action="/cadastro" method="POST">
             @csrf
-            <div id="FormBox">  
+            <div id="FormBox">
                 <div class="container_fileira">
                 <div class="tipo_recolhimento">
                 <label>Tipo de recolhimento</label>
-                    <select class="CampoSelect" id="recolhimento" name="recolhimento" required>
-                        <option value="">Tipo de recolhimento</option>
-                        @foreach ($auxtiporecolhimento as $item)
-                        <option value="{{ $item->id }}">{{ $item->id }}</option>
-                        @endforeach
+                    <select class="CampoSelect" id="recolhimento" name="auxtiporecolhimentoid" required>
+                    <option value="">Instituição financeira</option>
+                    @foreach($opcoes as $opcao)
+                        <option value="{{ $opcao->id }}">{{ $opcao->descricao }}</option>
+                    @endforeach
+
                     </select>
             </div>
             
             <div class="instituicao_financeira">
                     <label>Instituição financeira</label>
-                    <select class="CampoSelect" id="financeira" name="financeira" required>
-                        <option value="">Instituição financeira</option>
-                       
-                        <option value=""></option>
-                     
+                    <select class="CampoSelect" id="financeira" name="auxinstituicaofinanceiraid" required>
+                        <option value="Instituição financeira">Instituição financeira</option>
+
+                        @foreach($financas as $fin)
+                        <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
+                        @endforeach
+
                     </select>
                     </div>
                 </div>
@@ -53,12 +56,13 @@
                 <div class="container_fileira">
                 <div class="agencia">
                     <label>Agência</label>
-                        <select class="CampoSelect" id="agencias" name="agencias">
+                        <select class="CampoSelect" id="agencias" name="auxagenciaid">
                             <option value="">Agência</option>
-                            <option value="teste">teste</option>
-                            <option value="teste">teste</option>
-                            <option value="teste">teste</option>
-                            <option value="teste">teste</option>
+
+                            @foreach($agencia as $agen)
+                            <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
+                            @endforeach
+                          
                         </select>
                     </div>
                     <div class="conta">
@@ -89,12 +93,10 @@
                 </div>
                 <div>
                     <label>Tipo de documento</label>
-                        <select class="CampoSelect" name="documentos" id="documentos">
-                            <option value="">Tipo de documento</option>
-                            <option value="">teste</option>
-                            <option value="">teste</option>
-                            <option value="">teste</option>
-                            <option value="">teste</option>
+                        <select class="CampoSelect" name="auxtipodocumentoid" id="documentos">
+                        @foreach($documento as $docu)
+                            <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
+                        @endforeach
                         </select>
                     </div>
                 <div>    
@@ -107,12 +109,11 @@
             <div class="container_fileira">
             <div class="empresa">
                     <label>Empresa</label>
-                        <select class="CampoSelect" id="empresa" name="empresa">
-                            <option value="">Empresa</option>       <option value="teste000000000000000000">teste</option>
-                            <option value="teste">teste</option>
-                            <option value="teste">teste</option>
-                            <option value="teste">teste</option>
-                        </select>
+                    <select class="CampoSelect" id="empresa" name="auxempresaid">
+                    @foreach($empresa as $empre)       
+                        <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
+                    @endforeach      
+                    </select>
             </div>
             <div class="valor">    
                     <label>Valor</label>
@@ -128,7 +129,7 @@
                 </div>
                 <div class="numero_nl">    
                     <label>Numero da NL</label>
-                    <input type="number" id="numeros_nls" name="numeros_nls" class="CampoInput"></input> 
+                    <input type="number" id="numeros_nls" name="numeronl" class="CampoInput"></input> 
                 </div>
         </div>
         <br><br>
@@ -147,14 +148,9 @@
             <button class="botao-salvar">Salvar</button>
         </div>
         <div>
-            <a href="{{ route('pesquisa')}}" class="botao-cadastro">Cancelar</a>
+            <a href="" class="botao-cadastro">Cancelar</a>
         </div>
         </div>
     </div>
 </section>
 <br><br><br><br>        
-
-
-
-
-

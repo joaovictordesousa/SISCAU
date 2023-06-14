@@ -9,6 +9,7 @@ class AuxTipoDocumento extends Model
 {
     use HasFactory;
 
+    protected $table = 'auxtipodocumento';
     protected $fillable = [
         'descricao'
     ];
