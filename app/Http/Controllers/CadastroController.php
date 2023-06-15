@@ -12,14 +12,11 @@ use App\Models\AuxEmpresas;
 
 class CadastroController extends Controller
 {
-    public function pesquisa()
-    {
-        return view('pesquisa');
-    }
 
+    
     public function RenderCadastroView() {
 
-        $opcoes = AuxTipoRecolhimento::all();
+        $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
         $agencia = AuxAgencias::all();
         $documento = AuxTipoDocumento::all();
@@ -27,7 +24,7 @@ class CadastroController extends Controller
 
         // dd($opcoes);
         return view('cadastro', [
-        'opcoes' => $opcoes, 
+        'recolhimentos' => $recolhimentos, 
         'financas' => $financas,
         'agencia' => $agencia,
         'documento' => $documento,

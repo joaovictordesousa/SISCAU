@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PesquisaController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\HistoricoController;
-use Illuminate\Support\Facades\Cadastro;
 
 
 /*
@@ -23,8 +22,8 @@ Route::get('/', function () {
     return view('pesquisa');
 });
 
-Route::get('/pesquisa', [PesquisaController::class, 'RenderPesquisaView'])->name('pesquisa');
-Route::get('/historico', [HistoricoController::class, 'RenderHistoricoView'])->name('ResultadoHistorico');
+Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
+Route::get('/historico', [HistoricoController::class, 'historico'])->name('ResultadoHistorico');
 Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name('NovaGuia');
 
 Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGuia');

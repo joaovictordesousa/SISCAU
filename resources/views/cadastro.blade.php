@@ -31,8 +31,8 @@
                 <label>Tipo de recolhimento</label>
                     <select class="CampoSelect" id="recolhimento" name="auxtiporecolhimentoid" required>
                     <option value="">Instituição financeira</option>
-                    @foreach($opcoes as $opcao)
-                        <option value="{{ $opcao->id }}">{{ $opcao->descricao }}</option>
+                    @foreach($recolhimentos as $recolhimento)
+                        <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
                     @endforeach
 
                     </select>
@@ -85,11 +85,11 @@
             <div class="container_fileira">
                 <div>
                     <label>Data do GR</label>
-                    <input type="date" id="datagr" name="datagr" class="CampoInput"></input> 
+                    <input type="date" id="datagr" name="datagr" class="CampoInput" required></input> 
                 </div>
                 <div>    
                     <label>Data de validade</label>
-                    <input type="date" id="datavalidade" name="datavalidade" class="CampoInput"></input> 
+                    <input type="date" id="datavalidade" name="datavalidade" class="CampoInput" required></input> 
                 </div>
                 <div>
                     <label>Tipo de documento</label>
@@ -148,7 +148,7 @@
             <button class="botao-salvar">Salvar</button>
         </div>
         <div>
-            <a href="" class="botao-cadastro">Cancelar</a>
+            <a href="{{ route('pesquisa')  }}" class="botao-cadastro">Cancelar</a>
         </div>
         </div>
     </div>
