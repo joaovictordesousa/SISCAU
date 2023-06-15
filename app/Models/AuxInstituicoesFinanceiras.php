@@ -10,7 +10,7 @@ class AuxInstituicoesFinanceiras extends Model
     use HasFactory;
 
     protected $table = 'auxinstituicoesfinanceiras';
-
+    
     protected $fillable = [
         'descricao'
     ];

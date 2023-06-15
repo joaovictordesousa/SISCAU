@@ -12,8 +12,6 @@ use App\Models\AuxEmpresas;
 
 class CadastroController extends Controller
 {
-
-    
     public function RenderCadastroView() {
 
         $recolhimentos = AuxTipoRecolhimento::all();
