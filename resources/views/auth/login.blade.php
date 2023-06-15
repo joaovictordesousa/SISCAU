@@ -17,7 +17,7 @@
 
             <div>
                 <x-label for="login" value="{{ __('Login') }}" /> 
-                <x-input id="login" class="block mt-1 w-full" type="login" name="login" style="padding: 0.6em; border: 1px solid gray" :value="old('login')" required autofocus autocomplete="username" />
+                <x-input id="login" class="block mt-1 w-full" type="login" name="login" style="padding: 0.5em; border: 1px solid gray" :value="old('login')" required autofocus autocomplete="username" />
             </div>
 
             <div class="mt-4">
