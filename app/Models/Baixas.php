@@ -9,6 +9,7 @@ class Baixas extends Model
 {
     use HasFactory;
 
+    protected $table = 'baixas';
     protected $fillable = [
         'guiarecolhimento',
         'processo',

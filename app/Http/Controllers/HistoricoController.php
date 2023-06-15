@@ -12,5 +12,4 @@ class HistoricoController extends Controller
         // Method logic goes here
         return view('historico');
     }
-
 }

@@ -9,6 +9,7 @@ class GuiasRecolhimento extends Model
 {
     use HasFactory;
 
+    protected $table = 'guiasrecolhimento';
     protected $fillable = [
         'auxtiporecolhimentoid',
         'auxinstituicaofinanceiraid',
@@ -24,6 +25,7 @@ class GuiasRecolhimento extends Model
         'valor',
         'numerodocumento',
         'numeronl',
-        'numeronl'
+        'numeronl',
+        'historico'
     ];
 }

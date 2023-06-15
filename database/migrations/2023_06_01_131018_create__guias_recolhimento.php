@@ -6,20 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('guiasrecolhimento', function (Blueprint $table) {
+        Schema::create('guia_de_recolhimentos', function (Blueprint $table) {
             $table->id();
-            $table->integer('auxtiporecolhimentoid');
-            $table->integer('auxinstituicaofinanceiraid');
-            $table->integer('auxagenciaid');
-            $table->integer('auxempresaid');
+            $table->unsignedBigInteger('auxtiporecolhimentoid');
+            $table->unsignedBigInteger('auxinstituicaofinanceiraid');
+            $table->unsignedBigInteger('auxagenciaid');
+            $table->unsignedBigInteger('auxempresaid');
             $table->date('datagr');
             $table->date('datavalidade');
-            $table->integer('auxtipodocumentoid');
+            $table->unsignedBigInteger('auxtipodocumentoid');
             $table->string('numero', 10);
             $table->string('numeroconta', 10);
             $table->string('numerocontrato', 10);
@@ -29,14 +26,16 @@ return new class extends Migration
             $table->string('numeronl', 11);
             $table->string('historico', 512);
             $table->timestamps();
+
+            $table->foreign('auxtiporecolhimentoid')->references('id')->on('auxtiporecolhimento');
+            $table->foreign('auxinstituicaofinanceiraid')->references('id')->on('auxinstituicaofinanceiras');
+            $table->foreign('auxagenciaid')->references('id')->on('auxagencias');
+            $table->foreign('auxempresaid')->references('id')->on('auxempresas');
+            $table->foreign('auxtipodocumentoid')->references('id')->on('auxtipodocumento');
         });
     }
-
-    /**
-     * Reverse the migrations. 
-     */
     public function down(): void
     {
-        Schema::dropIfExists('guiasrecolhimento');
+        Schema::dropIfExists('guia_de_recolhimentos');
     }
 };

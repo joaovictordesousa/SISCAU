@@ -9,6 +9,8 @@ class AuxAgencias extends Model
 {
     use HasFactory;
 
+    protected $table = 'auxagencias';
+
     protected $fillable = [
         'auxinstituicoesfinanceiraid',
         'codigo',

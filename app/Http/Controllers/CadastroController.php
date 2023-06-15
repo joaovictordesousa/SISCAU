@@ -2,87 +2,45 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AuxAgencias;
+use App\Models\AuxInstituicoesFinanceiras;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Cadastro;
 use App\Models\AuxTipoRecolhimento;
 use App\Models\GuiasRecolhimento;
-use App\Models\AuxInstituicoesFinanceiras;
+use App\Models\AuxTipoDocumento;
+use App\Models\AuxEmpresas;
 
 class CadastroController extends Controller
 {
-    //
     public function pesquisa()
     {
         return view('pesquisa');
     }
 
-    public function cadastro()
-    {
+    public function RenderCadastroView() {
 
-        $auxtiporecolhimento = AuxTipoRecolhimento::all();
-            return view('cadastro', [
-            'auxtiporecolhimento' => $auxtiporecolhimento
+        $opcoes = AuxTipoRecolhimento::all();
+        $financas = AuxInstituicoesFinanceiras::all();
+        $agencia = AuxAgencias::all();
+        $documento = AuxTipoDocumento::all();
+        $empresa = AuxEmpresas::all();
+
+        // dd($opcoes);
+        return view('cadastro', [
+        'opcoes' => $opcoes, 
+        'financas' => $financas,
+        'agencia' => $agencia,
+        'documento' => $documento,
+        'empresa' => $empresa
         ]);
 
+        // all = select na tabela.
     }
 
-    // public function cadastro1() {
-    //     $auxinstituicoesfinanceiras = AuxInstituicoesFinanceiras::all();
-    //     return view('cadastro', [
-    //     'auxinstituicoesfinanceiras' => $auxinstituicoesfinanceiras
-    // ]);
-    // }
-
-
-    public function store(Request $request)
-    {
-        // Validação dos dados recebidos do formulário
-
-        $request->validate([
-            'auxtiporecolhimentoid' => 'required',
-            'auxinstituicaofinanceiraid' => 'required',
-            'auxagenciaid' => 'required',
-            'auxempresaid' => 'required',
-            'datagr' => 'required',
-            'datavalidade' => 'required',
-            'auxtipodocumentoid' => 'required',
-            'numero' => 'required',
-            'numeroconta' => 'required',
-            'numerocontrato' => 'required',
-            'aditivo' => 'required',
-            'valor' => 'required',
-            'numerodocumento' => 'required',
-            'numeronl' => 'required',
-            'historico' => 'required',
-        ]);
-
-        // Criação de um novo registro no banco de dados 
-        $cadastro = GuiasRecolhimento::create([
-            'auxtiporecolhimentoid' => $request->input('auxtiporecolhimentoid'),
-            'auxinstituicaofinanceiraid' => $request->input('auxinstituicaofinanceiraid'),
-            'auxagenciaid' => $request->input('auxagenciaid'),
-            'auxempresaid' => $request->input('auxempresaid'),
-            'datagr' => $request->input('datagr'),
-            'datavalidade' => $request->input('datavalidade'),
-            'auxtipodocumentoid' => $request->input('auxtipodocumentoid'),
-            'numero' => $request->input('numero'),
-            'numeroconta' => $request->input('numeroconta'),
-            'numerocontrato' => $request->input('numerocontrato'),
-            'aditivo' => $request->input('aditivo'),
-            'valor' => $request->input('valor'),
-            'numerodocumento' => $request->input('numerodocumento'),
-            'numeronl' => $request->input('numeronl'),
-            'historico' => $request->input('historico'),
-        ]);
-
-        // Atribuição dos valores dos campos
-       
-
-        // Salva o registro no banco de dados
-        $cadastro->save();
-
-        // Redireciona para uma rota ou retorna uma resposta de sucesso
-        return redirect()->route('/cadastro'); 
-        
+    public function Cadastrar(Request $request){
+        $NovaGuia = new guiasrecolhimento;
+        $NovaGuia->create($request->all());
+      return view('cadastro');
     }
+
 }

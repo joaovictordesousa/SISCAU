@@ -18,9 +18,21 @@ use Illuminate\Support\Facades\Cadastro;
 |
 */
 
+
 Route::get('/', function () {
     return view('pesquisa');
 });
+
+Route::get('/pesquisa', [PesquisaController::class, 'RenderPesquisaView'])->name('pesquisa');
+Route::get('/historico', [HistoricoController::class, 'RenderHistoricoView'])->name('ResultadoHistorico');
+Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name('NovaGuia');
+
+Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGuia');
+
+
+// Route::get('/', function () {
+//     return view('pesquisa');
+// });
 
 // Route::get('/historico', function (){
 //     return view('historico');
@@ -38,11 +50,10 @@ Route::get('/', function () {
 //     return view('login');
 // });
 
-Route::get('/cadastro', [CadastroController::class, 'cadastro'])->name('cadastro'); //Comado de rota pesquisa para cadastro, finaliza no Controller. 
-//
-Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
-//
-Route::get('/historico', [HistoricoController::class, 'historico'])->name('historico');
-//
-Route::post('/cadastro', [CadastroController::class, 'store']);
-//
+// Route::get('/cadastro', [CadastroController::class, 'cadastro'])->name('cadastro'); //Comado de rota pesquisa para cadastro, finaliza no Controller. 
+
+// Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
+
+// Route::get('/historico', [HistoricoController::class, 'historico'])->name('historico');
+
+// Route::post('/cadastro', [CadastroController::class, 'store']);
