@@ -121,13 +121,11 @@
 
         <div class="espaco_div_5">
 
-        <label>Tipo do Documento</label>
+        <label>Tipo do consulta</label>
             <select class="CampoSelect">
                 <option value="">Tipo de Documento</option>
-                <option value="">teste</option>
-                <option value="">teste</option>
-                <option value="">teste</option>
-                <option value="">teste</option>
+                <option value="">PDF</option>
+                <option value="">Excel</option>
             </select>
         </div>
 

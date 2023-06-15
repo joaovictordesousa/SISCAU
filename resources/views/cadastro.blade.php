@@ -30,7 +30,8 @@
                 <div class="tipo_recolhimento">
                 <label>Tipo de recolhimento</label>
                     <select class="CampoSelect" id="recolhimento" name="auxtiporecolhimentoid" required>
-                    <option value="">Instituição financeira</option>
+                    <option value="Instituição financeira">Instituição financeira</option>
+
                     @foreach($recolhimentos as $recolhimento)
                         <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
                     @endforeach
@@ -56,8 +57,8 @@
                 <div class="container_fileira">
                 <div class="agencia">
                     <label>Agência</label>
-                        <select class="CampoSelect" id="agencias" name="auxagenciaid">
-                            <option value="">Agência</option>
+                        <select class="CampoSelect" id="agencias" name="auxagenciaid" required>
+                            <option value="Agência">Agência</option>
 
                             @foreach($agencia as $agen)
                             <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
@@ -67,15 +68,15 @@
                     </div>
                     <div class="conta">
                         <label>Conta</label>
-                        <input type="number" id="numeroconta" name="numeroconta" class="CampoInput"></input> 
+                        <input type="number" id="numeroconta" name="numeroconta" class="CampoInput" required></input> 
                     </div>
                     <div class="contrato">
                         <label>Contrato</label>
-                        <input type="number" id="numerocontrato" name="numerocontrato" class="CampoInput"></input> 
+                        <input type="number" id="numerocontrato" name="numerocontrato" class="CampoInput" required></input> 
                     </div>
                     <div class="aditivos">
                         <label>Aditivo</label>
-                        <input type="text" id="aditivo" name="aditivo" class="CampoInput"></input> 
+                        <input type="text" id="aditivo" name="aditivo" class="CampoInput" required></input> 
                     </div>
                     <!---->
                 </div>
@@ -94,6 +95,7 @@
                 <div>
                     <label>Tipo de documento</label>
                         <select class="CampoSelect" name="auxtipodocumentoid" id="documentos">
+                        <option value="Tipo de documento">Tipo de documento</option>
                         @foreach($documento as $docu)
                             <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
                         @endforeach
@@ -101,7 +103,7 @@
                     </div>
                 <div>    
                     <label>Número</label>
-                    <input type="number" id="numero" name="numero" class="CampoInput"></input>
+                    <input type="number" id="numero" name="numero" class="CampoInput" required></input>
                 </div>
             </div>
             <br><br>
@@ -109,7 +111,8 @@
             <div class="container_fileira">
             <div class="empresa">
                     <label>Empresa</label>
-                    <select class="CampoSelect" id="empresa" name="auxempresaid">
+                    <select class="CampoSelect" id="empresa" name="auxempresaid" required>
+                    <option value="Empresa">Empresa</option>  
                     @foreach($empresa as $empre)       
                         <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
                     @endforeach      
@@ -117,7 +120,7 @@
             </div>
             <div class="valor">    
                     <label>Valor</label>
-                    <input type="number" id="valor" name="valor" class="CampoInput"></input>
+                    <input type="number" id="valor" name="valor" class="CampoInput" required></input>
                 </div>
         </div>
         <br><br>
@@ -125,11 +128,11 @@
         <div class="container_fileira">
                 <div class="documento">
                     <label>Documento</label>
-                    <input type="text" id="numerodocumento" name="numerodocumento" class="CampoInput"></input> 
+                    <input type="text" id="numerodocumento" name="numerodocumento" class="CampoInput" required></input> 
                 </div>
                 <div class="numero_nl">    
                     <label>Numero da NL</label>
-                    <input type="number" id="numeros_nls" name="numeronl" class="CampoInput"></input> 
+                    <input type="number" id="numeros_nls" name="numeronl" class="CampoInput" required></input> 
                 </div>
         </div>
         <br><br>
@@ -137,7 +140,7 @@
         <div class="container_fileira">
                 <div class="historicos">
                     <label>Histórico</label>
-                    <input type="text" id="historico" name="historico" class="CampoInput"></input> 
+                    <input type="text" id="historico" name="historico" class="CampoInput" required></input> 
                 </div>
         </div>
         <br><br><br>
