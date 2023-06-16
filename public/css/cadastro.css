@@ -19,15 +19,13 @@
     padding: 2em;
     border-radius: 30px;
     background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-               -15px -15px 30px #ffffff;
-
+    box-shadow: 15px 15px 30px #bebebe;
 }
 
 .cadastro_titulo {
     display: block;
     font-size: 30px;
-    margin: em 0;
+    margin: 1em 0;
 }
 
 .container_fileira {
@@ -45,7 +43,7 @@
 }
 
 .empresa {
-    margin-right: 1.3em;
+    margin-right: 0.8em;
 }
 
 .CampoInput {
@@ -68,20 +66,31 @@
 }
 
 .instituicao_financeira {
-    padding-left: 8.5em;
+    padding-right: 15em;
+}
+
+.agencia {
+    margin: 0 5px 0 5px;
+    padding-right: 3em;
 }
 
 .valor {
-    padding-left: 9.2em;
+    padding-left: 10em;
+}
+
+.documento {
+    margin: 0 20em 0 1em;
+    padding-right: 6em;
 }
 
 .numero_nl {
-    padding-left: 9.9em;
+    margin: 0 10px 0 0;
+    padding-left: 4.2em;
 }
 
 .historicos {
-    margin-right: 21.5em;
-    padding: 1em;
+    margin: 0 42em 0 0;
+    padding: 0.5em;
 }
 
 .button {
