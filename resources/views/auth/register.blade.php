@@ -12,7 +12,7 @@
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" 
-                style="padding: 1.2em; border: 1px solid gray":value="old('name')" required autofocus autocomplete="name" />
+                style="padding: 1.2em; border: 1px solid gray ":value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
