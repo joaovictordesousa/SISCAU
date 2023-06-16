@@ -20,20 +20,21 @@ class CadastroController extends Controller
         $documento = AuxTipoDocumento::all();
         $empresa = AuxEmpresas::all();
 
-        // dd($opcoes);
+        // dd($recolhimentos);
+
         return view('cadastro', [
-        'recolhimentos' => $recolhimentos, 
-        'financas' => $financas,
-        'agencia' => $agencia,
-        'documento' => $documento,
-        'empresa' => $empresa
+            'recolhimentos' => $recolhimentos, 
+            'financas' => $financas,
+            'agencia' => $agencia,
+            'documento' => $documento,
+            'empresa' => $empresa
         ]);
 
         // all = select na tabela.
     }
 
     public function Cadastrar(Request $request){
-        $NovaGuia = new guiasrecolhimento;
+        $NovaGuia = new GuiasRecolhimento;
         $NovaGuia->create($request->all());
       return view('cadastro');
     }

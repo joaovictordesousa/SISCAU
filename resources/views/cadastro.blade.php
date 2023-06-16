@@ -30,12 +30,15 @@
                 <div class="tipo_recolhimento">
                 <label>Tipo de recolhimento</label>
                     <select class="CampoSelect" id="recolhimento" name="auxtiporecolhimentoid" required>
-                    <option value="Instituição financeira">Instituição financeira</option>
+                    <!-- <option value="Instituição financeira">Instituição financeira</option> -->
 
+                    
+                    
                     @foreach($recolhimentos as $recolhimento)
                         <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
                     @endforeach
 
+                    
                     </select>
             </div>
             
