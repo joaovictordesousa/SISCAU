@@ -66,11 +66,12 @@
 }
 
 .instituicao_financeira {
-    padding-right: 15em;
+    margin: 0 -10px 0 0;
+    padding-left: 15em;
 }
 
 .agencia {
-    margin: 0 5px 0 5px;
+    margin: 0 0 0 5px;
     padding-right: 3em;
 }
 
