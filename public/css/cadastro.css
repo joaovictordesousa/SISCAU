@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 23px;
     padding: 0.3em;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .campodual {
-    padding: 10px 20px;
+    padding: 8px 4px;
     border-radius: 4px;
     outline: none;
     border: 2px solid gray;
@@ -62,18 +62,18 @@
 }
 
 .tipo_recolhimento {
-    margin-right: 0 1em 0 0;
-    padding-right: 8.5em;
+    margin-right: 0 2em 0 0;
+    padding-right: 7.4em;
 }
 
 .instituicao_financeira {
-    margin-left: 6em;
-    padding: 0.5em;
+    margin-left: 9.5em;
+    padding: 0;
 }
 
 .agencia {
-    margin: 0 0 0 5px;
-    padding-right: 3em;
+    margin: 0 2em 0 0;
+    padding-right: 1em;
 }
 
 .empresa {
@@ -83,7 +83,7 @@
 
 .valor {
     margin: 0;
-    padding-left: 5em;
+    padding-left: 6.5em;
 }
 
 .documento {
@@ -92,12 +92,12 @@
 }
 
 .numero_nl {
-    margin: 0 1em 0 1em;
-    padding-left: 9em;
+    margin: 0;
+    padding-left: 12em;
 }
 
 .historicos {
-    margin: 0 39em 0 0;
+    margin: 0 40.5em 0 0;
     padding: 1em;
 }
 
