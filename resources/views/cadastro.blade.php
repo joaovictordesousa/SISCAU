@@ -140,7 +140,9 @@
         <div class="container_fileira">
                 <div class="historicos">
                     <label>Histórico</label>
-                    <input type="text" id="historico" name="historico" class="CampoInput" required></input> 
+                    <input type="text" id="historico" name="historico" class="CampoInput
+                    
+                    " required></input> 
                 </div>
         </div>
         <br><br><br>

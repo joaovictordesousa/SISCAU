@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 30px;
+    gap: 10px;
     padding: 0.3em;
 }
 
@@ -62,12 +62,12 @@
 }
 
 .tipo_recolhimento {
-    margin-right: 0 -6em 0 0;
-    padding-right: 15em;
+    margin-right: 0 1em 0 0;
+    padding-right: 8.5em;
 }
 
 .instituicao_financeira {
-    margin-left: 1em;
+    margin-left: 6em;
     padding: 0.5em;
 }
 
@@ -77,28 +77,28 @@
 }
 
 .empresa {
-    margin-right: 2.5em;
+    margin-right: 3em;
     padding-left: 5px;
 }
 
 .valor {
-    margin: 0 10px 0 0;
-    padding-left: 8em;
+    margin: 0;
+    padding-left: 5em;
 }
 
 .documento {
-    margin: 0 20em 0 1em;
-    padding-right: 8em;
+    margin: 0 20em 0 2em;
+    padding-right: 5em;
 }
 
 .numero_nl {
     margin: 0 20px 0 0;
-    padding-left: 2em;
+    padding-left: 4em;
 }
 
 .historicos {
     margin: 0 42em 0 0;
-    padding: 0.5em;
+    padding: 1em;
 }
 
 .button {
@@ -162,7 +162,7 @@
     }
 
     .instituicao_financeira {
-        padding: 0.5em;
+        padding: 1em;
     }
 
     .container_fileira label {
