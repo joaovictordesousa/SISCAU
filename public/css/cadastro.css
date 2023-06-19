@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 23px;
     padding: 0.3em;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .campodual {
-    padding: 10px 20px;
+    padding: 8px 4px;
     border-radius: 4px;
     outline: none;
     border: 2px solid gray;
@@ -62,8 +62,8 @@
 }
 
 .tipo_recolhimento {
-    margin-right: 0 1em 0 0;
-    padding-right: 8.5em;
+    margin-right: 0 2em 0 0;
+    padding-right: 7.4em;
 }
 
 .instituicao_financeira {
@@ -72,7 +72,7 @@
 }
 
 .agencia {
-    margin: 0 0 0 5px;
+    margin: 0 -55px 0 -20px;
     padding-right: 3em;
 }
 
