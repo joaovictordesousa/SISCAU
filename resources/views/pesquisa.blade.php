@@ -45,10 +45,11 @@
             <label>Tipo de recolhimento</label>
             <select class="CampoSelect" required>
                 <option value="documentos">Documentos</option>
-                <option value="documentos">teste</option>
-                <option value="documentos">teste</option>
-                <option value="documentos">teste</option>
-                <option value="documentos">teste</option>
+                
+            @foreach($recolhimentos as $recolhimento)   
+                <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
+            @endforeach
+
             </select>
             </div>
         </div>
@@ -59,11 +60,11 @@
         <div>
             <label>Agência</label>
                 <select class="CampoSelect">
-                    <option value="">0000000</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+
+                @foreach($agencias as $agencia) 
+                    <option value="{{ $agencia->id }}">{{ $agencia->descricao }}</option>
+                @endforeach
+
                 </select>
             </div>
             <div>
@@ -104,11 +105,11 @@
         <div class="espacamento_select">
             <label>Tipo do Documento</label>
                 <select class="CampoSelect">
-                    <option value="">Tipo do Documento</option>
-                    <option value="">teste</option>
-                    <option value="">teste</option>
-                    <option value="">teste</option>
-                    <option value="">teste</option>
+
+                @foreach($documentos as $documento)     
+                    <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
+                @endforeach
+                
                 </select>
         </div>
     </div>

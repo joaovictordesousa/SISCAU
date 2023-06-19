@@ -62,7 +62,7 @@
 
       <div class="container_botoes">
           <button class="botao_imprimir">Imprimir</button>
-          <a href="{{ route('pesquisa')}}" class="botao_voltar">Voltar</a>
+          <a href="{{ route('pesquisa') }}" class="botao_voltar">Voltar</a>
       </div>
 
     </main>
