@@ -33,10 +33,19 @@ class CadastroController extends Controller
         // all = select na tabela.
     }
 
-    public function Cadastrar(Request $request){
-        $NovaGuia = new GuiasRecolhimento;
-        $NovaGuia->create($request->all());
-      return view('cadastro');
+    // public function Cadastrar(Request $request){
+    //     $NovaGuia = new GuiasRecolhimento;
+    //     $NovaGuia->create($request->all());
+    //   return view('cadastro');
+    // }
+
+    public function cadastrar(Request $request)
+    {
+        $novaGuia = new GuiasRecolhimento;
+        $novaGuia->fill($request->all());
+        $novaGuia->save();
+
+        return redirect()->back()->with('success', 'Guia de recolhimento cadastrada com sucesso.');
     }
 
 }
