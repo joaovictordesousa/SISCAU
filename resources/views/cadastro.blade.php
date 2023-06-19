@@ -136,11 +136,10 @@
         <br><br>
 
         <div class="container_fileira">
-                <div class="historicos">
+                <div class="historico">
                     <label>Histórico</label>
-                    <input type="text" id="historico" name="historico" class="CampoInput
-                    
-                    " required></input> 
+                    <input type="text" id="historico" name="historico" class="CampoInput"
+                    style="width:480%;" required></input> 
                 </div>
         </div>
         <br><br><br>
