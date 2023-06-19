@@ -29,7 +29,6 @@ Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name
 
 Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGuia');
 
-
 // Route::get('/', function () {
 //     return view('pesquisa');
 // });
