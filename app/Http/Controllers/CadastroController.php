@@ -45,7 +45,7 @@ class CadastroController extends Controller
         $novaGuia->fill($request->all());
         $novaGuia->save();
 
-        return view('pesquisa');
+        return view('pesquisa');    
     }
 
 }

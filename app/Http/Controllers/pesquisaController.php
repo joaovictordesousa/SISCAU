@@ -14,9 +14,6 @@ class PesquisaController extends Controller
         return view('pesquisa');
 
     }
-
-
-
     
     // public function filtrar(Request $request){
     //     $NovaGuia = new GuiasRecolhimento;
