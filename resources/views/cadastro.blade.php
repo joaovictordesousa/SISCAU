@@ -42,7 +42,6 @@
             <div class="instituicao_financeira">
                     <label>Instituição financeira</label>
                     <select class="CampoSelect" id="financeira" name="auxinstituicaofinanceiraid" required>
-                        <option value="Instituição financeira">Instituição financeira</option>
 
                         @foreach($financas as $fin)
                         <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
@@ -58,7 +57,6 @@
                 <div class="agencia">
                     <label>Agência</label>
                         <select class="CampoSelect" id="agencias" name="auxagenciaid" required>
-                            <option value="Agência">Agência</option>
 
                             @foreach($agencia as $agen)
                             <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
@@ -95,7 +93,7 @@
                 <div>
                     <label>Tipo de documento</label>
                         <select class="CampoSelect" name="auxtipodocumentoid" id="documentos">
-                        <option value="Tipo de documento">Tipo de documento</option>
+                        
                         @foreach($documento as $docu)
                             <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
                         @endforeach
@@ -112,7 +110,7 @@
             <div class="empresa">
                     <label>Empresa</label>
                     <select class="CampoSelect" id="empresa" name="auxempresaid" required>
-                    <option value="Empresa">Empresa</option>  
+                     
                     @foreach($empresa as $empre)       
                         <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
                     @endforeach      
