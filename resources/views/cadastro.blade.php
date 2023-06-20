@@ -139,7 +139,7 @@
                 <div class="historico">
                     <label>Histórico</label>
                     <input type="text" id="historico" name="historico" class="CampoInput"
-                    style="width:480%;" required></input> 
+                    style="width: 450%;" required></input> 
                 </div>
         </div>
         <br><br><br>

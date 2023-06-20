@@ -40,7 +40,7 @@ class CadastroController extends Controller
         $novaGuia->fill($request->all());
         $novaGuia->save();
 
-        return view('pesquisa');    
+        return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento cadastrada com sucesso.');
     }
 
 }
