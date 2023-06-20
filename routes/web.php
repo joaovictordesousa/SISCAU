@@ -18,11 +18,7 @@ use App\Models\AuxTipoRecolhimento;
 |
 */
 
-
-Route::get('/', function () {
-    return view('pesquisa');
-});
-
+Route::get('/', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
 Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
 Route::get('/historico', [HistoricoController::class, 'historico'])->name('ResultadoHistorico');
 Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name('NovaGuia');
