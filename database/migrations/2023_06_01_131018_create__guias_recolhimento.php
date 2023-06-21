@@ -9,7 +9,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('guiasrecolhimento', function (Blueprint $table) {
-            $table->id();
             $table->unsignedBigInteger('auxtiporecolhimentoid');
             $table->unsignedBigInteger('auxinstituicaofinanceiraid');
             $table->unsignedBigInteger('auxagenciaid');

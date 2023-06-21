@@ -52,13 +52,3 @@ Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGu
 // Route::get('/historico', [HistoricoController::class, 'historico'])->name('historico');
 
 // Route::post('/cadastro', [CadastroController::class, 'store']);
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
