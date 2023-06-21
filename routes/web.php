@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PesquisaController;
+use App\Http\Controllers\CadastroController;
+use App\Http\Controllers\HistoricoController;
+use App\Models\AuxTipoRecolhimento;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +18,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
+Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
+Route::get('/historico', [HistoricoController::class, 'historico'])->name('ResultadoHistorico');
+Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name('NovaGuia');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGuia');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+// Route::get('/', function () {
+//     return view('pesquisa');
+// });
 
-require __DIR__.'/auth.php';
+// Route::get('/historico', function (){
+//     return view('historico');
+// });
+
+// Route::get('/pesquisa', function (){
+//     return view('pesquisa');
+// });
+
+// Route::get('/cadastro', function (){
+//     return view('cadastro');
+// });
+
+// Route::get('/login', function (){
+//     return view('login');
+// });
+
+// Route::get('/cadastro', [CadastroController::class, 'cadastro'])->name('cadastro'); //Comado de rota pesquisa para cadastro, finaliza no Controller. 
+
+// Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
+
+// Route::get('/historico', [HistoricoController::class, 'historico'])->name('historico');
+
+// Route::post('/cadastro', [CadastroController::class, 'store']);

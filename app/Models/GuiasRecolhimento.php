@@ -25,7 +25,6 @@ class GuiasRecolhimento extends Model
         'valor',
         'numerodocumento',
         'numeronl',
-        'numeronl',
         'historico'
     ];
 }
