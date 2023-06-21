@@ -52,3 +52,5 @@ Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGu
 // Route::get('/historico', [HistoricoController::class, 'historico'])->name('historico');
 
 // Route::post('/cadastro', [CadastroController::class, 'store']);
+
+//teste
