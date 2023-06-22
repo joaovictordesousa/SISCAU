@@ -31,19 +31,19 @@
         <div class="container_quatro">
             <div>
                 <label>Numero</label>
-                <input type="number" class="CampoInput" ></input> 
+                <input type="number" class="CampoInput" id=""></input> 
             </div>
             <div>
                 <label>Contrato</label>
-                <input type="number" class="CampoInput"></input> 
+                <input type="number" class="CampoInput" id=" nrcontrato"></input> 
             </div>
             <div>
                 <label>Documento</label>   
-                <input type="number" class="CampoInput"></input> 
+                <input type="number" class="CampoInput" id="nrdocumento"></input> 
             </div>
         <div>
             <label>Tipo de recolhimento</label>
-            <select class="CampoSelect" required>
+            <select class="CampoSelect" id="auxtiporecolhimentoid">
                 
             @foreach($recolhimentos as $recolhimento)   
                 <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
@@ -58,7 +58,7 @@
         <div class="container_quatro">
         <div>
             <label>Agência</label>
-                <select class="CampoSelect">
+                <select class="CampoSelect" id="codigoagencia">
 
                 @foreach($agencias as $agencia) 
                     <option value="{{ $agencia->id }}">{{ $agencia->descricao }}</option>
@@ -68,11 +68,11 @@
             </div>
             <div>
                 <label>Processos de baixa</label>
-                <input type="text" class="CampoInput"></input> 
+                <input type="text" class="CampoInput" id="nrbaixaprocesso"></input> 
             </div>
             <div>
                 <label>CPF/CNPJ</label>
-                <input type="number" class="CampoInput"></input> 
+                <input type="number" class="CampoInput" id="nrcpfcnpj"></input> 
             </div>
             <!---->
         </div>
@@ -80,24 +80,24 @@
     <div class="container_quatro">
         <div>
             <label>Data do GR</label>
-            <input type="date" class="campodual"></input> 
+            <input type="date" class="campodual" id="datagrinicio"></input> 
             <span>a</span>
-            <input type="date" class="campodual"></input> 
+            <input type="date" class="campodual" id="datagrfim"></input> 
         </div>
         <br>
 
         <div>
         <label>Data de validade</label>
-            <input type="date" class="campodual"></input>
+            <input type="date" class="campodual" id="datavalidadeinicio"></input>
             <span>a</span>
-            <input type="date" class="campodual"></input> 
+            <input type="date" class="campodual" id="datavalidadefim"></input> 
         </div>
 
         <div>
             <label>Data da baixa</label>
-            <input type="date" class="campodual"></input>
+            <input type="date" class="campodual" id="databaixainicio"></input>
             <span>a</span>
-            <input type="date" class="campodual"></input> 
+            <input type="date" class="campodual" id="databaixafim"></input> 
         </div>
 
     </div>
@@ -120,7 +120,7 @@
 
         <div>
             <label>Numero da NL</label>
-            <input type="number" class="CampoInput"></input> 
+            <input type="number" class="CampoInput" id=""></input> 
         </div>
 
         <div class="espaco_div_5">
