@@ -18,6 +18,10 @@ use App\Models\AuxTipoRecolhimento;
 |
 */
 
+// Route::get('/historico', function () {
+//     return view('historico', ['name' => 'James']);
+// });
+
 Route::get('/', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
 Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
 Route::get('/historico', [HistoricoController::class, 'historico'])->name('ResultadoHistorico');
@@ -52,5 +56,3 @@ Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGu
 // Route::get('/historico', [HistoricoController::class, 'historico'])->name('historico');
 
 // Route::post('/cadastro', [CadastroController::class, 'store']);
-
-//teste

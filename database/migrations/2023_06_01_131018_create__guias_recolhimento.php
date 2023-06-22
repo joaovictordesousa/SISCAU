@@ -9,6 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('guiasrecolhimento', function (Blueprint $table) {
+            $table->increments('id');
             $table->unsignedBigInteger('auxtiporecolhimentoid');
             $table->unsignedBigInteger('auxinstituicaofinanceiraid');
             $table->unsignedBigInteger('auxagenciaid');
@@ -32,7 +33,8 @@ return new class extends Migration
             $table->foreign('auxempresaid')->references('id')->on('auxempresas');
             $table->foreign('auxtipodocumentoid')->references('id')->on('auxtipodocumento');
         });
-    }
+   }
+   
     public function down(): void
     {
         Schema::dropIfExists('guiasrecolhimento');

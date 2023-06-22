@@ -12,6 +12,7 @@
     <title>SISCAU</title>
 </head>
 <body>
+
     <header class="cabecalho">
       <img src="img/logo_branca.png" alt="logo" class="logo_header">
     </header>
@@ -34,26 +35,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td value="Tipo">Documento</td>
-            <td value="Empresa">Novacap</td>
-            <td value="Valor">500.000,00</td>
-          </tr>
-          <tr>
-            <td value="Tipo">Documento</td>
-            <td value="Empresa">Novacap</td>
-            <td value="Valor">500.000,00</td>
-          </tr>
-          <tr>
-            <td value="Tipo">Documento</td>
-            <td value="Empresa">Novacap</td>
-            <td value="Valor">500.000,00</td>
-          </tr>
-          <tr>
-            <td value="Tipo">Documento</td>
-            <td value="Empresa">Novacap</td>
-            <td value="Valor">500.000,00</td>
-          </tr>
+
+
         </tbody>
       </table>
     </div>
