@@ -30,6 +30,5 @@ class PesquisaController extends Controller
 
     }
 
-
 }
 

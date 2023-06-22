@@ -31,7 +31,7 @@
         <div class="container_quatro">
             <div>
                 <label>Numero</label>
-                <input type="number" class="CampoInput"></input> 
+                <input type="number" class="CampoInput" ></input> 
             </div>
             <div>
                 <label>Contrato</label>
@@ -126,9 +126,11 @@
         <div class="espaco_div_5">
         <label>Tipo do consulta</label>
             <select class="CampoSelect">
-                <option value="">Tipo de Documento</option>
-                <option value="">PDF</option>
-                <option value="">Excel</option>
+                <option value="">Tipo da Consulta</option>
+                <option value="baixadas">Baixadas</option>
+                <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>
+                <option value="nao baixadas">Não baixadas</option>
+                <option value="vencidas e nao baixadas">Vencidas e não baixadas</option>
             </select>
         </div>
 
