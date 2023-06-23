@@ -26,6 +26,5 @@ class Filtro extends Model
 					   'nrauxtipodocumentoid',
 					   'nrnumeronl',
 					   'tipoconsulta'
-
     ];
 }

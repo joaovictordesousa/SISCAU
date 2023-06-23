@@ -26,6 +26,7 @@ Route::get('/', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
 Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
 Route::get('/historico', [HistoricoController::class, 'historico'])->name('ResultadoHistorico');
 Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name('NovaGuia');
+Route::get('/filter', [CadastroController::class, 'filtrar'])->name('filtr');
 
 Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGuia');
 

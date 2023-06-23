@@ -31,7 +31,7 @@
         <div class="container_quatro">
             <div>
                 <label>Numero</label>
-                <input type="number" class="CampoInput" id=""></input> 
+                <input type="number" class="CampoInput" id="nr"></input> 
             </div>
             <div>
                 <label>Contrato</label>
@@ -108,7 +108,7 @@
     <div class="container_documento">
 
         <label>Tipo do Documento</label>
-            <select class="CampoSelect">
+            <select class="CampoSelect" id="nrauxtipodocumentoid">
 
             @foreach($documentos as $documento)     
                 <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
@@ -120,12 +120,12 @@
 
         <div>
             <label>Numero da NL</label>
-            <input type="number" class="CampoInput" id=""></input> 
+            <input type="number" class="CampoInput" id="nrnumeronl"></input> 
         </div>
 
         <div class="espaco_div_5">
         <label>Tipo do consulta</label>
-            <select class="CampoSelect">
+            <select class="CampoSelect" id="tipoconsulta"> 
                 <option value="">Tipo da Consulta</option>
                 <option value="baixadas">Baixadas</option>
                 <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>

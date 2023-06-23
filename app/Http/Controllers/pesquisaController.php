@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\AuxTipoRecolhimento;
 use App\Models\AuxAgencias;
 use App\Models\AuxTipoDocumento;
+use Illuminate\Support\Facades\DB;
 
 class PesquisaController extends Controller
 {
@@ -27,6 +28,8 @@ class PesquisaController extends Controller
             'agencias' => $agencias,
             'documentos' => $documentos
         ]);
+
+       
 
     }
 
