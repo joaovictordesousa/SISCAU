@@ -66,10 +66,10 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '10.115.1.76'),
+            'host' => env('DB_HOST', '10.233.208.9'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'Homologacao'),
-            'username' => env('DB_USERNAME', 'UserSiscau'),
+            'database' => env('DB_DATABASE', 'siscau'),
+            'username' => env('DB_USERNAME', 'usersiscau'),
             'password' => env('DB_PASSWORD', 'M#vc7AEK'),
             'charset' => 'utf8',
             'prefix' => '',

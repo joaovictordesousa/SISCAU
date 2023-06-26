@@ -35,9 +35,14 @@
           </tr>
         </thead>
         <tbody>
-
-
-        </tbody>
+        @foreach(filtro as $filtrar)
+          <tr>
+            <td value="{ $filtrar->auxtiporecolhimento->id }">{ $filtrar->auxtiporecolhimento->descricao }</td>
+            <td value="{ $filtrar->razaosocial->id }">{ $filtrar->razaosocial->descricao }</td>
+            <td value="{ $filtrar->valor->id }">{ $filtrar->valor->descricao }</td>
+          </tr>
+        @endforeach
+      </tbody>
       </table>
     </div>
 
