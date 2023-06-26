@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\GuiasRecolhimento;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 
 class HistoricoController extends Controller
 {
@@ -21,6 +21,20 @@ class HistoricoController extends Controller
 
         $nrcontrato = $request->input('nrcontrato');
         $nrdocumento = $request->input('nrdocumento');
+        $auxtiporecolhimentoid = $request->input('auxtiporecolhimentoid');
+        $codigoagencia = $request->input('codigoagencia');
+        $nrbaixaprocesso = $request->input('nrbaixaprocesso');
+        $nrcpfcnpj = $request->input('nrcpfcnpj');
+        $datagrinicio = $request->input('datagrinicio');
+        $datagrfim = $request->input('datagrfim');
+        $datavalidadeinicio = $request->input('datavalidadeinicio');
+        $datavalidadefim = $request->input('datavalidadefim');
+        $databaixainicio = $request->input('databaixainicio');
+        $databaixafim = $request->input('databaixafim');
+        $nrauxtipodocumentoid = $request->input('nrauxtipodocumentoid');
+        $nrnumeronl = $request->input('nrnumeronl');
+        $tipoconsulta = $request->input('tipoconsulta');
+       
 
 
         $pesquisa = DB::select('SELECT auxtiporecolhimento, razaosocial, valor FROM pesquisa(
@@ -38,12 +52,29 @@ class HistoricoController extends Controller
 					   databaixafim,
 					   nrauxtipodocumentoid,
 					   nrnumeronl,
-					   tipoconsulta', [
+					   tipoconsulta)', [
                         'nrcontrato' => $nrcontrato,
-                        'nrdocumento' => $
+                        'nrdocumento' => $nrdocumento,
+                        'auxtiporecolhimentoid' => $auxtiporecolhimentoid,
+                        'codigoagencia' => $codigoagencia,
+                        'nrbaixaprocesso' => $nrbaixaprocesso,
+                        'nrcpfcnpj' => $nrcpfcnpj,
+                        'datagrinicio' => $datagrinicio,
+                        'datagrfim' => $datagrfim,
+                        'datavalidadeinicio' => $datavalidadeinicio,
+                        'datavalidadefim' => $datavalidadefim,
+                        'databaixainicio' => $databaixainicio,
+                        'databaixafim' => $databaixafim,
+                        'nrauxtipodocumentoid' => $nrauxtipodocumentoid,
+                        'nrnumeronl' => $nrnumeronl,
+                        'tipoconsulta' => $tipoconsulta
                        ]);
 
-                       return view('historico');        
+                    return view('historico.index', ['pesquisa' => $pesquisa]);
+
+        
+
+        // return view('historico');        
        
     }
 }

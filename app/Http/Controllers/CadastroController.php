@@ -31,6 +31,7 @@ class CadastroController extends Controller
         ]);
 
         // all = select na tabela.
+        
     }
 
 
