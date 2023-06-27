@@ -12,6 +12,7 @@ class Filtro extends Model
     protected $table = 'filtro';
 
     protected $fillable = [
+						'nr',
         			   'nrdocumento',
 					   'auxtiporecolhimentoid',
 					   'codigoagencia',
@@ -26,6 +27,5 @@ class Filtro extends Model
 					   'nrauxtipodocumentoid',
 					   'nrnumeronl',
 					   'tipoconsulta'
-
     ];
 }
