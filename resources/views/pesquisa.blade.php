@@ -112,6 +112,7 @@
       <div class="form-row">
         <label for="tipo_consulta">Tipo da Consulta:</label>
         <select id="tipoconsulta" name="tipoconsulta">
+          <option value="">Selecione</option>
           <option value="baixadas">Baixadas</option>
           <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>
           <option value="nao baixadas">Não baixadas</option>

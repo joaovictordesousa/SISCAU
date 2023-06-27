@@ -52,44 +52,30 @@ class PesquisaController extends Controller
             $nrnumeronl = $request->input('nrnumeronl');
             $tipoconsulta = $request->input('tipoconsulta');
                    
-            // dd($nr);
+            //  dd($nr);
             
-            $filtro = DB::select('SELECT auxtiporecolhimento, razaosocial, valor FROM pesquisa(
-                nr,
-                nrcontrato,
-                nrdocumento,
-                auxtiporecolhimentoid,
-                codigoagencia,
-                nrbaixaprocesso,
-                nrcpfcnpj,
-                datagrinicio,
-                datagrfim,
-                datavalidadeinicio,
-                datavalidadefim,
-                databaixainicio,
-                databaixafim,
-                nrauxtipodocumentoid,
-                nrnumeronl,
-                tipoconsulta)', [
+            $filtro = DB::select("SELECT * FROM pesquisa(
+              
+              $nr, 
+              $nrcontrato, 
+              $nrdocumento, 
+              $auxtiporecolhimentoid, 
+              $codigoagencia,
+              $nrbaixaprocesso, 
+              $nrcpfcnpj,
+              $datagrinicio, 
+              $datagrfim,
+              $datavalidadeinicio, 
+              $datavalidadefim,
+              $databaixainicio, 
+              $databaixafim,
+              $nrauxtipodocumentoid, 
+              $nrnumeronl,
+              $tipoconsulta)
 
-                    'nr' => $nr,
-                    'nrcontrato' => $nrcontrato, 
-                    'nrdocumento' => $nrdocumento,
-                    'auxtiporecolhimentoid' => $auxtiporecolhimentoid,
-                    'codigoagencia' => $codigoagencia,
-                    'nrbaixaprocesso' => $nrbaixaprocesso,
-                    'nrcpfcnpj' => $nrcpfcnpj,
-                    'datagrinicio' => $datagrinicio,
-                    'datagrfim' => $datagrfim,
-                    'datavalidadeinicio' => $datavalidadeinicio,
-                    'datavalidadefim' => $datavalidadefim,
-                    'databaixainicio' => $databaixainicio,
-                    'databaixafim' => $databaixafim,
-                    'nrauxtipodocumentoid' => $nrauxtipodocumentoid,
-                    'nrnumeronl' => $nrnumeronl,
-                    'tipoconsulta' => $tipoconsulta
+                    ");
 
-                ]);
+                // dd($filtro);
                 
                 return view('historico', [
                     'filtro' => $filtro
