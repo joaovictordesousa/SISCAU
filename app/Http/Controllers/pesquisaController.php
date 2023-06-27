@@ -52,7 +52,7 @@ class PesquisaController extends Controller
             $nrnumeronl = $request->input('nrnumeronl');
             $tipoconsulta = $request->input('tipoconsulta');
                    
-            
+            // dd($nr);
             
             $filtro = DB::select('SELECT auxtiporecolhimento, razaosocial, valor FROM pesquisa(
                 nr,
@@ -91,7 +91,6 @@ class PesquisaController extends Controller
 
                 ]);
                 
-
                 return view('historico', [
                     'filtro' => $filtro
                 ]);
@@ -99,4 +98,5 @@ class PesquisaController extends Controller
         }
 
 }
+
 

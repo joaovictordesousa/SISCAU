@@ -20,132 +20,114 @@
 
 <section class="container_pesquisa">
 
-    <div class="container_completo">
-
+    <div class="form-container">
+    <!-- Guias de recolhimento  -->
     <div class="pesquisa_titulo">
         <h1 class="titulo_recolhimento" >Guias de recolhimento</h1>
         <a href="{{ route('NovaGuia')  }}" id="NovaGuia">+ Nova guia de recolhimento</a>
     </div>
+    <!--  -->
+    
+    <form action="/filtro" method="GET">
+      @csrf
+      <div class="form-row">
+        <label for="numero">Numero:</label>
+        <input type="text" id="nr" name="nr">
+  
+        <label for="contrato" style="margin: 0 0 0 20px; flex-basis: 102px;">Contrato:</label>
+        <input type="text" id="nrcontrato" name="nrcontrato">
+      </div>
+  
+      <div class="form-row">
+        <label for="documento">Documento:</label>
+        <input type="text" id="nrdocumento" name="nrdocumento">
+      </div>
+  
+      <div class="form-row">
+        <label for="recolhimento">Tipo de recolhimento:</label>
+        <select id="recolhimento" name="recolhimento">
+          <option value="">Selecione</option>
+        @foreach($recolhimentos as $recolhimento)  
+          <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
+        @endforeach
+        </select>
+      </div>
+  
+      <div class="form-row">
+        <label for="agencia">Agência:</label>
+        <select id="codigoagencia" name="codigoagencia">
+          <option value="">Selecione</option>
+        @foreach($agencias as $agencia) 
+          <option value="{{ $agencia->id }}">{{ $agencia->descricao }}</option>
+        @endforeach
+        </select>
+      </div>
+  
+      <div class="form-row">
+        <label for="baixa">Processos de baixa:</label>
+        <input type="text" id="nrbaixaprocesso" name="nrbaixaprocesso">
+     
+        <label for="cpf_cnpj" style="margin: 0 0 0 20px; flex-basis: 102px;">CPF/CNPJ:</label>
+        <input type="text" id="nrcpfcnpj" name="nrcpfcnpj">
+      </div>
+  
+      <div class="form-row">
+        <label for="gr">Data do GR:</label>
 
-    <form action="/historico" method="POST">
-    @csrf
-    <div id="FormBox">
-        <div class="container_quatro">
-            <div>
-                <label>Numero</label>
-                <input type="number" class="CampoInput" id="nr" name="nr"></input> 
-            </div>
-            <div>
-                <label>Contrato</label>
-                <input type="number" class="CampoInput" id="nrcontrato" name="nrcontrato"></input> 
-            </div>
-            <div>
-                <label>Documento</label>   
-                <input type="number" class="CampoInput" id="nrdocumento" name="nrdocumento"></input> 
-            </div>
-        <div>
-            <label>Tipo de recolhimento</label>
-            <select class="CampoSelect" id="auxtiporecolhimentoid" name="auxtiporecolhimentoid">
-                
-            @foreach($recolhimentos as $recolhimento)   
-                <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
-            @endforeach
+        <input type="date" id="datagrinicio" name="datagrinicio">
+        <span>a</span>
+        <input type="date" id="datagrfim" name="datagrfim">
 
-            </select>
-            </div>
-        </div>
-
-        <br><br>
-
-        <div class="container_quatro">
-        <div>
-            <label>Agência</label>
-                <select class="CampoSelect" id="codigoagencia" name="codigoagencia">
-
-                @foreach($agencias as $agencia) 
-                    <option value="{{ $agencia->id }}">{{ $agencia->descricao }}</option>
-                @endforeach
-
-                </select>
-            </div>
-            <div>
-                <label>Processos de baixa</label>
-                <input type="text" class="CampoInput" id="nrbaixaprocesso" name="nrbaixaprocesso"></input> 
-            </div>
-            <div>
-                <label>CPF/CNPJ</label>
-                <input type="number" class="CampoInput" id="nrcpfcnpj" name="nrcpfcnpj"></input> 
-            </div>
-            <!---->
-        </div>
-        <br><br>
-    <div class="container_quatro">
-        <div>
-            <label>Data do GR</label>
-            <input type="date" class="campodual" id="datagrinicio" name="datagrinicio"></input> 
-            <span>a</span>
-            <input type="date" class="campodual" id="datagrfim" name="datagrfim"></input> 
-        </div>
-        <br>
-
-        <div>
-        <label>Data de validade</label>
-            <input type="date" class="campodual" id="datavalidadeinicio" name="datavalidadeinicio"></input>
-            <span>a</span>
-            <input type="date" class="campodual" id="datavalidadefim" name="datavalidadefim"></input> 
-        </div>
-
-        <div>
-            <label>Data da baixa</label>
-            <input type="date" class="campodual" id="databaixainicio" name="databaixainicio"></input>
-            <span>a</span>
-            <input type="date" class="campodual" id="databaixafim" name="databaixafim"></input> 
-        </div>
-
-    </div>
-
-    <br><br><br>
-    <div class="container_quatro">
-
-    <div class="container_documento">
-
-        <label>Tipo do Documento</label>
-            <select class="CampoSelect" id="nrauxtipodocumentoid" name="nrauxtipodocumentoid">
-
-            @foreach($documentos as $documento)     
-                <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
-            @endforeach
-                    
-            </select>
-
-    </div>
-
-        <div>
-            <label>Numero da NL</label>
-            <input type="number" class="CampoInput" id="nrnumeronl" name="nrnumeronl"></input> 
-        </div>
-
-        <div class="espaco_div_5">
-        <label>Tipo do consulta</label>
-            <select class="CampoSelect" namer id="tipoconsulta" name=""> 
-                <option value="">Tipo da Consulta</option>
-                <option value="baixadas">Baixadas</option>
-                <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>
-                <option value="nao baixadas">Não baixadas</option>
-                <option value="vencidas e nao baixadas">Vencidas e não baixadas</option>
-            </select>
-        </div>
-
-    </div>
+      </div>
+  
+      <div class="form-row">
+        <label for="validade">Data de validade:</label>
+        <input type="date" id="datavalidadeinicio" name="datavalidadeinicio">
+        <span>a</span>
+        <input type="date" id="datavalidadefim" name="datavalidadefim">
+      </div>
+  
+      <div class="form-row">
+        <label for="data_baixa">Data da baixa:</label>
+        <input type="date" id="databaixainicio" name="databaixainicio">
+        <span>a</span>
+        <input type="date" id="databaixafim" name="databaixafim">
+      </div>
+  
+      <div class="form-row">
+        <label for="tipo_documento">Tipo do Documento:</label>
+        <select id="tipo_documento" name="tipo_documento">
+          <option value="">Selecione</option>
+        @foreach($documentos as $documento)
+          <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
+        @endforeach
+        </select>
+      </div>
+  
+      <div class="form-row">
+        <label for="numero_nl">Número da NL:</label>
+        <input type="text" id="nrnumeronl" name="nrnumeronl">
+      </div>
+  
+      <div class="form-row">
+        <label for="tipo_consulta">Tipo da Consulta:</label>
+        <select id="tipoconsulta" name="tipoconsulta">
+          <option value="baixadas">Baixadas</option>
+          <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>
+          <option value="nao baixadas">Não baixadas</option>
+          <option value="vencidas e nao baixadas">Vencidas e não baixadas</option>
+        </select>
+      </div>
+  
+      <div class="form-row">
+        <button class="btn">Pesquisar</button>  
+      </div>
     </form>
+  </div>
 
     <br><br><br>
     
-    <div>
-        <button class="btn">Pesquisar</button>   
-    </div>
-     
-    </div>
+
 </section>
 
 </body>

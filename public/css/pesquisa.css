@@ -24,62 +24,51 @@
     margin: 1em 0 3em 0;
 }
 
-.container_completo {
-    border-radius: 30px;
-    margin: 3em 0;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe;
-    flex-wrap: wrap;
-    display: block;
-    padding: 2em 3em;
-}
+.form-container {
+    max-width: 80%; /* Ajuste a largura conforme necessário */
+    margin: 5em auto;
+    padding: 50px;
+    background-color: #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 4px rgb(183, 181, 181);
+    border-radius: 25px; 
+  }
 
-.container_pesquisa {
+  .form-row {
     display: flex;
-    justify-content: center;
-    /* Alinha horizontalmente ao centro */
     align-items: center;
-    /* Alinha verticalmente ao centro */
-}
+    margin-bottom: 20px;
+  }
 
-.container_quatro {
-    display: flex;
-    gap: 50px;
-}
+  .form-row label {
+    font-weight: bold;
+    margin-right: 10px;
+    flex-basis: 140px;
+  }
 
-.container_quatro label {
-    display: flex;
-    font-size: 18px;
-}
-
-.CampoInput {
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: 2px solid gray;
-    outline: none;
-}
-
-
-.campodual {
-    padding: 10px 20px;
-    border-radius: 4px;
-    outline: none;
-    border: 2px solid gray;
-}
-
-.CampoSelect {
+  .form-row input,
+  .form-row select {
+    flex: 1;
     padding: 10px;
-    border: 2px solid gray;
-}
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
 
-.espacamento_select {
-    padding: 0 7em;
-}
+  .form-row input[type="submit"] {
+    background-color: #4285f4;
+    color: white;
+    cursor: pointer;
+  }
 
+  .form-row input[type="submit"]:hover {
+    background-color: #3367d6;
+  }
 
-.espaco_div_5 {
-    margin: 0 7em;
-}
+  span {
+    margin: 0 5px;
+  }
 
 .btn {
     font-size: 18px;
@@ -98,62 +87,24 @@
 
 
 @media screen and (max-width: 960px) {
-
-    * {
-        padding: 0;
-        margin: 0;
+    .form-container {
+        margin: 1em auto;
+        box-shadow: 0 0 0  white;
+        max-width: 100%;
+        border-radius: none;
     }
 
-    body {
-        background-color: white;
+    #NovaGuia {
+        border: none;
+        background-color: #002776;
+        padding: 9px 0;
+        width: 100%;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
     }
 
-    .container_completo {
-        box-shadow: none;
-        background: none;
-        text-align: center;
-    }
-
-    #FormBox {
+    .form-row{
         display: block;
     }
-
-    .container_quatro {
-        flex-direction: column;
-    }
-
-    .container_quatro label {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-    }
-
-    .CampoInput {
-        width: 60%;
-    }
-
-    .campodual {
-        margin: 0;
-        width: 20%;
-    }
-
 }
-
-/* @media screen and (max-width: 800px) {
-    .container_completo {
-        width: 50%;
-        margin: none;
-    }
-} */
-
-@media screen and (max-width: 1130px) {
-
-    .container_completo {
-        box-shadow: none;
-        background: none;
-        margin: 0 auto;
-    }
-
-}
-

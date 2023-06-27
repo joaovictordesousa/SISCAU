@@ -29,17 +29,17 @@
       <table>
         <thead>
           <tr>
-            <th class="th_tipo">Tipo</th>
+            <th class="th_tipo">Tipo recolhimento</th>
             <th class="th_empresa">Empresa</th>
             <th class="th_valor">Valor</th>
           </tr>
         </thead>
         <tbody>
-        @foreach(filtro as $filtrar)
+        @foreach($filtro as $filtrar)
           <tr>
-            <td value="{ $filtrar->auxtiporecolhimento->id }">{ $filtrar->auxtiporecolhimento->descricao }</td>
-            <td value="{ $filtrar->razaosocial->id }">{ $filtrar->razaosocial->descricao }</td>
-            <td value="{ $filtrar->valor->id }">{ $filtrar->valor->descricao }</td>
+            <td value="{{ $filtrar->auxtiporecolhimentoid }}">{{ $filtrar->auxtiporecolhimentoid }}</td>
+            <td value="{{ $filtrar->auxagenciaid }}">{{ $filtrar->auxempresaid }}</td>
+            <td value="{{ $filtrar->numero }}">{{ $filtrar->numero }}</td>
           </tr>
         @endforeach
       </tbody>
