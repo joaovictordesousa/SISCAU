@@ -109,7 +109,7 @@
             <div class="container_fileira">
             <div class="empresa">
                     <label>Empresa</label>
-                    <select class="CampoSelect" id="empresa" name="auxempresaid" required>
+                    <select class="CampoSelect" id="empresa" name="auxempresaid" style="width: 85%" required>
                      
                     @foreach($empresa as $empre)       
                         <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
@@ -139,7 +139,7 @@
                 <div class="historico">
                     <label>Histórico</label>
                     <input type="text" id="historico" name="historico" class="CampoInput"
-                    style="width: 450%;" required></input> 
+                    style="width: 373%" required></input> 
                 </div>
         </div>
         <br><br><br>
