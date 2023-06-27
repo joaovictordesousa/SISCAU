@@ -11,8 +11,12 @@ class HistoricoController extends Controller
     // 
     public function historico()
     {   
+
+        $filtro = GuiasRecolhimento::all();
+
+        return view('historico', [
+            'filtro' => $filtro
+        ]);
             
-        return view('historico');
-             
     }
 }
