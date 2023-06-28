@@ -109,7 +109,7 @@
             <div class="container_fileira">
             <div class="empresa">
                     <label>Empresa</label>
-                    <select class="CampoSelect" id="empresa" name="auxempresaid" style="width: 85%" required>
+                    <select class="CampoSelect" id="empresa" name="auxempresaid" style="width: 93%" required>
                      
                     @foreach($empresa as $empre)       
                         <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     

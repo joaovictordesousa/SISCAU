@@ -64,27 +64,28 @@
 }
 
 .tipo_recolhimento {
-    padding-right: 66.4em;
-    margin-left: -1em;
-    width: 5.6em;
+    padding-right: 67.8em;
+    margin-left: -0.1em;
+    width: 4.6em;
 }
 
 .instituicao_financeira {
-    margin-left: -39.6em;
+    margin-left: -38.6em;
     padding: 10px;
 }
 
 .agencia {
-    margin: 0 1.3em 0 0;
-    padding-right: 1.4em;
+    margin-left: -4px;
+    padding-right: 3.4em;
 }
 
 .empresa {
-    margin-right:13.9em;
+    margin-right:12.9em;
 }
 
 .valor {
-    padding-left: 2em;
+    padding-left: 2.2em;
+    margin-right: 1em;
 }
 
 .documento {
@@ -98,7 +99,7 @@
 }
 
 .historico {
-    margin: 0 40em 0 0; 
+    margin: 0 39.4em 0 0; 
 }
 
 .button {
