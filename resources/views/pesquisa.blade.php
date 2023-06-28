@@ -32,7 +32,7 @@
       @csrf
       <div class="form-row">
         <label for="numero">Numero:</label>
-        <input type="text" id="nr" name="nr">
+        <input type="number" id="nr" name="nr">
   
         <label for="contrato" style="margin: 0 0 0 20px; flex-basis: 102px;">Contrato:</label>
         <input type="text" id="nrcontrato" name="nrcontrato">
@@ -106,7 +106,7 @@
   
       <div class="form-row">
         <label for="numero_nl">Número da NL:</label>
-        <input type="text" id="nrnumeronl" name="nrnumeronl">
+        <input type="number" id="nrnumeronl" name="nrnumeronl">
       </div>
   
       <div class="form-row">

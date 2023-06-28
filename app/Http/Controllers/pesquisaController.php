@@ -35,22 +35,23 @@ class PesquisaController extends Controller
     public function filtro(Request $request) 
         {
 
-            $nr = $request->input('nr');
-            $nrcontrato = $request->input('nrcontrato');
-            $nrdocumento = $request->input('nrdocumento');
-            $auxtiporecolhimentoid = $request->input('auxtiporecolhimentoid');
-            $codigoagencia = $request->input('codigoagencia');
-            $nrbaixaprocesso = $request->input('nrbaixaprocesso');
-            $nrcpfcnpj = $request->input('nrcpfcnpj');
-            $datagrinicio = $request->input('datagrinicio');
-            $datagrfim = $request->input('datagrfim');
-            $datavalidadeinicio = $request->input('datavalidadeinicio');
-            $datavalidadefim = $request->input('datavalidadefim');
-            $databaixainicio = $request->input('databaixainicio');
-            $databaixafim = $request->input('databaixafim');
-            $nrauxtipodocumentoid = $request->input('nrauxtipodocumentoid');
-            $nrnumeronl = $request->input('nrnumeronl');
-            $tipoconsulta = $request->input('tipoconsulta');
+            $nr = $request->input('nr', null);
+            $nrcontrato = $request->input('nrcontrato', null);
+            $nrdocumento = $request->input('nrdocumento', null);
+            $auxtiporecolhimentoid = $request->input('auxtiporecolhimentoid', null);
+            $codigoagencia = $request->input('codigoagencia', null);
+            $nrbaixaprocesso = $request->input('nrbaixaprocesso', null);
+            $nrcpfcnpj = $request->input('nrcpfcnpj', null);
+            $datagrinicio = $request->input('datagrinicio', null);
+            $datagrfim = $request->input('datagrfim', null);
+            $datavalidadeinicio = $request->input('datavalidadeinicio', null);
+            $datavalidadefim = $request->input('datavalidadefim', null);
+            $databaixainicio = $request->input('databaixainicio', null);
+            $databaixafim = $request->input('databaixafim', null);
+            $nrauxtipodocumentoid = $request->input('nrauxtipodocumentoid', null);
+            $nrnumeronl = $request->input('nrnumeronl', null);
+            $tipoconsulta = $request->input('tipoconsulta', null);
+    
                    
             //  dd($nr);
             

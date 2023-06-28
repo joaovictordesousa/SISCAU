@@ -1,110 +1,101 @@
 /* João */
 
 #NovaGuia {
-    border: none;
-    background-color: #002776;
-    padding: 9px 25px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
+  border: none;
+  background-color: #002776;
+  padding: 9px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
 }
 
 #NovaGuia:hover {
-    background-color: rgb(4, 106, 209);
-    box-shadow: 2px 1px 8px 1px dodgerblue;
+  background-color: rgb(4, 106, 209);
+  box-shadow: 2px 1px 8px 1px dodgerblue;
 }
 
 .titulo_recolhimento {
-    font-size: 25px;
-    margin: 1em 0;
+  font-size: 25px;
+  margin: 1em 0;
 }
 
 .pesquisa_titulo {
-    font-size: 20px;
-    margin: 1em 0 3em 0;
+  font-size: 20px;
+  margin: 1em 0 3em 0;
 }
 
 .form-container {
-    max-width: 80%; /* Ajuste a largura conforme necessário */
-    margin: 5em auto;
-    padding: 50px;
-    background-color: #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 7px 4px rgb(183, 181, 181);
-    border-radius: 25px; 
-  }
+  max-width: 80%; /* Ajuste a largura conforme necessário */
+  margin: 5em auto;
+  padding: 50px;
+  background-color: #ccc;
+  border-radius: 4px;
+  box-shadow: 15px 15px 30px #bebebe;
+  border-radius: 25px; 
+}
 
-  .form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
-  .form-row label {
-    font-weight: bold;
-    margin-right: 10px;
-    flex-basis: 140px;
-  }
+.form-row label {
+  font-weight: bold;
+  margin-right: 10px;
+  flex-basis: 140px;
+}
 
-  .form-row input,
-  .form-row select {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    outline: none;
-  }
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  outline: none;
+}
 
-  .form-row input[type="submit"] {
-    background-color: #4285f4;
-    color: white;
-    cursor: pointer;
-  }
-
-  .form-row input[type="submit"]:hover {
-    background-color: #3367d6;
-  }
-
-  span {
-    margin: 0 5px;
-  }
+span {
+  margin: 0 5px; /* Esse span é o "a" da data */
+}
 
 .btn {
-    font-size: 18px;
-    background-color: #002776;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    border-radius: 10px;
-    margin: 1.5em 0 2em 4em;
+  font-size: 18px;
+  background-color: #002776;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 1.5em 0 2em 4em;
 }
 
 .btn:hover {
-    background-color: rgb(2, 81, 161);
-    box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
+  background-color: rgb(2, 81, 161);
+  box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
-
 
 @media screen and (max-width: 960px) {
-    .form-container {
-        margin: 1em auto;
-        box-shadow: 0 0 0  white;
-        max-width: 100%;
-        border-radius: none;
-    }
+  .form-container {
+    margin: 1em auto;
+    box-shadow: 0 0 0  white;
+    max-width: 100%;
+    border-radius: none;
+  }
 
-    #NovaGuia {
-        border: none;
-        background-color: #002776;
-        padding: 9px 0;
-        width: 100%;
-        border-radius: 10px;
-        text-decoration: none;
-        color: white;
-    }
+  #NovaGuia {
+    border: none;
+    background-color: #002776;
+    padding: 9px 0;
+    width: 100%;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+  }
 
-    .form-row{
-        display: block;
-    }
+  .form-row{
+    display: block;
+  }
+
 }
+
