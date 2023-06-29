@@ -17,142 +17,127 @@
 
 <section class="container_cadastro">
 
-    <div class="container_completo_cadastro">
+<div class="form-container">
 
     <div class="cadastro_titulo">
         <h1>Guias de recolhimento</h1><br>
     </div>
 
-        <form action="/cadastro" method="POST">
-            @csrf
-            <div id="FormBox">
-                <div class="container_fileira">
-                <div class="tipo_recolhimento">
-                <label>Tipo de recolhimento</label>
-                    <select class="CampoSelect" id="recolhimento" name="auxtiporecolhimentoid" required> 
-                    <!-- <option value="Instituição financeira">Instituição financeira</option> -->                 
-                    
-                    @foreach($recolhimentos as $recolhimento)
-                        <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
-                    @endforeach
+    <form action="/cadastro" method="POST">
+        @csrf
+     <div class="form-row">
+        <label>Tipo de recolhimento:</label>
+        <select id="recolhimento" name="auxtiporecolhimentoid" required> 
+        <!-- <option value="Instituição financeira">Instituição financeira</option> -->                 
+        
+        @foreach($recolhimentos as $recolhimento)
+            <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
+        @endforeach
 
-                    </select>
-            </div>
-            
-            <div class="instituicao_financeira">
-                    <label>Instituição financeira</label>
-                    <select class="CampoSelect" id="financeira" name="auxinstituicaofinanceiraid" required>
+        </select>
+      </div>
 
-                        @foreach($financas as $fin)
-                        <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
-                        @endforeach
+      <div class="form-row">
+        <label>Instituição financeira:</label>
+            <select id="financeira" name="auxinstituicaofinanceiraid" required>
 
-                    </select>
-                    </div>
-                </div>
+            @foreach($financas as $fin)
+             <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
+            @endforeach
 
-                <br><br>
+            </select>
+      </div>
+  
+      <div class="form-row">
+        <label>Agência:</label>
+            <select id="agencias" name="auxagenciaid" required>
 
-                <div class="container_fileira">
-                <div class="agencia">
-                    <label>Agência</label>
-                        <select class="CampoSelect" id="agencias" name="auxagenciaid" required>
-
-                            @foreach($agencia as $agen)
-                            <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
-                            @endforeach
+            @foreach($agencia as $agen)
+              <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
+            @endforeach
                           
-                        </select>
-                    </div>
-                    <div class="conta">
-                        <label>Conta</label>
-                        <input type="number" id="numeroconta" name="numeroconta" class="CampoInput" required></input> 
-                    </div>
-                    <div class="contrato">
-                        <label>Contrato</label>
-                        <input type="number" id="numerocontrato" name="numerocontrato" class="CampoInput" required></input> 
-                    </div>
-                    <div class="aditivos">
-                        <label>Aditivo</label>
-                        <input type="text" id="aditivo" name="aditivo" class="CampoInput" required></input> 
-                    </div>
-                    <!---->
-                </div>
+            </select>
+      </div>
+  
+      <div class="form-row">
+        <label >Conta</label>
+        <input type="number" id="numeroconta" name="numeroconta" required></input>  
 
-                <br><br>
+        <label style="margin: 0 0 0 30px;">Contrato:</label>
+        <input type="number" id="numerocontrato" name="numerocontrato" required></input>
+      </div>
+  
+      <div class="form-row">
+        <label>Aditivo</label>
+        <input type="text" id="aditivo" name="aditivo" required></input> 
+      </div>
 
-            <div class="container_fileira">
-                <div>
-                    <label>Data do GR</label>
-                    <input type="date" id="datagr" name="datagr" class="CampoInput" required></input> 
-                </div>
-                <div>    
-                    <label>Data de validade</label>
-                    <input type="date" id="datavalidade" name="datavalidade" class="CampoInput" required></input> 
-                </div>
-                <div>
-                    <label>Tipo de documento</label>
-                        <select class="CampoSelect" name="auxtipodocumentoid" id="documentos">
+      <div class="form-row">     
+
+        <label>Data do GR:</label>
+        <input type="date" id="datagr" name="datagr" required></input> 
+
+        <label style="margin: 0 0 0 30px; flex-basis: 102px;">Data de validade:</label>
+        <input type="date" id="datavalidade" name="datavalidade" required></input> 
+        
+      </div>
+  
+      <div class="form-row">
+        <label>Tipo de documento</label>
+        <select name="auxtipodocumentoid" id="documentos">
                         
-                        @foreach($documento as $docu)
-                            <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
-                        @endforeach
-                        </select>
-                    </div>
-                <div>    
-                    <label>Número</label>
-                    <input type="number" id="numero" name="numero" class="CampoInput" required></input>
-                </div>
-            </div>
-            <br><br>
-            
-            <div class="container_fileira">
-            <div class="empresa">
-                    <label>Empresa</label>
-                    <select class="CampoSelect" id="empresa" name="auxempresaid" style="width: 93%" required>
-                     
-                    @foreach($empresa as $empre)       
-                        <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
-                    @endforeach      
-                    </select>
-            </div>
-            <div class="valor">    
-                    <label>Valor</label>
-                    <input type="number" id="valor" name="valor" class="CampoInput" required></input>
-                </div>
-        </div>
-        <br><br>
+            @foreach($documento as $docu)
+                <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
+            @endforeach
+        </select>
+      </div>
+  
+      <div class="form-row">
+        <label>Número</label>
+        <input type="number" id="numero" name="numero" required></input>
+      </div>
+  
+      <div class="form-row">
+        <label>Empresa</label>
+        <select id="empresa" name="auxempresaid" required>
+         
+        @foreach($empresa as $empre)       
+            <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
+        @endforeach      
+        </select>
+      </div>
+  
+      <div class="form-row">
+        <label>Valor:</label>
+        <input type="number" id="valor" name="valor" required></input>
 
-        <div class="container_fileira">
-                <div class="documento">
-                    <label>Documento</label>
-                    <input type="text" id="numerodocumento" name="numerodocumento" class="CampoInput" required></input> 
-                </div>
-                <div class="numero_nl">    
-                    <label>Numero da NL</label>
-                    <input type="number" id="numeros_nls" name="numeronl" class="CampoInput" required></input> 
-                </div>
-        </div>
-        <br><br>
 
-        <div class="container_fileira">
-                <div class="historico">
-                    <label>Histórico</label>
-                    <input type="text" id="historico" name="historico" class="CampoInput"
-                    style="width: 373%" required></input> 
-                </div>
-        </div>
-        <br><br><br>
-    </form>
+        <label style="margin: 0 0 0 30px; flex-basis: 102px;">Documento:</label>
+        <input type="text" id="numerodocumento" name="numerodocumento" required></input>
+      </div>
 
+      <div class="form-row">
+        
+      </div>
+
+      <div class="form-row">
+        <label>Numero da NL:</label>
+        <input type="number" id="numeros_nls" name="numeronl" required></input>
+      </div>
+
+      <div class="form-row">
+        <label>Histórico:</label>
+        <input type="text" id="historico" name="historico" required></input>
+      </div>
+      <br><br><br><br>  
         <div class="button">
         <div>
             <button class="botao-salvar">Salvar</button>
         </div>
+        
         <div>
             <a href="{{ route('pesquisa')  }}" class="botao-cadastro">Cancelar</a>
         </div>
-        </div>
     </div>
 </section>
-<br><br><br><br>        
+      
