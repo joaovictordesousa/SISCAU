@@ -57,23 +57,23 @@ class PesquisaController extends Controller
             
             $filtro = DB::select("SELECT * FROM pesquisa(
               
-              $nr, 
-              $nrcontrato, 
-              $nrdocumento, 
-              $auxtiporecolhimentoid, 
-              $codigoagencia,
-              $nrbaixaprocesso, 
-              $nrcpfcnpj,
-              $datagrinicio, 
-              $datagrfim,
-              $datavalidadeinicio, 
-              $datavalidadefim,
-              $databaixainicio, 
-              $databaixafim,
-              $nrauxtipodocumentoid, 
-              $nrnumeronl,
+              $nr
+              $nrcontrato
+              $nrdocumento
+              $auxtiporecolhimentoid
+              $codigoagencia
+              $nrbaixaprocesso
+              $nrcpfcnpj
+              $datagrinicio
+              $datagrfim
+              $datavalidadeinicio 
+              $datavalidadefim
+              $databaixainicio
+              $databaixafim
+              $nrauxtipodocumentoid
+              $nrnumeronl
               $tipoconsulta)
-
+              
                     ");
 
                 // dd($filtro);
