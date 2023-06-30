@@ -14,7 +14,7 @@
 .button {
     display: flex;
     gap: 1em;
-
+    cursor: pointer;
 }
 
 .botao-salvar {
@@ -25,6 +25,7 @@
     border: none;
     margin-top: -20px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .botao-cadastro {
@@ -35,6 +36,7 @@
     border-radius: 10px;
     border: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .botao-cadastro:hover {
