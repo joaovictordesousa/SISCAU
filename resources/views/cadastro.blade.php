@@ -112,6 +112,7 @@
         <label>Valor:</label>
         <input type="number" id="valor" name="valor" required></input>
 
+
         <label style="margin: 0 0 0 30px; flex-basis: 102px;">Documento:</label>
         <input type="text" id="numerodocumento" name="numerodocumento" required></input>
       </div>
