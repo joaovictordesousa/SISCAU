@@ -5,9 +5,16 @@
     padding: 0;
 }
 
+.cadastro_titulo {
+    margin: 1em 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 .button {
     display: flex;
     gap: 1em;
+
 }
 
 .botao-salvar {

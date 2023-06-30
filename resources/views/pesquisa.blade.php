@@ -24,7 +24,8 @@
     <!-- Guias de recolhimento  -->
     <div class="pesquisa_titulo">
         <h1 class="titulo_recolhimento" >Guias de recolhimento</h1>
-        <a href="{{ route('NovaGuia')  }}" id="NovaGuia">+ Nova guia de recolhimento</a>
+        <a href="{{ route('NovaGuia')  }}" id="NovaGuia">+ Nova guia de recolhimento</a><br><br>
+        <hr>
     </div>
     <!--  -->
     
