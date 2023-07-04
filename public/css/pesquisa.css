@@ -30,7 +30,6 @@
   margin: 5em auto;
   padding: 50px;
   background-color: #ccc;
-  border-radius: 4px;
   box-shadow: 15px 15px 30px #bebebe;
   border-radius: 25px; 
 }
@@ -42,9 +41,10 @@
 }
 
 .form-row label {
+  margin: 0 0 0 20px; flex-basis: 102px;
   font-weight: bold;
-  margin-right: 10px;
-  flex-basis: 140px;
+  margin-right: 7px;
+  flex-basis: 90px;
 }
 
 .form-row input,
@@ -52,7 +52,7 @@
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 16px;
   outline: none;
 }
@@ -99,5 +99,13 @@ span {
     display: block;
   }
 
+  @media screen and (max-width: 1300px) {
+    .form-container {
+      margin: 1em auto;
+      box-shadow: 0 0 0  white;
+      max-width: 100%;
+      border-radius: none;
+    }
 }
 
+}
