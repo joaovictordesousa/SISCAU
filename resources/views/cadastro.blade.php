@@ -36,9 +36,7 @@
         @endforeach
 
         </select>
-      </div>
-
-      <div class="form-row">
+      
         <label>Instituição financeira:</label>
             <select id="financeira" name="auxinstituicaofinanceiraid" required>
             <option value="">Selecione</option>
@@ -47,9 +45,7 @@
             @endforeach
 
             </select>
-      </div>
-  
-      <div class="form-row">
+
         <label>Agência:</label>
             <select id="agencias" name="auxagenciaid" required>
             <option value="">Selecione</option>
@@ -61,16 +57,14 @@
       </div>
   
       <div class="form-row">
-        <label >Conta</label>
-        <input type="number" id="numeroconta" name="numeroconta" required></input>  
+        <label>Conta:</label>
+        <input type="text" id="numeroconta" name="numeroconta" maxlength="10" required></input>  
 
         <label style="margin: 0 0 0 30px; flex-basis: 102px;">Contrato:</label>
-        <input type="number" id="numerocontrato" name="numerocontrato" required></input>
-      </div>
-  
-      <div class="form-row">
-        <label>Aditivo</label>
-        <input type="text" id="aditivo" name="aditivo" required></input> 
+        <input type="text" id="numerocontrato" name="numerocontrato" maxlength="10" required></input>
+
+        <label>Aditivo:</label>
+        <input type="text" id="aditivo" name="aditivo" maxlength="25" required></input> 
       </div>
 
       <div class="form-row">     
@@ -80,11 +74,8 @@
 
         <label style="margin: 0 0 0 30px; flex-basis: 102px;">Data de validade:</label>
         <input type="date" id="datavalidade" name="datavalidade" required></input> 
-        
-      </div>
-  
-      <div class="form-row">
-        <label>Tipo de documento</label>
+
+        <label>Tipo de documento:</label>
         <select name="auxtipodocumentoid" id="documentos">
           <option value="">Selecione</option>        
           @foreach($documento as $docu)
@@ -95,11 +86,9 @@
   
       <div class="form-row">
         <label>Número</label>
-        <input type="number" id="numero" name="numero" required></input>
-      </div>
-  
-      <div class="form-row">
-        <label>Empresa</label>
+        <input type="text" id="numero" name="numero" maxlength="10" required></input>
+
+        <label>Empresa:</label>
         <select id="empresa" name="auxempresaid" required>
           <option value="">Selecione</option>
         @foreach($empresa as $empre)       
@@ -110,21 +99,19 @@
   
       <div class="form-row">
         <label>Valor:</label>
-        <input type="number" id="valor" name="valor" required></input>
+        <input type="number" id="valor" name="valor" maxlength="18" required></input>
 
 
-        <label style="margin: 0 0 0 30px; flex-basis: 102px;">Documento:</label>
-        <input type="text" id="numerodocumento" name="numerodocumento" required></input>
-      </div>
+        <label>Documento:</label>
+        <input type="text" id="numerodocumento" name="numerodocumento" maxlength="25" required></input>
 
-      <div class="form-row">
         <label>Numero da NL:</label>
         <input type="number" id="numeros_nls" name="numeronl" required></input>
       </div>
 
       <div class="form-row">
         <label>Histórico:</label>
-        <input type="text" id="historico" name="historico" required></input>
+        <input type="text" id="historico" name="historico" maxlength="512" required></input>
       </div>
       <br><br><br><br>  
         <div class="button">
@@ -137,4 +124,7 @@
         </div>
     </div>
 </section>
-      
+
+<script src="../js/cadastro.js"></script>
+</body>
+</html>
