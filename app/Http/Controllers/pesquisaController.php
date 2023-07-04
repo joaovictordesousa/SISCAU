@@ -27,7 +27,7 @@ class PesquisaController extends Controller
             'agencias' => $agencias,
             'documentos' => $documentos
         ]);
-                         
+                        
     }
 
     public function filtro(Request $request) 
@@ -53,6 +53,7 @@ class PesquisaController extends Controller
             //  dd($nr);
             
             $filtro = DB::select("SELECT * FROM pesquisa(
+
               $nr
               $nrcontrato
               $nrdocumento

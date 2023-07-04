@@ -37,9 +37,7 @@
   
         <label for="contrato" style="margin: 0 0 0 20px; flex-basis: 102px;">Contrato:</label>
         <input type="text" id="nrcontrato" name="nrcontrato">
-      </div>
-  
-      <div class="form-row">
+
         <label for="documento">Documento:</label>
         <input type="text" id="nrdocumento" name="nrdocumento">
       </div>
@@ -52,9 +50,7 @@
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
         @endforeach
         </select>
-      </div>
-  
-      <div class="form-row">
+
         <label for="agencia">Agência:</label>
         <select id="codigoagencia" name="codigoagencia">
           <option value="">Selecione</option>
@@ -103,14 +99,10 @@
           <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
         @endforeach
         </select>
-      </div>
-  
-      <div class="form-row">
+
         <label for="numero_nl">Número da NL:</label>
         <input type="number" id="nrnumeronl" name="nrnumeronl">
-      </div>
-  
-      <div class="form-row">
+
         <label for="tipo_consulta">Tipo da Consulta:</label>
         <select id="tipoconsulta" name="tipoconsulta">
           <option value="">Selecione</option>
