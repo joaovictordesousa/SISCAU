@@ -85,7 +85,7 @@
       </div>
   
       <div class="form-row">
-        <label>Número</label>
+        <label>Numero</label>
         <input type="text" id="numero" name="numero" maxlength="10" required></input>
 
         <label>Empresa:</label>
@@ -99,7 +99,7 @@
   
       <div class="form-row">
         <label>Valor:</label>
-        <input type="number" id="valor" name="valor" maxlength="18" required></input>
+        <input type="text" id="valor" name="valor" maxlength="18" required></input>
 
 
         <label>Documento:</label>
