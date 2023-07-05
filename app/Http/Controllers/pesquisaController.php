@@ -21,18 +21,21 @@ class PesquisaController extends Controller
         $recolhimentos = AuxTipoRecolhimento::all();
         $agencias = AuxAgencias::all();
         $documentos = AuxTipoDocumento::all();
-
+ 
         return view('pesquisa', [
             'recolhimentos' => $recolhimentos,
             'agencias' => $agencias,
             'documentos' => $documentos
         ]);
+
+         // usados para fazer o foreach
                         
     }
 
+    //função de fazer o filtro, função criada diretamente do banco de dados.
     public function filtro(Request $request) 
         {
-
+            //Falando oque são cada input
             $nr = $request->input('nr');
             $nrcontrato = $request->input('nrcontrato');
             $nrdocumento = $request->input('nrdocumento');
@@ -49,9 +52,9 @@ class PesquisaController extends Controller
             $nrauxtipodocumentoid = $request->input('nrauxtipodocumentoid');
             $nrnumeronl = $request->input('nrnumeronl');
             $tipoconsulta = $request->input('tipoconsulta');
-                   
+
             //  dd($nr);
-            
+
             $filtro = DB::select("SELECT * FROM pesquisa(
 
               $nr
@@ -74,13 +77,15 @@ class PesquisaController extends Controller
             ");
 
                 // dd($filtro);
+
+                //função de filtro do banco 
                 
                 return view('historico', [
                     'filtro' => $filtro
                 ]);
 
         }
-
+            // FIM DO FILTRO
 }
 
 
