@@ -39,7 +39,7 @@
           <tr>
             <td value="{{ $filtrar->auxtiporecolhimentoid }}">{{ $filtrar->auxtiporecolhimentoid }}</td>
             <td value="{{ $filtrar->auxagenciaid }}">{{ $filtrar->auxempresaid }}</td>
-            <td value="{{ $filtrar->numero }}">{{ $filtrar->numero }}</td>
+            <td value="{{ $filtrar->numero }}">R$ {{ $filtrar->valor }}</td>
           </tr>
         @endforeach
       </tbody>

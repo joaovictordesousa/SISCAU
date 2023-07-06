@@ -106,7 +106,7 @@
         <input type="text" id="numerodocumento" name="numerodocumento" maxlength="25" required></input>
 
         <label>Numero da NL:</label>
-        <input type="number" id="numeros_nls" name="numeronl" required></input>
+        <input type="text" id="numeros_nls" name="numeronl" required></input>
       </div>
 
       <div class="form-row">

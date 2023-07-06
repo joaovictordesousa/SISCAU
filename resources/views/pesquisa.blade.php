@@ -29,11 +29,11 @@
     </div>
     <!--  -->
     
-    <form action="/filtro" method="GET">
+    <form action="/filtro " method="POST">
       @csrf
       <div class="form-row">
         <label for="numero">Numero:</label>
-        <input type="number" id="nr" name="nr">
+        <input type="text" id="nr" name="nr">
   
         <label for="contrato" style="margin: 0 0 0 20px; flex-basis: 102px;">Contrato:</label>
         <input type="text" id="nrcontrato" name="nrcontrato">
@@ -101,7 +101,7 @@
         </select>
 
         <label for="numero_nl">Número da NL:</label>
-        <input type="number" id="nrnumeronl" name="nrnumeronl">
+        <input type="text" id="nrnumeronl" name="nrnumeronl">
 
         <label for="tipo_consulta">Tipo da Consulta:</label>
         <select id="tipoconsulta" name="tipoconsulta">
