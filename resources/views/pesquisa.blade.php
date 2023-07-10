@@ -29,7 +29,7 @@
     </div>
     <!--  -->
     
-    <form action="/filtro " method="POST">
+    <form action="/filtro" method="POST">
       @csrf
       <div class="form-row">
         <label for="numero">Numero:</label>
@@ -59,7 +59,7 @@
         @endforeach
         </select>
       </div>
-  
+
       <div class="form-row">
         <label for="baixa">Processos de baixa:</label>
         <input type="text" id="nrbaixaprocesso" name="nrbaixaprocesso">
@@ -102,7 +102,9 @@
 
         <label for="numero_nl">Número da NL:</label>
         <input type="text" id="nrnumeronl" name="nrnumeronl">
-
+      </div>
+  
+      <div class="form-row">
         <label for="tipo_consulta">Tipo da Consulta:</label>
         <select id="tipoconsulta" name="tipoconsulta">
           <option value="">Selecione</option>
