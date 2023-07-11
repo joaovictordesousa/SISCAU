@@ -18,6 +18,8 @@ class PesquisaController extends Controller
 
     public function pesquisa()
     {
+        // usados para fazer o foreach
+
         $recolhimentos = AuxTipoRecolhimento::all();
         $agencias = AuxAgencias::all();
         $documentos = AuxTipoDocumento::all();
@@ -52,7 +54,7 @@ class PesquisaController extends Controller
             $nrauxtipodocumentoid = $request->input('nrauxtipodocumentoid');
             $nrnumeronl = $request->input('nrnumeronl');
             $tipoconsulta = $request->input('tipoconsulta');
-        
+                    
             $filtro = DB::select("
                 SELECT * FROM pesquisa(
                     :nr,

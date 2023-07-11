@@ -35,6 +35,7 @@
           </tr>
         </thead>
         <tbody>
+          
         @foreach($filtro as $filtrar)
           <tr>
             <td>{{ $filtrar->auxtiporecolhimentoid }}</td>

@@ -44,7 +44,7 @@
   
       <div class="form-row">
         <label for="recolhimento">Tipo de recolhimento:</label>
-        <select id="recolhimento" name="recolhimento">
+        <select id="auxtiporecolhimentoid" name="auxtiporecolhimentoid">
           <option value="">Selecione</option>
         @foreach($recolhimentos as $recolhimento)  
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
@@ -93,7 +93,7 @@
   
       <div class="form-row">
         <label for="tipo_documento">Tipo do Documento:</label>
-        <select id="tipo_documento" name="tipo_documento">
+        <select id="nrauxtipodocumentoid" name="nrauxtipodocumentoid">
           <option value="">Selecione</option>
         @foreach($documentos as $documento)
           <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
