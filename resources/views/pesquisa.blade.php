@@ -29,7 +29,7 @@
     </div>
     <!--  -->
     
-    <form action="/filtro " method="POST">
+    <form action="/filtro" method="POST">
       @csrf
       <div class="form-row">
         <label for="numero">Numero:</label>
@@ -44,7 +44,7 @@
   
       <div class="form-row">
         <label for="recolhimento">Tipo de recolhimento:</label>
-        <select id="recolhimento" name="recolhimento">
+        <select id="auxtiporecolhimentoid" name="auxtiporecolhimentoid">
           <option value="">Selecione</option>
         @foreach($recolhimentos as $recolhimento)  
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
@@ -59,7 +59,7 @@
         @endforeach
         </select>
       </div>
-  
+
       <div class="form-row">
         <label for="baixa">Processos de baixa:</label>
         <input type="text" id="nrbaixaprocesso" name="nrbaixaprocesso">
@@ -93,7 +93,7 @@
   
       <div class="form-row">
         <label for="tipo_documento">Tipo do Documento:</label>
-        <select id="tipo_documento" name="tipo_documento">
+        <select id="nrauxtipodocumentoid" name="nrauxtipodocumentoid">
           <option value="">Selecione</option>
         @foreach($documentos as $documento)
           <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
@@ -102,7 +102,9 @@
 
         <label for="numero_nl">Número da NL:</label>
         <input type="text" id="nrnumeronl" name="nrnumeronl">
-
+      </div>
+  
+      <div class="form-row">
         <label for="tipo_consulta">Tipo da Consulta:</label>
         <select id="tipoconsulta" name="tipoconsulta">
           <option value="">Selecione</option>

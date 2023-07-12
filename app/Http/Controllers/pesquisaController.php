@@ -18,6 +18,8 @@ class PesquisaController extends Controller
 
     public function pesquisa()
     {
+        // usados para fazer o foreach
+
         $recolhimentos = AuxTipoRecolhimento::all();
         $agencias = AuxAgencias::all();
         $documentos = AuxTipoDocumento::all();
@@ -52,31 +54,47 @@ class PesquisaController extends Controller
             $nrauxtipodocumentoid = $request->input('nrauxtipodocumentoid');
             $nrnumeronl = $request->input('nrnumeronl');
             $tipoconsulta = $request->input('tipoconsulta');
+                    
+            $filtro = DB::select("
+                SELECT * FROM pesquisa(
+                    :nr,
+                    :nrcontrato,
+                    :nrdocumento,
+                    :auxtiporecolhimentoid,
+                    :codigoagencia,
+                    :nrbaixaprocesso,
+                    :nrcpfcnpj,
+                    :datagrinicio,
+                    :datagrfim,
+                    :datavalidadeinicio,
+                    :datavalidadefim,
+                    :databaixainicio,
+                    :databaixafim,
+                    :nrauxtipodocumentoid,
+                    :nrnumeronl,
+                    :tipoconsulta
+                )
 
-            //  dd($nr);
+            ", [
+                'nr' => $nr,
+                'nrcontrato' => $nrcontrato,
+                'nrdocumento' => $nrdocumento,
+                'auxtiporecolhimentoid' => $auxtiporecolhimentoid, 
+                'codigoagencia' => $codigoagencia,
+                'nrbaixaprocesso' => $nrbaixaprocesso,
+                'nrcpfcnpj' => $nrcpfcnpj,
+                'datagrinicio' => $datagrinicio,
+                'datagrfim' => $datagrfim,
+                'datavalidadeinicio' => $datavalidadeinicio,
+                'datavalidadefim' => $datavalidadefim,
+                'databaixainicio' => $databaixainicio,
+                'databaixafim' => $databaixafim,
+                'nrauxtipodocumentoid' => $nrauxtipodocumentoid,
+                'nrnumeronl' => $nrnumeronl,
+                'tipoconsulta' => $tipoconsulta
+            ]);
 
-            $filtro = DB::select("SELECT * FROM pesquisa(
-
-              $nr
-              $nrcontrato
-              $nrdocumento
-              $auxtiporecolhimentoid
-              $codigoagencia
-              $nrbaixaprocesso
-              $nrcpfcnpj
-              $datagrinicio
-              $datagrfim
-              $datavalidadeinicio 
-              $datavalidadefim
-              $databaixainicio
-              $databaixafim
-              $nrauxtipodocumentoid
-              $nrnumeronl
-              $tipoconsulta)
-
-            ");
-
-                // dd($filtro);
+            //   dd($filtro);
 
                 //função de filtro do banco 
                 
@@ -84,8 +102,10 @@ class PesquisaController extends Controller
                     'filtro' => $filtro
                 ]);
 
+                
+                // 00001/1996
         }
             // FIM DO FILTRO
+            
 }
-
 

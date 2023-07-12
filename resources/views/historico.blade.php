@@ -35,13 +35,16 @@
           </tr>
         </thead>
         <tbody>
-        @foreach($filtro as $filtrar)
+          
+        @foreach($filtro as $fil)
           <tr>
-            <td value="{{ $filtrar->auxtiporecolhimentoid }}">{{ $filtrar->auxtiporecolhimentoid }}</td>
-            <td value="{{ $filtrar->auxagenciaid }}">{{ $filtrar->auxempresaid }}</td>
-            <td value="{{ $filtrar->numero }}">R$ {{ $filtrar->valor }}</td>
+            <td>{{ $fil->auxtiporecolhimento }}</td>
+            <td>{{ $fil->razaosocial }}</td>
+            <td>R$ {{ $fil->valor }}</td>
           </tr>
         @endforeach
+
+   
       </tbody>
       </table>
     </div>
