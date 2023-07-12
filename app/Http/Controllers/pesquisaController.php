@@ -98,6 +98,7 @@ class PesquisaController extends Controller
 
                 //função de filtro do banco 
                 
+                
                 return view('historico', [
                     'filtro' => $filtro
                 ]);
