@@ -94,7 +94,7 @@ class PesquisaController extends Controller
                 'tipoconsulta' => $tipoconsulta
             ]);
 
-            //  dd($filtro);
+            //   dd($filtro);
 
                 //função de filtro do banco 
                 
@@ -103,10 +103,9 @@ class PesquisaController extends Controller
                 ]);
 
                 
-
+                // 00001/1996
         }
             // FIM DO FILTRO
             
 }
-
 
