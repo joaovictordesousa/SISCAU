@@ -43,7 +43,6 @@
             <td>R$ {{ $fil->valor }}</td>
           </tr>
         @endforeach
-
    
       </tbody>
       </table>
