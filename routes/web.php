@@ -23,6 +23,8 @@ Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa
 Route::get('/historico', [HistoricoController::class, 'historico'])->name('ResultadoHistorico');
 Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name('NovaGuia');
 
-Route::post('/filtro', [PesquisaController::class, 'filtro'])->name('filtrar');
+Route::post('/historico', [PesquisaController::class, 'historico'])->name('filtrar');
 Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGuia');
+
+Route::delete('/delete', [HistoricoController::class, 'delete'])->name('deletar.dados');
 

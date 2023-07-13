@@ -1,7 +1,7 @@
 <!-- Onde tambem vai gerar o relatorio-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <link rel="icon" href="../img/logoicon.jpg">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>SISCAU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">    <title>SISCAU</title>
 </head>
 <body>
 
@@ -32,22 +32,27 @@
             <th class="th_tipo">Tipo recolhimento</th>
             <th class="th_empresa">Empresa</th>
             <th class="th_valor">Valor</th>
+            <th class="th_acoes">Ações</th>
           </tr>
         </thead>
         <tbody>
           
-        @foreach($filtro as $fil)
+        @foreach($historico as $histo)
           <tr>
-            <td>{{ $fil->auxtiporecolhimento }}</td>
-            <td>{{ $fil->razaosocial }}</td>
-            <td>R$ {{ $fil->valor }}</td>
+            <td>{{ $histo->auxtiporecolhimento }}</td>
+            <td>{{ $histo->razaosocial }}</td>
+            <td>R$ {{ $histo->valor }}</td>
+            <td>
+              <a href="" class="btn btn-light btn-sm">Editar</a>
+              <a onclick="deleteRegistroPaginacao( '{{ route('deletar.dados') }}' )" class="btn btn-danger btn-sm" >Excluir</a>
+            </td>
           </tr>
         @endforeach
    
       </tbody>
       </table>
     </div>
-
+    
   </section>
 
       <div class="container_botoes">
@@ -56,6 +61,11 @@
       </div>
 
     </main>
- 
-</body>
+
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+    <script src="../js/projeto.js"></script>
+  </body>
 </html>

@@ -67,8 +67,11 @@ thead {
 }
 
 .th_empresa {
-    padding: 0 20px;
-    text-align: none;
+   width: 50%;
+}
+
+.th_acoes {
+    width: 30%;
 }
   
 tr {
@@ -77,8 +80,6 @@ tr {
   
 tbody tr td {
     vertical-align: text-top;
-    padding: 6px;
-    max-width: 50px;
 }
   
 thead tr th {
@@ -109,10 +110,10 @@ td button {
 td button i {
     font-size: 25px;
 }
-  
+/*   
 td button i:first-child {
     margin-right: 10px;
-}
+} */
 
 .container_botoes {
     display: flex;

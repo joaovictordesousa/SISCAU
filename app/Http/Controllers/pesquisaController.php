@@ -35,7 +35,7 @@ class PesquisaController extends Controller
     }
 
     //função de fazer o filtro, função criada diretamente do banco de dados.
-    public function filtro(Request $request) 
+    public function historico(Request $request) 
         {
             //Falando oque são cada input
             $nr = $request->input('nr');
@@ -55,7 +55,7 @@ class PesquisaController extends Controller
             $nrnumeronl = $request->input('nrnumeronl');
             $tipoconsulta = $request->input('tipoconsulta');
                     
-            $filtro = DB::select("
+            $historico = DB::select("
                 SELECT * FROM pesquisa(
                     :nr,
                     :nrcontrato,
@@ -98,9 +98,8 @@ class PesquisaController extends Controller
 
                 //função de filtro do banco 
                 
-                
                 return view('historico', [
-                    'filtro' => $filtro
+                    'historico' => $historico,
                 ]);
 
                 
