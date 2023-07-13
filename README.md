@@ -21,11 +21,11 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 
 ## Ultimas updates
 
-- [x] Pesquisa
+- [x] _**Pesquisa**_
 
-- [x] Cadastro
+- [x] _**Cadastro**_
 
-- [x] Histórico
+- [x] _**Histórico**_
 
 
 # Tecnologias utilizadas
