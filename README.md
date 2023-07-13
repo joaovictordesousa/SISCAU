@@ -49,7 +49,7 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 5. >Run php artisan serve
 6. >Go to link localhost:8000
 
-_**PROPRIEDADES**_ | _**DESCRIÇÃO**_
+_*PROPRIEDADES*_ | _*DESCRIÇÃO*_
 
 ----------- | -----------
 *Novacap Ouvidoria* |  https://ouvidoria.df.gov.br/ 
@@ -59,7 +59,7 @@ _**PROPRIEDADES**_ | _**DESCRIÇÃO**_
 >
 >
 
-_**COLABORADORES**_ | _**GITHUB PAGE**_
+_*COLABORADORES*_ | _*GITHUB PAGE*_
 
 -------------- | ----------------
 **João Victor Sousa Ribeiro** | https://github.com/joaovictodesousa 
