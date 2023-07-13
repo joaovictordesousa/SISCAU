@@ -18,6 +18,7 @@ Nessa sistema você vai encontrar todo campo de **cadastro**, **pesquisa** e **g
 - _**Históricos**_
 
 O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastrar, pesquisar e organizar.
+----
 
 ## Ultimas updates
 
@@ -26,7 +27,7 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 - [x] _**Cadastro**_
 
 - [x] _**Histórico**_
-
+----
 
 # Tecnologias utilizadas
 
@@ -39,7 +40,7 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 * **HTML**
 
 * **CSS**
-
+----
 # Clonar, organizar e instalar para iniciar localmente
 
 1. >Run git clone
