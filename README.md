@@ -8,7 +8,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="Licença"></a>
 </p>
 
-# Bem vindo a README do sistema SISCAU da Novacap.
+# Bem vindo ao README do sistema SISCAU da Novacap.
 
 Nessa sistema você vai encontrar todo campo de **cadastro**, **pesquisa** e **gestão** referente a **Novacap**.
 
