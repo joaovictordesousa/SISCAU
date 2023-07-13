@@ -50,10 +50,10 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 6. >Go to link localhost:8000
 >
 >
-===
+>
+
 
 _*PROPRIEDADES*_ | _*DESCRIÇÃO*_
-
 ----------- | -----------
 *Novacap Ouvidoria* |  https://ouvidoria.df.gov.br/ 
 *Sujestão* | https://ouvidoria.df.gov.br/carta-servico-cidadao/
@@ -61,12 +61,11 @@ _*PROPRIEDADES*_ | _*DESCRIÇÃO*_
 *Reclamações* | _162_
 >
 >
-===
+>
 
 
 
 _*COLABORADORES*_ | _*GITHUB PAGE*_
-
 -------------- | ----------------
 **João Victor Sousa Ribeiro** | https://github.com/joaovictodesousa 
 **Rafael Alencar do Amaral** | https://github.com/RafaelOsama
