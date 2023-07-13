@@ -48,6 +48,9 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 4. >Run php artisan key:generate
 5. >Run php artisan serve
 6. >Go to link localhost:8000
+>
+>
+===
 
 _*PROPRIEDADES*_ | _*DESCRIÇÃO*_
 
@@ -58,6 +61,9 @@ _*PROPRIEDADES*_ | _*DESCRIÇÃO*_
 *Reclamações* | _162_
 >
 >
+===
+
+
 
 _*COLABORADORES*_ | _*GITHUB PAGE*_
 
