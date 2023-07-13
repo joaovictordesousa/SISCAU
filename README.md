@@ -13,19 +13,20 @@
 Nessa sistema você vai encontrar todo campo de **cadastro**, **pesquisa** e **gestão** referente a **Novacap**.
 
 
-- Cadastro
-- Pesquisa
-- Históricos
+- _**Cadastro**_
+- _**Pesquisa**_
+- _**Históricos**_
 
 O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastrar, pesquisar e organizar.
 
 ## Ultimas updates
 
-- [x] Pesquisa
+- [x] _**Pesquisa**_
 
-- [x] Cadastro
+- [x] _**Cadastro**_
 
-- [x] Histórico
+- [x] _**Histórico**_
+----
 
 
 # Tecnologias utilizadas
@@ -39,6 +40,7 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 * **HTML**
 
 * **CSS**
+----
 
 # Clonar, organizar e instalar para iniciar localmente
 
