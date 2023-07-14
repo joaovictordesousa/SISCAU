@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\GuiasRecolhimento;
+use Illuminate\Http\Request;
 
 class HistoricoController extends Controller
 {
@@ -15,6 +16,11 @@ class HistoricoController extends Controller
             'filtro' => $filtro
         ]);
             
+    }
+
+    public function delete(Request $request) 
+    {
+
     }
 
 }
