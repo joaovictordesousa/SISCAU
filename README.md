@@ -41,7 +41,7 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 
 * **pgAdmin4**
 
-* **Java Script**
+* **JavaScript**
 
 * **HTML**
 
