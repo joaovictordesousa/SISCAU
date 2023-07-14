@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrincipalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PesquisaController;
 use App\Http\Controllers\CadastroController;
@@ -18,13 +19,16 @@ use App\Models\AuxTipoRecolhimento;
 |
 */
 
-Route::get('/', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
-Route::get('/pesquisa', [PesquisaController::class, 'pesquisa'])->name('pesquisa');
-Route::get('/historico', [HistoricoController::class, 'historico'])->name('ResultadoHistorico');
-Route::get('/cadastro', [CadastroController::class, 'RenderCadastroView'])->name('NovaGuia');
+Route::get('/', [PrincipalController::class, 'index'])->name('pesquisa');
+Route::get('/principal', [PrincipalController::class, 'index'])->name('pesquisa');
+Route::get('/principal/create', [PrincipalController::class, 'create'])->name('NovaGuia');
+Route::post('/principal', [PrincipalController::class, 'store'])->name('Principal.store');
+Route::post('/principal/historico', [PrincipalController::class, 'filtrar'])->name('principal.historico');
+route::get('/principal/{GuiasRecolhimento}/edit', [PrincipalController::class, 'edit'])->name('editardados');
+route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'update'])->name('principal.update');
+route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');
+route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
+route::get('/principal/{GuiasRecolhimento}/confirmdestroy', [PrincipalController::class, 'confirmdestroy'])->name('principal.confirmdestroy');
 
-Route::post('/historico', [PesquisaController::class, 'historico'])->name('filtrar');
-Route::post('/cadastro', [CadastroController::class, 'Cadastrar'])->name('NovaGuia');
 
-Route::delete('/delete', [HistoricoController::class, 'delete'])->name('deletar.dados');
 

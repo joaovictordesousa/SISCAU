@@ -1,4 +1,19 @@
-@include('navbar.cabecalho')
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logoicon.jpg">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>SISCAU</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="img/logo_branca.png" alt="logo" class="logo_header">
+        <div class="container_botao"></div>
+    </header>
     
 <section class="container_cadastro">
 
@@ -12,8 +27,10 @@
     <form action="{{ route('Principal.store')}}" method="POST">
         @csrf
      <div class="form-row">
+        <input type="hidden" method="PUT">
+
         <label>Tipo de recolhimento:</label>
-        <select id="recolhimento" name="auxtiporecolhimentoid" required> 
+        <select id="recolhimento" name="auxtiporecolhimentoid"> 
         <!-- <option value="Instituição financeira">Instituição financeira</option> -->                 
         <option value="">Selecione</option>
         @foreach($recolhimentos as $recolhimento)
@@ -23,7 +40,7 @@
         </select>
       
         <label>Instituição financeira:</label>
-            <select id="financeira" name="auxinstituicaofinanceiraid" required>
+            <select id="financeira" name="auxinstituicaofinanceiraid">
             <option value="">Selecione</option>
             @foreach($financas as $fin)
              <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
@@ -32,7 +49,7 @@
             </select>
 
         <label>Agência:</label>
-            <select id="agencias" name="auxagenciaid" required>
+            <select id="agencias" name="auxagenciaid">
             <option value="">Selecione</option>
             @foreach($agencia as $agen)
               <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
@@ -43,22 +60,22 @@
   
       <div class="form-row">
         <label>Conta:</label>
-        <input type="text" id="numeroconta" name="numeroconta" maxlength="10" required></input>  
+        <input value="{{ $GuiasRecolhimento->numeroconta }}" type="text" id="numeroconta" name="numeroconta" maxlength="10">
 
         <label style="margin: 0 0 0 30px; flex-basis: 102px;">Contrato:</label>
-        <input type="text" id="numerocontrato" name="numerocontrato" maxlength="10" required></input>
+        <input type="text" id="numerocontrato" name="numerocontrato" maxlength="10">
 
         <label>Aditivo:</label>
-        <input type="text" id="aditivo" name="aditivo" maxlength="25" required></input> 
+        <input type="text" id="aditivo" name="aditivo" maxlength="25">
       </div>
 
       <div class="form-row">     
 
         <label>Data do GR:</label>
-        <input type="date" id="datagr" name="datagr" required></input> 
+        <input type="date" id="datagr" name="datagr">
 
         <label style="margin: 0 0 0 30px; flex-basis: 102px;">Data de validade:</label>
-        <input type="date" id="datavalidade" name="datavalidade" required></input> 
+        <input type="date" id="datavalidade" name="datavalidade">
 
         <label>Tipo de documento:</label>
         <select name="auxtipodocumentoid" id="documentos">
@@ -71,10 +88,10 @@
   
       <div class="form-row">
         <label>Numero</label>
-        <input type="text" id="numero" name="numero" maxlength="10" required></input>
+        <input value="{{ $GuiasRecolhimento->numero }}" type="text" id="numero" name="numero" maxlength="10">
 
         <label>Empresa:</label>
-        <select id="empresa" name="auxempresaid" required>
+        <select id="empresa" name="auxempresaid">
           <option value="">Selecione</option>
         @foreach($empresa as $empre)       
             <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
@@ -84,28 +101,24 @@
   
       <div class="form-row">
         <label>Valor:</label>
-        <input type="text" id="valor" name="valor" maxlength="18" required></input>
+        <input {{ $GuiasRecolhimento->valor }} type="text" id="valor" name="valor" maxlength="18">
 
 
         <label>Documento:</label>
-        <input type="text" id="numerodocumento" name="numerodocumento" maxlength="25" required></input>
+        <input {{ $GuiasRecolhimento->numerodocumento }} type="text" id="numerodocumento" name="numerodocumento" maxlength="25">
 
         <label>Numero da NL:</label>
-        <input type="text" id="numeros_nls" name="numeronl" required></input>
+        <input {{ $GuiasRecolhimento->numeronl }} type="text" id="numeros_nls" name="numeronl">
       </div>
 
       <div class="form-row">
         <label>Histórico:</label>
-        <input type="text" id="historico" name="historico" maxlength="512" required></input>
+        <input type="text" id="historico" name="historico" maxlength="512">
       </div>
       <br><br><br><br>  
         <div class="button">
         <div>
             <button class="botao-salvar">Salvar</button>
-        </div>
-        
-        <div>
-            <a href="{{ route('pesquisa')  }}" class="botao-cadastro">Cancelar</a>
         </div>
     </div>
 </section>
