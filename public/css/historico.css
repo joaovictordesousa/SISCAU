@@ -16,7 +16,7 @@
     border-radius: 30px;
     /* box-shadow: 1px 3px 8px 10px gray; Qual lado| Qual altura | Transparencia | Tamanho da Sombra  */
 }
-  
+
 .cabecalho_container {
     min-height: 70px;
     display: flex;
@@ -24,7 +24,7 @@
     justify-content: space-between;
     margin: auto 12px;
 }
-  
+
 .cabecalho_container span {
     font-weight: 900;
     font-size: 20px;
@@ -34,85 +34,88 @@
 .divTable {
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
-               -15px -15px 30px #ffffff;
+        -15px -15px 30px #ffffff;
     padding: 24px;
-    width: 80%; 
-    height: inherit; 
+    width: 80%;
+    height: inherit;
     overflow: auto;
     text-align: center;
     color: black;
     font-size: 20px;
 }
-  
+
 .divTable::-webkit-scrollbar {
     width: 12px;
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
 }
-  
+
 .divTable::-webkit-scrollbar-thumb {
     border-radius: 10px;
     /* background-color: darkgray;  */
 }
-  
+
 table {
     width: 100%;
     border-spacing: 10px;
     word-break: break-all;
     border-collapse: collapse;
 }
-  
+
 thead {
-    background-color: #002776;  /* Cor de fundo dos titulos do historico */
+    background-color: #002776;
+    /* Cor de fundo dos titulos do historico */
     border-radius: 15px;
 }
 
 .th_empresa {
-    padding: 0 20px;
-    text-align: none;
+    width: 50%;
 }
-  
+
+.th_acoes {
+    width: 30%;
+}
+
 tr {
     border-radius: 15px;
 }
-  
+
 tbody tr td {
     vertical-align: text-top;
-    padding: 6px;
-    max-width: 50px;
 }
-  
+
 thead tr th {
     text-align: center;
     padding: 8px 0;
     color: white;
 }
-  
+
 tbody tr {
     margin-bottom: 50px;
 }
-  
+
 thead tr th.acao {
-    width: 100px!important;
+    width: 100px !important;
     text-align: center;
 }
-  
+
 tbody tr td.acao {
     text-align: center;
 }
-  
+
 td button {
     border: none;
     outline: none;
     background: transparent;
 }
-  
+
 td button i {
     font-size: 25px;
 }
-  
+
+/*   
 td button i:first-child {
     margin-right: 10px;
-}
+} */
 
 .container_botoes {
     display: flex;
@@ -151,7 +154,7 @@ td button i:first-child {
     box-shadow: 2px 1px 8px 1px rgb(3, 76, 149);
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
     body {
         background-color: white;
     }
@@ -171,10 +174,10 @@ td button i:first-child {
         background: none;
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
 
-    .divTable {   
+    .divTable {
         width: 100%;
         box-shadow: none;
         background: none;

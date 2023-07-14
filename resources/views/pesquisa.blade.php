@@ -29,7 +29,7 @@
     </div>
     <!--  -->
     
-    <form action="/filtro" method="POST">
+    <form action="/historico" method="POST">
       @csrf
       <div class="form-row">
         <label for="numero">Numero:</label>
@@ -44,7 +44,7 @@
   
       <div class="form-row">
         <label for="recolhimento">Tipo de recolhimento:</label>
-        <select id="auxtiporecolhimentoid" name="auxtiporecolhimentoid">
+        <select id="auxtiporecolhimento" name="auxtiporecolhimento">
           <option value="">Selecione</option>
         @foreach($recolhimentos as $recolhimento)  
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
