@@ -1,28 +1,99 @@
-@include('navbar.cabecalho');
+@include('navbar.cabecalho')
 
     <div class="ContainerShow">
-        <p class="numero_show"><b>Numero:</b> {{ $GuiasRecolhimento->numero }}</p>
-        <p class="numero_show"><b>Tipo recolhimento:</b> {{ $GuiasRecolhimento->auxtiporecolhimento }}</p>
-        <p class="numero_show"><b>Instituição financeira:</b> {{ $GuiasRecolhimento->auxinstituicaofinanceira }}</p>
-        <p class="numero_show"><b>Numero do contrato:</b> {{ $GuiasRecolhimento->numerocontrato }}</p>
-        <p class="numero_show"><b>Agência:</b> {{ $GuiasRecolhimento->auxagencia }}</p>
-        <p class="numero_show"><b>Numero do documento:</b> {{ $GuiasRecolhimento->numerodocumento }}</p>
-        <p class="numero_show"><b>Empresa CNPJ:</b> {{ $GuiasRecolhimento->auxempresacnpj }}</p>
-        <p class="numero_show"><b>Razão social:</b> {{ $GuiasRecolhimento->razaosocial}}</p>
-        <p class="numero_show"><b>Data GR:</b> {{ $GuiasRecolhimento->datagr }}</p>
-        <p class="numero_show"><b>Data validade:</b> {{ $GuiasRecolhimento->datavalidade }}</p>
-        <p class="numero_show"><b>Numero da NL:</b> {{ $GuiasRecolhimento->auxtipodocumento }}</p>
-        <p class="numero_show"><b>Numero da conta:</b> {{ $GuiasRecolhimento->numeroconta }}</p> 
-        <p class="numero_show"><b>Aditivo:</b> {{ $GuiasRecolhimento->aditivo }}</p> 
-        <p class="numero_show"><b>Código:</b> {{ $GuiasRecolhimento->codigo }}</p> 
-        <p class="numero_show"><b>Numero NL:</b> {{ $GuiasRecolhimento->numeronl }}</p> 
-        <p class="numero_show"><b>Baixa Processo:</b> {{ $GuiasRecolhimento->baixaprocesso }}</p> 
-        <p class="numero_show"><b>Baixa data:</b> {{ $GuiasRecolhimento->baixadata }}</p> 
-        <p class="numero_show"><b>Baixa nl:</b> {{ $GuiasRecolhimento->baixanl }}</p> 
-        <p class="numero_show"><b>Baixa mensagem:</b> {{ $GuiasRecolhimento->baixamensagem }}</p> 
-        <p class="numero_show"><b>Valor:</b> R${{ $GuiasRecolhimento->valor }}</p> <br><br>
-    
-    <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $GuiasRecolhimento->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em"> Excluir</a>
+       
+        <table class="table">
+            <tbody>
+              <tr>
+                <td><b>Numero:</b></td>
+                <td>{{ $GuiasRecolhimento->numero }}</td>
+              </tr>
+              <tr>
+                <td><b>Tipo recolhimento:</b></td>
+                <td>{{ $GuiasRecolhimento->auxtiporecolhimento }}</td>
+              </tr>
+              <tr>
+                <td><b>Instituição financeira:</b></td>
+                <td>{{ $GuiasRecolhimento->auxinstituicaofinanceira }}</td>
+              </tr>
+              <tr>
+                <td><b>Numero do contrato:</b></td>
+                <td>{{ $GuiasRecolhimento->numerocontrato }}</td>
+              </tr>
+              <tr>
+                <td><b>Agência:</b></td>
+                <td>{{ $GuiasRecolhimento->auxagencia }}</td>
+              </tr>
+              <tr>
+                <td><b>Numero do documento:</b></td>
+                <td>{{ $GuiasRecolhimento->numerodocumento }}</td>
+              </tr>
+              <tr>
+                <td><b>Empresa CNPJ:</b></td>
+                <td>{{ $GuiasRecolhimento->auxempresacnpj }}</td>
+              </tr>
+              <tr>
+                <td><b>Razão social:</b></td>
+                <td>{{ $GuiasRecolhimento->razaosocial }}</td>
+              </tr>
+              <tr>
+                <td><b>Data GR:</b></td>
+                <td>{{ $GuiasRecolhimento->datagr }}</td>
+              </tr>
+              <tr>
+                <td><b>Data validade:</b></td>
+                <td>{{ $GuiasRecolhimento->datavalidade }}</td>
+              </tr>
+              <tr>
+                <td><b>Tipo do documento:</b></td>
+                <td>{{ $GuiasRecolhimento->auxtipodocumento }}</td>
+              </tr>
+              <tr>
+                <td><b>Numero conta:</b></td>
+                <td>{{ $GuiasRecolhimento->numeroconta }}</td>
+              </tr>
+              <tr>
+                <td><b>Aditivo:</b></td>
+                <td>{{ $GuiasRecolhimento->aditivo }}</td>
+              </tr>
+              <tr>
+                <td><b>Código:</b></td>
+                <td>{{ $GuiasRecolhimento->codigo }}</td>
+              </tr>
+              <tr>
+                <td><b>Numero NL:</b></td>
+                <td>{{ $GuiasRecolhimento->numeronl }}</td>
+              </tr>
+              <tr>
+                <td><b>Baixa processo:</b></td>
+                <td>{{ $GuiasRecolhimento->baixaprocesso }}</td>
+              </tr>
+              <tr>
+                <td><b>baixa data:</b></td>
+                <td>{{ $GuiasRecolhimento->baixadata }}</td>
+              </tr>
+              <tr>
+                <td><b>Baixa NL:</b></td>
+                <td>{{ $GuiasRecolhimento->baixanl }}</td>
+              </tr>
+              <tr>
+                <td><b>Baixa mensagem:</b></td>
+                <td>{{ $GuiasRecolhimento->baixamensagem }}</td>
+              </tr>
+              <tr>
+                <td><b>Valor:</b></td>
+                <td>{{ $GuiasRecolhimento->valor }}</td>
+              </tr><br><br>
+
+            </tbody>
+          </table>
+          <br><br>
+
+        <div class="containerbutton">
+            <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $GuiasRecolhimento->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em; margin: 0 10px;"> Excluir</a>
+            <a href=" {{ route('principal_historico') }} " class="btn btn-success" style="padding: 0.8em 1.2em">Voltar</a> 
+        </div>
+
 </div>
 <br><br><br>
 
