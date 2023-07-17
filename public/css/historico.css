@@ -2,8 +2,6 @@
     margin: 16px 0;
     padding: 1em;
     color: black;
-    font-size: 25px;
-}
 
 .container_botoes {
     display: flex;
@@ -47,5 +45,3 @@
     .container_titulo {
         margin: 1em 0;
     }
-
-}
