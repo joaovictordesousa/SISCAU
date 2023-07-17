@@ -103,7 +103,8 @@
       <br><br><br><br>  
         <div class="button">
         <div>
-            <button class="botao-salvar">Salvar</button>
+          <button class="botao-salvar">Salvar</button>
+          <a href=" {{ route('principal_historico') }} " class="btn btn-danger" style="padding: 1.09em 1.5em">Voltar</a> 
         </div>
     </div>
 </section>

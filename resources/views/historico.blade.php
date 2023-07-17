@@ -5,38 +5,6 @@
     </section>
     
   <section class="container">
-  
-    {{-- <div class="divTable">
-      <table>
-        <thead>
-          <tr>
-            <th class="th_tipo">Tipo recolhimento</th>
-            <th class="th_empresa">Empresa</th>
-            <th class="th_valor">Valor</th>
-            <th class="th_acoes">Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-        @foreach($historico as $histo)
-          <tr>
-            <td>{{ $histo->auxtiporecolhimento }}</td>
-            <td>{{ $histo->razaosocial }}</td>
-            <td>R$ {{ $histo->valor }}</td>
-            <td>
-              <a href=" {{ route('editardados', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-light btn-sm">Editar</a>
-              <a href=" {{ route('principal.show', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-success btn-sm">ver mais</a>
-            </td>
-          </tr>
-        @endforeach
-   
-      </tbody>
-      </table>
-    </div>
-    
-  </section> --}}
-
-{{-- boostrap --}}
 
   <div class="container_table">
 
