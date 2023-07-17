@@ -31,16 +31,16 @@
       @endforeach
 
     </tbody>
+  
   </table>
   </div>
   
 <br><br>
 
       <div class="container_botoes">
-          <button class="botao_imprimir">Imprimir</button>
-          <a href="{{ route('pesquisa') }}" class="botao_voltar">Voltar</a>
+          <button class="btn btn-primary" style="padding: 12px 20px;">Imprimir</button>
+          <a href="{{ route('pesquisa') }}" class="btn btn-danger" style="padding: 12px 20px;">Voltar</a>
       </div>
-    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
+    <br><br>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>  </body>
 </html>
