@@ -1,0 +1,13 @@
+.conatiner_botao_destroy {
+    margin: 5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo_destroy {
+    text-align: center;
+    margin: 1em;
+    font-size: 30px;
+}

@@ -18,6 +18,7 @@ class PrincipalController extends Controller
      */
     public function index()
     {
+        // chamando dados das tabelas auxiliares
         $recolhimentos = AuxTipoRecolhimento::all();
         $agencias = AuxAgencias::all();
         $documentos = AuxTipoDocumento::all();
@@ -32,6 +33,14 @@ class PrincipalController extends Controller
 
     public function create()
     {
+        //função de cadastrar os select de outras tabelas auxiliares
+
+        //Quando não tiver o select seria somente o retorn view('cadastro')
+
+    //A função create em si é usada para exibir o formulário de criação de um recurso, ou seja, 
+    //é usada para exibir um formulário no qual os usuários podem preencher os dados necessários 
+    //para criar um novo registro no banco de dados.
+
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
         $agencia = AuxAgencias::all();
@@ -54,6 +63,7 @@ class PrincipalController extends Controller
      */
     public function store(Request $request)
     {
+        //Cadastrar no banco de dados.
         $novaGuia = new GuiasRecolhimento;
         $novaGuia->fill($request->all());
         $novaGuia->save();
@@ -184,10 +194,14 @@ class PrincipalController extends Controller
      */
     public function destroy(string $id)
     {
-
         // Apagar registro
         GuiasRecolhimento::where('id', $id)->delete();
+
+        // Definir mensagem de sucesso na sessão
+        session()->flash('success', 'Registro excluído com sucesso.');
+    
         return redirect()->route('pesquisa');
+
     }
 
     public function confirmdestroy(GuiasRecolhimento $GuiasRecolhimento)
