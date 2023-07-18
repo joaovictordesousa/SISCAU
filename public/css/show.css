@@ -10,6 +10,9 @@
     font: 700;
 }
 
+.show_show {
+    border: 2px solid gray;
+}
 
 @media only screen and (max-width: 600px){
 

@@ -76,6 +76,9 @@ class PrincipalController extends Controller
      */
     public function show( GuiasRecolhimento $GuiasRecolhimento )
     {
+
+        //  dd($GuiasRecolhimento);
+
         return view('show', [
             'GuiasRecolhimento' => $GuiasRecolhimento]);
 

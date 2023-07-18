@@ -20,7 +20,6 @@
         @foreach($recolhimentos as $recolhimento)
             <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
         @endforeach
-
         </select>
       
         <label>Instituição financeira:</label>
@@ -28,7 +27,6 @@
             @foreach($financas as $fin)
              <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
             @endforeach
-
             </select>
 
         <label>Agência:</label>
@@ -36,7 +34,6 @@
             @foreach($agencia as $agen)
               <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
             @endforeach
-                          
             </select>
       </div>
   
