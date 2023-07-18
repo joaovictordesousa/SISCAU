@@ -1,8 +1,8 @@
 @include('navbar.cabecalho')
 
     <div class="ContainerShow">
-       
-        <table class="table">
+{{-- estou chamando os dados do GuiasRecolhimento trazendo os dados que foram cadastrados --}}
+        <table class="table show_show">
             <tbody>
               <tr>
                 <td><b>Numero:</b></td>
@@ -10,11 +10,11 @@
               </tr>
               <tr>
                 <td><b>Tipo recolhimento:</b></td>
-                <td>{{ $GuiasRecolhimento->auxtiporecolhimento }}</td>
+                <td>{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</td>
               </tr>
               <tr>
                 <td><b>Instituição financeira:</b></td>
-                <td>{{ $GuiasRecolhimento->auxinstituicaofinanceira }}</td>
+                <td>{{ $GuiasRecolhimento->auxinstituicaofinanceiraid }}</td>
               </tr>
               <tr>
                 <td><b>Numero do contrato:</b></td>
@@ -22,7 +22,7 @@
               </tr>
               <tr>
                 <td><b>Agência:</b></td>
-                <td>{{ $GuiasRecolhimento->auxagencia }}</td>
+                <td>{{ $GuiasRecolhimento->auxagenciaid }}</td>
               </tr>
               <tr>
                 <td><b>Numero do documento:</b></td>
@@ -34,7 +34,7 @@
               </tr>
               <tr>
                 <td><b>Razão social:</b></td>
-                <td>{{ $GuiasRecolhimento->razaosocial }}</td>
+                <td>{{ $GuiasRecolhimento->razaosocial }}</td> 
               </tr>
               <tr>
                 <td><b>Data GR:</b></td>
