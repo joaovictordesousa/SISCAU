@@ -68,6 +68,8 @@ class PrincipalController extends Controller
     {
         return view('show', [
             'GuiasRecolhimento' => $GuiasRecolhimento]);
+
+            // view para mostrar o view show
     }
 
     public function filtrar(Request $request)
@@ -128,7 +130,7 @@ class PrincipalController extends Controller
             'tipoconsulta' => $tipoconsulta
         ]);
 
-        //   dd($filtro);
+            // dd($historico);
 
             //função de filtro do banco 
             
@@ -146,6 +148,7 @@ class PrincipalController extends Controller
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
 
+        //editar
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
         $agencia = AuxAgencias::all();
@@ -168,6 +171,9 @@ class PrincipalController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
+        // Atualização de resultado
+
         GuiasRecolhimento::where('id', $id)->update($request);
 
         return redirect()->back();
@@ -178,6 +184,8 @@ class PrincipalController extends Controller
      */
     public function destroy(string $id)
     {
+
+        // Apagar registro
         GuiasRecolhimento::where('id', $id)->delete();
         return redirect()->route('pesquisa');
     }

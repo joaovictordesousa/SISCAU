@@ -1,0 +1,25 @@
+.ContainerShow {
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.numero_show {
+    font-size: 20px;
+    font: 700;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .containerbutton {
+        display: flex;
+        margin: 0 10px;
+    }
+
+    .ContainerShow {
+        width: 100%;
+    }
+
+}
