@@ -69,8 +69,8 @@
                 <td>{{ $GuiasRecolhimento->baixaprocesso }}</td>
               </tr>
               <tr>
-                <td><b>baixa data:</b></td>
-                <td>{{ $GuiasRecolhimento->baixadata }}</td>
+                <td><b>Baixa data:</b></td>
+                <td>{{ $GuiasRecolhimento->Baixadata }}</td>
               </tr>
               <tr>
                 <td><b>Baixa NL:</b></td>
@@ -78,7 +78,7 @@
               </tr>
               <tr>
                 <td><b>Baixa mensagem:</b></td>
-                <td>{{ $GuiasRecolhimento->baixamensagem }}</td>
+                <td>{{ $GuiasRecolhimento->Baixamensagem }}</td>
               </tr>
               <tr>
                 <td><b>Valor:</b></td>
