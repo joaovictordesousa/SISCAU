@@ -1,5 +1,16 @@
 @include('navbar.cabecalho')
 
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.alert-success').style.display = 'none';
+        }, {{ session('display_time', 5000) }});
+    </script>
+@endif
+
 <section class="container_pesquisa">
 
     <div class="form-container">
