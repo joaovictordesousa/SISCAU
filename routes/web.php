@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PrincipalController;
+use App\Models\GuiasRecolhimento;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PesquisaController;
 use App\Http\Controllers\CadastroController;
@@ -30,6 +31,5 @@ route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'updat
 route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');
 route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
 route::get('/principal/{GuiasRecolhimento}/confirmdestroy', [PrincipalController::class, 'confirmdestroy'])->name('principal.confirmdestroy');
-
 
 

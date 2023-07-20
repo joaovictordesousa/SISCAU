@@ -20,6 +20,7 @@
     <tbody class="table-group-divider">
       @foreach($historico as $histo)
       <tr>
+        {{-- Mudar nome para os do filtro --}}
         <td>{{ $histo->auxtiporecolhimento }}</td>
         <td>{{ $histo->razaosocial }}</td>
         <td>R$ {{ $histo->valor }}</td>
@@ -31,8 +32,12 @@
       @endforeach
 
     </tbody>
+  </table> 
   
-  </table>
+  {{$historico->appends([
+    'search' => request()->get('search','')
+ ])->links()}}
+
   </div>
   
 <br><br>
