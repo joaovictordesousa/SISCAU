@@ -91,7 +91,7 @@
         @foreach($documentos as $documento)
           <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
         @endforeach
-        </select>
+        </select> 
 
         <label for="numero_nl">Número da NL:</label>
         <input type="text" id="nrnumeronl" name="nrnumeronl">

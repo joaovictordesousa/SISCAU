@@ -9,7 +9,9 @@ use App\Models\AuxTipoDocumento;
 use App\Models\AuxInstituicoesFinanceiras;
 use App\Models\AuxEmpresas;
 use App\Models\GuiasRecolhimento;
+use App\Models\Filtro;
 use Illuminate\Support\Facades\DB;
+use Nette\Utils\Paginator;
 
 class PrincipalController extends Controller
 {
@@ -18,6 +20,9 @@ class PrincipalController extends Controller
      */
     public function index()
     {
+
+        // $historico = Filtro::paginate(15);
+
         // chamando dados das tabelas auxiliares
         $recolhimentos = AuxTipoRecolhimento::all();
         $agencias = AuxAgencias::all();
@@ -26,7 +31,8 @@ class PrincipalController extends Controller
         return view('pesquisa', [
             'recolhimentos' => $recolhimentos,
             'agencias' => $agencias,
-            'documentos' => $documentos
+            'documentos' => $documentos,
+            // 'historico' => $historico
         ]);
     }
 
@@ -76,11 +82,12 @@ class PrincipalController extends Controller
      */
     public function show( GuiasRecolhimento $GuiasRecolhimento )
     {
-
-        //  dd($GuiasRecolhimento);
+        // dd($historico);
+        
 
         return view('show', [
-            'GuiasRecolhimento' => $GuiasRecolhimento]);
+            'GuiasRecolhimento' => $GuiasRecolhimento,
+        ]);
 
             // view para mostrar o view show
     }
@@ -143,15 +150,26 @@ class PrincipalController extends Controller
             'tipoconsulta' => $tipoconsulta
         ]);
 
-            // dd($historico);
+            //  dd($historico);
+
+            //GuiasRecolhimento deve ser Filtro, mas ele não é uma tabela
+            if(!empty($search)){
+      
+                $historico = GuiasRecolhimento::orderby('id','DESC')
+                  ->where('id', '=', $search)
+                  ->paginate(10);
+          
+              }
+              else{
+                $historico = GuiasRecolhimento::orderby('id','DESC')->paginate(10);
+              } 
 
             //função de filtro do banco 
-            
+                        
             return view('historico', [
                 'historico' => $historico,
             ]);
 
-            
             // 00001/1996
     }
 
@@ -160,7 +178,6 @@ class PrincipalController extends Controller
      */
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
-
         //editar
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
@@ -214,4 +231,5 @@ class PrincipalController extends Controller
         ]);
 
     }
+
 }

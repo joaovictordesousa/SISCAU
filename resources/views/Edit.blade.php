@@ -17,16 +17,16 @@
         <label>Tipo de recolhimento:</label>
         <select id="recolhimento" name="auxtiporecolhimentoid"> 
         <!-- <option value="Instituição financeira">Instituição financeira</option> -->                 
-        @foreach($recolhimentos as $recolhimento)
-            <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
+        @foreach($recolhimentos as $auxtiporecolhimentoid)
+            <option value="{{ $GuiasRecolhimento->auxtiporecolhimentoid }}">{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</option>
         @endforeach
         </select>
       
         <label>Instituição financeira:</label>
             <select id="financeira" name="auxinstituicaofinanceiraid">
-            @foreach($financas as $fin)
-             <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
-            @endforeach
+              @foreach($financas as $fin)
+              <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
+              @endforeach
             </select>
 
         <label>Agência:</label>
