@@ -10,8 +10,9 @@ use App\Models\AuxInstituicoesFinanceiras;
 use App\Models\AuxEmpresas;
 use App\Models\GuiasRecolhimento;
 use App\Models\Filtro;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
-use Nette\Utils\Paginator;
+
 
 class PrincipalController extends Controller
 {
@@ -150,24 +151,14 @@ class PrincipalController extends Controller
             'tipoconsulta' => $tipoconsulta
         ]);
 
-            //  dd($historico);
+		$historicoCollection = collect($historico);
+		$perPage = 5;
 
-            //GuiasRecolhimento deve ser Filtro, mas ele não é uma tabela
-            // if(!empty($search)){
-      
-            //     $historico = filtro::orderby('id','DESC')
-            //       ->where('id', '=', $search)
-            //       ->paginate(10);
-          
-            //   }
-            //   else{
-            //     $historico = filtro::orderby('id','DESC')->paginate(15);
-            //   } 
+		$paginate = new Paginator($historicoCollection, $perPage);
+       
 
-            //função de filtro do banco 
-                        
             return view('historico', [
-                'historico' => $historico
+                'paginate' => $paginate
             ]);
 
             // 00001/1996

@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\DB;
 
 class Filtro extends Model
 {
@@ -28,4 +31,8 @@ class Filtro extends Model
 					   'nrnumeronl',
 					   'tipoconsulta'
     ];
+
+	public static function filtrar(Request $request) {
+		
+	}
 }
