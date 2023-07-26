@@ -9,16 +9,16 @@
         <hr>
     </div>
 
-    <form action="{{ route('Principal.store')}}" method="POST">
+    <form action="{{ route('principal.update', ['GuiasRecolhimento'=>$GuiasRecolhimento->id]) }}" method="POST">
         @csrf
      <div class="form-row">
-        <input type="hidden" method="PUT">
+        <input type="hidden" name="_method" value="PUT">
 
         <label>Tipo de recolhimento:</label>
         <select id="recolhimento" name="auxtiporecolhimentoid"> 
         <!-- <option value="Instituição financeira">Instituição financeira</option> -->                 
-        @foreach($recolhimentos as $auxtiporecolhimentoid)
-            <option value="{{ $GuiasRecolhimento->auxtiporecolhimentoid }}">{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</option>
+        @foreach($recolhimentos as $reco)
+            <option value="{{ $reco->id }}">{{ $reco->descricao }}</option>
         @endforeach
         </select>
       
@@ -40,7 +40,6 @@
       <div class="form-row">
         <label>Conta:</label>
         <input value="{{ $GuiasRecolhimento->numeroconta }}" type="text" id="numeroconta" name="numeroconta" maxlength="10">
-
         <label style="margin: 0 0 0 30px; flex-basis: 102px;">Contrato:</label>
         <input value="{{ $GuiasRecolhimento->numerocontrato }}" type="text" id="numerocontrato" name="numerocontrato" maxlength="10">
 

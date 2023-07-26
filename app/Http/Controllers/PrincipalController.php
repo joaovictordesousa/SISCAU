@@ -153,21 +153,21 @@ class PrincipalController extends Controller
             //  dd($historico);
 
             //GuiasRecolhimento deve ser Filtro, mas ele não é uma tabela
-            if(!empty($search)){
+            // if(!empty($search)){
       
-                $historico = GuiasRecolhimento::orderby('id','DESC')
-                  ->where('id', '=', $search)
-                  ->paginate(10);
+            //     $historico = filtro::orderby('id','DESC')
+            //       ->where('id', '=', $search)
+            //       ->paginate(10);
           
-              }
-              else{
-                $historico = GuiasRecolhimento::orderby('id','DESC')->paginate(10);
-              } 
+            //   }
+            //   else{
+            //     $historico = filtro::orderby('id','DESC')->paginate(15);
+            //   } 
 
             //função de filtro do banco 
                         
             return view('historico', [
-                'historico' => $historico,
+                'historico' => $historico
             ]);
 
             // 00001/1996
@@ -178,35 +178,60 @@ class PrincipalController extends Controller
      */
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
-        //editar
+                //  dd($GuiasRecolhimento);
+
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
         $agencia = AuxAgencias::all();
-        $documento = AuxTipoDocumento::all();
         $empresa = AuxEmpresas::all();
+        $documento = AuxTipoDocumento::all();
+        
 
         return view('edit', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
             'recolhimentos' => $recolhimentos, 
             'financas' => $financas,
             'agencia' => $agencia,
-            'documento' => $documento,
-            'empresa' => $empresa
+            'empresa' => $empresa,
+            'documento' => $documento
+           
         ]);
             
-    }
-
+    } 
+ 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
 
+        // dd($request);
+        
+        
+        $NewGuiaRecolhimento = [
+            'auxtiporecolhimentoid' => $request->input('auxtiporecolhimentoid'),
+            'auxinstituicaofinanceiraid' => $request->input('auxinstituicaofinanceiraid'),
+            'auxagenciaid' => $request->input('auxagenciaid'),
+            'numeroconta' => $request->input('numeroconta'),
+            'numerocontrato' => $request->input('numerocontrato'),
+            'aditivo' => $request->input('aditivo'),
+            'datagr' => $request->input('datagr'),
+            'datavalidade' => $request->input('datavalidade'),
+            'auxtipodocumentoid' => $request->input('auxtipodocumentoid'),
+            'numero' => $request->input('numero'),
+            'auxempresaid' => $request->input('auxempresaid'),
+            'valor' => $request->input('valor'),
+            'numerodocumento' => $request->input('numerodocumento'),
+            'numeronl' => $request->input('numeronl'),
+            'historico' => $request->input('historico')
+        ];
+
         // Atualização de resultado
+        // dd($request);
 
-        GuiasRecolhimento::where('id', $id)->update($request);
+        GuiasRecolhimento::where('id', $id)->update($NewGuiaRecolhimento);
 
-        return redirect()->back();
+        return redirect()->route('pesquisa');
     }
 
     /**
@@ -214,6 +239,7 @@ class PrincipalController extends Controller
      */
     public function destroy(string $id)
     {
+       
         // Apagar registro
         GuiasRecolhimento::where('id', $id)->delete();
 

@@ -34,9 +34,9 @@
     </tbody>
   </table> 
   
-  {{$historico->appends([
+  {{-- {{$historico->appends([
     'search' => request()->get('search','')
- ])->links()}}
+ ])->links()}} --}}
 
   </div>
   
