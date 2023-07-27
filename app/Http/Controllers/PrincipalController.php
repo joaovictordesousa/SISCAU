@@ -152,7 +152,7 @@ class PrincipalController extends Controller
         ]);
 
 		$historicoCollection = collect($historico);
-		$perPage = 5;
+		$perPage = 10;
 
 		$paginate = new Paginator($historicoCollection, $perPage);
        

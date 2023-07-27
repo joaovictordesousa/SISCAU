@@ -29,9 +29,8 @@
   max-width: 80%; /* Ajuste a largura conforme necessário */
   margin: 5em auto;
   padding: 50px;
-  background-color: #ccc;
-  box-shadow: 15px 15px 30px #bebebe;
-  border-radius: 25px; 
+  background-color: white;;
+  box-shadow: 0px 1px 10px 0px gray;
 }
 
 .form-row {
