@@ -71,7 +71,7 @@ class PrincipalController extends Controller
     public function store(Request $request)
     {
 
-        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
+        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no 
 
         //Cadastrar no banco de dados.
         $novaGuia = new GuiasRecolhimento;
@@ -189,7 +189,7 @@ class PrincipalController extends Controller
             'empresa' => $empresa,
             'documento' => $documento
            
-        ])->with('success', 'Guia de recolhimento alterado com sucesso.');
+        ]);
             
     } 
  
@@ -200,7 +200,7 @@ class PrincipalController extends Controller
     {
 
         // dd($request);
-        
+        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
         
         $NewGuiaRecolhimento = [
             'auxtiporecolhimentoid' => $request->input('auxtiporecolhimentoid'),
@@ -225,7 +225,7 @@ class PrincipalController extends Controller
 
         GuiasRecolhimento::where('id', $id)->update($NewGuiaRecolhimento);
 
-        return redirect()->route('pesquisa');
+        return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento alterado com sucesso.');
     }
 
     /**
