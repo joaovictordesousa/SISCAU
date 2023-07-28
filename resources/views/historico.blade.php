@@ -18,7 +18,7 @@
       </tr>
     </thead>
     <tbody class="table-group-divider">
-      @foreach($historico as $histo)
+      @foreach($paginate as $histo)
       <tr>
         {{-- Mudar nome para os do filtro --}}
         <td>{{ $histo->auxtiporecolhimento }}</td>
@@ -30,22 +30,20 @@
         </td>
       </tr>
       @endforeach
-
     </tbody>
   </table> 
-  
-  {{-- {{$historico->appends([
-    'search' => request()->get('search','')
- ])->links()}} --}}
+  {{-- paginate passando os parametros que estão pesquisando' --}}
+     {{$paginate->appends([
+        'search' => request()->get('search','')
+     ])->links()}} 
 
   </div>
-  
 <br><br>
-
       <div class="container_botoes">
           <button class="btn btn-primary" style="padding: 12px 20px;">Imprimir</button>
           <a href="{{ route('pesquisa') }}" class="btn btn-danger" style="padding: 12px 20px;">Voltar</a>
       </div>
     <br><br>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>  </body>
-</html>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </html>

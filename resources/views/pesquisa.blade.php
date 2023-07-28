@@ -1,5 +1,29 @@
 @include('navbar.cabecalho')
 
+<style>
+  .form-control {
+  padding: 9px 10px;
+  border: 1px solid gray
+}
+
+.form-select {
+  padding: 9px 10px;
+  border: 1px solid gray
+}
+
+.input-group-text {
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+.form-row {
+  margin: 4em 0 0 0;
+}
+
+.btn-primary {
+  padding: 1em;
+}
+</style>
+
 @if (session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
@@ -16,100 +40,114 @@
     <div class="form-container">
     <!-- Guias de recolhimento  -->
     <div class="pesquisa_titulo">
-        <h1 class="titulo_recolhimento" >Guias de recolhimento</h1>
+        <h1 class="titulo_recolhimento">Guias de recolhimento<span style="font-size: 20px; color: rgb(120, 120, 120);"> - (Pesquisa)</span></h1>
         <a href="{{ route('NovaGuia')  }}" id="NovaGuia">+ Nova guia de recolhimento</a><br><br>
         <hr>
     </div>
     <!--  -->
     
-    <form action="{{ route('principal.historico') }}" method="POST">
+    <form class="row g-3" action="{{ route('principal.historico') }}" method="POST">
       @csrf
-      <div class="form-row">
-        <label for="numero">Numero:</label>
-        <input type="text" id="nr" name="nr">
-  
-        <label for="contrato" style="margin: 0 0 0 20px; flex-basis: 102px;">Contrato:</label>
-        <input type="text" id="nrcontrato" name="nrcontrato">
-
-        <label for="documento">Documento:</label>
-        <input type="text" id="nrdocumento" name="nrdocumento">
+      <div class="col-md-4">
+        <label class="form-label"><b>Numero</b></label>
+        <input type="text" class="form-control" id="nr" name="nr">
       </div>
   
-      <div class="form-row">
-        <label for="recolhimento">Tipo de recolhimento:</label>
-        <select id="auxtiporecolhimento" name="auxtiporecolhimento">
-          <option value="">Selecione</option>
-        @foreach($recolhimentos as $recolhimento)  
+      <div class="col-md-4">
+        <label class="form-label"><b>Contrato</b></label>
+        <input type="text" class="form-control" id="nrcontrato" name="nrcontrato">
+      </div>
+  
+      <div class="col-md-4">
+        <label class="form-label"><b>Documento</b></label>
+        <input type="text" class="form-control" id="nrdocumento" name="nrdocumento">
+      </div>
+  
+      <div class="col-md-6">
+        <label class="form-label"><b>Tipo de recolhimento</b></label>
+        <select class="form-select" id="auxtiporecolhimento" name="auxtiporecolhimento">
+          <option selected disabled value="">Selecione...</option>
+          @foreach($recolhimentos as $recolhimento)
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
-        @endforeach
+          @endforeach
         </select>
-
-        <label for="agencia">Agência:</label>
-        <select id="codigoagencia" name="codigoagencia">
-          <option value="">Selecione</option>
-        @foreach($agencias as $agencia) 
+      </div>
+  
+      <div class="col-md-6">
+        <label class="form-label"><b>Agência</b></label>
+        <select class="form-select" id="codigoagencia" name="codigoagencia">
+          <option selected disabled value="">Selecione...</option>
+          @foreach($agencias as $agencia) 
           <option value="{{ $agencia->id }}">{{ $agencia->descricao }}</option>
         @endforeach
         </select>
       </div>
+  
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label"><b>Processos de baixa</b></label>
+        <input type="email" class="form-control" id="nrbaixaprocesso" name="nrbaixaprocesso">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label"><b>CPF/CNPJ</b></label>
+        <input type="password" class="form-control" id="nrcpfcnpj" name="nrcpfcnpj">
+      </div>
+  
+      <div class="col-12"> 
+        <label for="inputAddress" class="form-label"><b>Data de GR</b></label>
+        <div class="input-group mb-3">
+            <input type="date" class="form-control" id="datagrinicio" name="datagrinicio">
+            <span class="input-group-text">a</span>
+            <input type="date" class="form-control" id="datagrfim" name="datagrfim">
+          </div>
+        </div>
+    
+        <div class="col-12"> 
+          <label for="inputAddress" class="form-label"><b>Data de validade</b></label>
+          <div class="input-group mb-3">
+              <input type="date" class="form-control" id="datavalidadeinicio" name="datavalidadeinicio">
+              <span class="input-group-text">a</span>
+              <input type="date" class="form-control" id="datavalidadefim" name="datavalidadefim">
+            </div>
+          </div>
+  
+          <div class="col-12"> 
+            <label for="inputAddress" class="form-label"><b>Data da baixa</b></label>
+            <div class="input-group mb-3">
+                <input type="date" class="form-control" id="databaixainicio" name="databaixainicio">
+                <span class="input-group-text">a</span>
+                <input type="date" class="form-control" id="databaixafim" name="databaixafim">
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <label class="form-label"><b>Tipo do documento</b></label>
+              <select class="form-select" id="nrauxtipodocumentoid" name="nrauxtipodocumentoid">
+                <option selected disabled value="">Selecione...</option>
+                @foreach($documentos as $documento)
+                  <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
+                @endforeach
+          </select> 
+              </select>
+            </div>
+        
+            <div class="col-md-4">
+              <label class="form-label"><b>Número da NL</b></label>
+              <input type="text" class="form-control" id="nrnumeronl" name="nrnumeronl">
+            </div>
+        
+            <div class="col-md-4">
+              <label class="form-label"><b>Tipo do consulta</b></label>
+              <select class="form-select" id="tipoconsulta" name="tipoconsulta">
+                <option selected disabled value="">Selecione...</option>
+                <option value="baixadas">Baixadas</option>
+                <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>
+                <option value="nao baixadas">Não baixadas</option>
+                <option value="vencidas e nao baixadas">Vencidas e não baixadas</option>
+              </select>
+            </div>
 
       <div class="form-row">
-        <label for="baixa">Processos de baixa:</label>
-        <input type="text" id="nrbaixaprocesso" name="nrbaixaprocesso">
-     
-        <label for="cpf_cnpj" style="margin: 0 0 0 20px; flex-basis: 102px;">CPF/CNPJ:</label>
-        <input type="text" id="nrcpfcnpj" name="nrcpfcnpj">
-      </div>
-  
-      <div class="form-row">
-        <label for="gr">Data do GR:</label>
-
-        <input type="date" id="datagrinicio" name="datagrinicio">
-        <span>a</span>
-        <input type="date" id="datagrfim" name="datagrfim">
-
-      </div>
-  
-      <div class="form-row">
-        <label for="validade">Data de validade:</label>
-        <input type="date" id="datavalidadeinicio" name="datavalidadeinicio">
-        <span>a</span>
-        <input type="date" id="datavalidadefim" name="datavalidadefim">
-      </div>
-  
-      <div class="form-row">
-        <label for="data_baixa">Data da baixa:</label>
-        <input type="date" id="databaixainicio" name="databaixainicio">
-        <span>a</span>
-        <input type="date" id="databaixafim" name="databaixafim">
-      </div>
-  
-      <div class="form-row">
-        <label for="tipo_documento">Tipo do Documento:</label>
-        <select id="nrauxtipodocumentoid" name="nrauxtipodocumentoid">
-          <option value="">Selecione</option>
-        @foreach($documentos as $documento)
-          <option value="{{ $documento->id }}">{{ $documento->descricao }}</option>
-        @endforeach
-        </select> 
-
-        <label for="numero_nl">Número da NL:</label>
-        <input type="text" id="nrnumeronl" name="nrnumeronl">
-      </div>
-  
-      <div class="form-row">
-        <label for="tipo_consulta">Tipo da Consulta:</label>
-        <select id="tipoconsulta" name="tipoconsulta">
-          <option value="">Selecione</option>
-          <option value="baixadas">Baixadas</option>
-          <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>
-          <option value="nao baixadas">Não baixadas</option>
-          <option value="vencidas e nao baixadas">Vencidas e não baixadas</option>
-        </select>
-      </div>
-  
-      <div class="form-row">
-        <button class="butao">Pesquisar</button>  
+        <button class="btn btn-primary">Pesquisar</button>  
       </div>
     </form>
   </div>

@@ -1,115 +1,172 @@
 @include('navbar.cabecalho')
     
-<section class="container_cadastro">
+<style>
+form {
+  box-shadow: 0px 1px 10px 0px gray;
+  padding: 4em; 
+  background-color: white;
+}
 
-<div class="form-container">
+.form-control {
+  padding: 9px 10px;
+  border: 1px solid gray
+}
 
-    <div class="cadastro_titulo">
-        <h1>Guias de recolhimento</h1><br>
-        <hr>
-    </div>
+.form-select {
+  padding: 9px 10px;
+  border: 1px solid gray
+}
 
-    <form action="{{ route('Principal.store')}}" method="POST">
-        @csrf
-     <div class="form-row">
-        <label>Tipo de recolhimento:</label>
-        <select id="recolhimento" name="auxtiporecolhimentoid" required> 
-        <!-- <option value="Instituição financeira">Instituição financeira</option> -->                 
-        <option value="">Selecione</option>
-        @foreach($recolhimentos as $recolhimento)
-            <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
-        @endforeach
+.titulo_cadastro {
+  margin: 5px 0 50px 0;
+  font-size: 25px;
+}
 
-        </select>
-      
-        <label>Instituição financeira:</label>
-            <select id="financeira" name="auxinstituicaofinanceiraid" required>
-            <option value="">Selecione</option>
-            @foreach($financas as $fin)
-             <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
-            @endforeach
+.form-floating {
+  margin: 2em 0 0 0;
+}
 
-            </select>
+@media only screen and (max-width: 600px){
+  #form_cadastro {
+  box-shadow: none;
+  background-color: white;
+}
 
-        <label>Agência:</label>
-            <select id="agencias" name="auxagenciaid" required>
-            <option value="">Selecione</option>
-            @foreach($agencia as $agen)
-              <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
-            @endforeach
-                          
-            </select>
-      </div>
-  
-      <div class="form-row">
-        <label>Conta:</label>
-        <input type="text" id="numeroconta" name="numeroconta" maxlength="10" required></input>  
+}
 
-        <label style="margin: 0 0 0 30px; flex-basis: 102px;">Contrato:</label>
-        <input type="text" id="numerocontrato" name="numerocontrato" maxlength="10" required></input>
+</style>
 
-        <label>Aditivo:</label>
-        <input type="text" id="aditivo" name="aditivo" maxlength="25" required></input> 
-      </div>
-
-      <div class="form-row">     
-
-        <label>Data do GR:</label>
-        <input type="date" id="datagr" name="datagr" required></input> 
-
-        <label style="margin: 0 0 0 30px; flex-basis: 102px;">Data de validade:</label>
-        <input type="date" id="datavalidade" name="datavalidade" required></input> 
-
-        <label>Tipo de documento:</label>
-        <select name="auxtipodocumentoid" id="documentos">
-          <option value="">Selecione</option>        
-          @foreach($documento as $docu)
-            <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
+    <form class="row g-3" id="form_cadastro" action="{{ route('Principal.store')}}" method="POST" style="width: 80%; margin: 5em auto;">
+      <h1 class="titulo_cadastro">Guias de recolhimentos<span style="font-size: 20px; color: rgb(120, 120, 120);"> - (Cadastro)</span></h1>
+      @csrf
+      <div class="col-md-4">
+        <label class="form-label"><b>Tipo de recolhimento</b></label>
+        <select class="form-select" id="recolhimento" name="auxtiporecolhimentoid" required>
+          <option selected disabled value="">Selecione...</option>
+          @foreach($recolhimentos as $recolhimento)
+          <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
           @endforeach
         </select>
       </div>
   
-      <div class="form-row">
-        <label>Numero</label>
-        <input type="text" id="numero" name="numero" maxlength="10" required></input>
-
-        <label>Empresa:</label>
-        <select id="empresa" name="auxempresaid" required>
-          <option value="">Selecione</option>
-        @foreach($empresa as $empre)       
-            <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
-        @endforeach      
+      <div class="col-md-4">
+        <label class="form-label"><b>Instituição financeira</b></label>
+        <select class="form-select" id="financeira" name="auxinstituicaofinanceiraid" required>
+          <option selected disabled value="">Selecione...</option>
+          @foreach($financas as $fin)
+          <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
+          @endforeach
         </select>
       </div>
   
-      <div class="form-row">
-        <label>Valor:</label>
-        <input type="text" id="valor" name="valor" maxlength="18" required></input>
-
-
-        <label>Documento:</label>
-        <input type="text" id="numerodocumento" name="numerodocumento" maxlength="25" required></input>
-
-        <label>Numero da NL:</label>
-        <input type="text" id="numeros_nls" name="numeronl" required></input>
+      <div class="col-md-4">
+        <label class="form-label"><b>Agência</b></label>
+        <select class="form-select" id="agencias" name="auxagenciaid" required>
+          <option selected disabled value="">Selecione...</option>
+          @foreach($agencia as $agen)
+          <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
+          @endforeach
+        </select>
+      </div>
+  <br><br>
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Conta</b></label>
+        <input type="text" class="form-control" id="numeroconta" name="numeroconta" maxlength="10" required>
+      </div>
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Contrato</b></label>
+        <input type="text" class="form-control" id="numerocontrato" name="numerocontrato" maxlength="10" required>
+      </div>
+      </div>
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Aditivo</b></label>
+        <input type="text" class="form-control" id="aditivo" name="aditivo" maxlength="25" required>
+      </div>
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Data do GR</b></label>
+        <input type="date" class="form-control" id="datagr" name="datagr" style="padding: 9px 10px" required>
+      </div>
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Data de validade</b></label>
+        <input type="date" class="form-control" id="datavalidade" name="datavalidade" style="padding: 9px 10px" required>
+      </div>
+  
+      <div class="col-md-4">
+        <label class="form-label"><b>Tipo de documento</b></label>
+        <select class="form-select" name="auxtipodocumentoid" id="documentos"> required>
+          <option selected disabled value="">Selecione...</option>
+          @foreach($documento as $docu)
+          <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
+          @endforeach
+        </select>
+      </div>
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Numero</b></label>
+        <input type="text" class="form-control" id="numero" name="numero" maxlength="10" required>
+      </div>
+  
+      <div class="col-md-8">
+        <label for="validationDefault04" class="form-label"><b>Empresa</b></label>
+        <select class="form-select" id="empresa" name="auxempresaid" required>
+          <option selected disabled value="">Selecione...</option>
+          @foreach($empresa as $empre)
+          <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>
+          @endforeach
+        </select>
+      </div>
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Valor</b></label>
+        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" maxlength="18" required>
+      </div>
+  
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Documento</b></label>
+        <input type="text" class="form-control" id="numerodocumento" name="numerodocumento" maxlength="25" required>
+      </div>
+  
+  
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label"><b>Numero da NL</b></label>
+        <input type="text" class="form-control" id="numeros_nls" name="numeronl" required>
+      </div>
+  
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="historico" name="historico" maxlength="512"
+          style="height: 100px"></textarea>
+        <label for="floatingTextarea2"><b>Histórico</b></label>
+      </div>
+      <div class="button">
+          <button class="btn btn-primary" style="padding:  15px 20px;">Salvar</button>
+          <a href="{{ route('pesquisa')  }}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
       </div>
 
-      <div class="form-row">
-        <label>Histórico:</label>
-        <input type="text" id="historico" name="historico" maxlength="512" required></input>
-      </div>
-      <br><br><br><br>  
-        <div class="button">
-        <div>
-            <button class="botao-salvar">Salvar</button>
-        </div>
-        
-        <div>
-            <a href="{{ route('pesquisa')  }}" class="botao-cadastro">Cancelar</a>
-        </div>
-    </div>
-</section>
+    </form>
+    <br><br><br><br>
 
+    <script>
+      function formatarValor() {
+        // Obtém o valor digitado no input
+        let valor = document.getElementById('valor').value;
+  
+        // Remove todos os caracteres não numéricos (exceto ponto decimal, se houver)
+        valor = valor.replace(/\D/g, '');
+  
+        // Formata o valor como dinheiro (adicionando ponto decimal e vírgula)
+        valor = (parseFloat(valor) / 100).toFixed(2).replace('.', ',');
+  
+        // Atualiza o valor formatado no input
+        document.getElementById('valor').value = valor;
+      }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="../js/cadastro.js"></script>
 </body>
 </html>
