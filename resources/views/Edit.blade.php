@@ -119,7 +119,7 @@
 
       <div class="col-md-4">
         <label class="form-label"><b>Valor</b></label>
-        <input type="text" value="{{ $GuiasRecolhimento->valor }}" class="form-control" id="valor" name="valor" maxlength="18" required>
+        <input type="text" value="{{ $GuiasRecolhimento->valor }}" class="form-control" id="valor" name="valor" oninput="formatarValor()" maxlength="18" required>
       </div>
 
       <div class="col-md-4">
@@ -143,6 +143,22 @@
           <a href="{{ route('pesquisa')  }}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
       </div>
       </form>
+
+      <script>
+        function formatarValor() {
+          // Obtém o valor digitado no input
+          let valor = document.getElementById('valor').value;
+    
+          // Remove todos os caracteres não numéricos (exceto ponto decimal, se houver)
+          valor = valor.replace(/\D/g, '');
+    
+          // Formata o valor como dinheiro (adicionando ponto decimal e vírgula)
+          valor = (parseFloat(valor) / 100).toFixed(2).replace('.', ',');
+    
+          // Atualiza o valor formatado no input
+          document.getElementById('valor').value = valor;
+        }
+      </script>
 <script src="../js/cadastro.js"></script>
 </body>
 </html>
