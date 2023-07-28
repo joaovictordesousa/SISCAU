@@ -9,15 +9,17 @@ form {
 
 .form-control {
   padding: 9px 10px;
+  border: 1px solid gray
 }
 
 .form-select {
   padding: 9px 10px;
+  border: 1px solid gray
 }
 
 .titulo_cadastro {
   margin: 5px 0 50px 0;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .form-floating {
@@ -35,10 +37,10 @@ form {
 </style>
 
     <form class="row g-3" id="form_cadastro" action="{{ route('Principal.store')}}" method="POST" style="width: 80%; margin: 5em auto;">
-      <h1 class="titulo_cadastro">Guias de recolhimento</h1>
+      <h1 class="titulo_cadastro">Guias de recolhimentos<span style="font-size: 20px; color: rgb(120, 120, 120);"> - (Cadastro)</span></h1>
       @csrf
       <div class="col-md-4">
-        <label for="validationDefault04" class="form-label"><b>Tipo de recolhimento</b></label>
+        <label class="form-label"><b>Tipo de recolhimento</b></label>
         <select class="form-select" id="recolhimento" name="auxtiporecolhimentoid" required>
           <option selected disabled value="">Selecione...</option>
           @foreach($recolhimentos as $recolhimento)
@@ -48,7 +50,7 @@ form {
       </div>
   
       <div class="col-md-4">
-        <label for="validationDefault04" class="form-label"><b>Instituição financeira</b></label>
+        <label class="form-label"><b>Instituição financeira</b></label>
         <select class="form-select" id="financeira" name="auxinstituicaofinanceiraid" required>
           <option selected disabled value="">Selecione...</option>
           @foreach($financas as $fin)
@@ -58,7 +60,7 @@ form {
       </div>
   
       <div class="col-md-4">
-        <label for="validationDefault04" class="form-label"><b>Agência</b></label>
+        <label class="form-label"><b>Agência</b></label>
         <select class="form-select" id="agencias" name="auxagenciaid" required>
           <option selected disabled value="">Selecione...</option>
           @foreach($agencia as $agen)
@@ -94,7 +96,7 @@ form {
       </div>
   
       <div class="col-md-4">
-        <label for="validationDefault04" class="form-label"><b>Tipo de documento</b></label>
+        <label class="form-label"><b>Tipo de documento</b></label>
         <select class="form-select" name="auxtipodocumentoid" id="documentos"> required>
           <option selected disabled value="">Selecione...</option>
           @foreach($documento as $docu)
@@ -120,7 +122,7 @@ form {
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Valor</b></label>
-        <input type="text" class="form-control" id="valor" name="valor" maxlength="18" required>
+        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" maxlength="18" required>
       </div>
   
   
@@ -147,6 +149,22 @@ form {
 
     </form>
     <br><br><br><br>
+
+    <script>
+      function formatarValor() {
+        // Obtém o valor digitado no input
+        let valor = document.getElementById('valor').value;
+  
+        // Remove todos os caracteres não numéricos (exceto ponto decimal, se houver)
+        valor = valor.replace(/\D/g, '');
+  
+        // Formata o valor como dinheiro (adicionando ponto decimal e vírgula)
+        valor = (parseFloat(valor) / 100).toFixed(2).replace('.', ',');
+  
+        // Atualiza o valor formatado no input
+        document.getElementById('valor').value = valor;
+      }
+    </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="../js/cadastro.js"></script>

@@ -29,35 +29,8 @@
   max-width: 80%; /* Ajuste a largura conforme necessário */
   margin: 5em auto;
   padding: 50px;
-  background-color: white;;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 10px 0px gray;
-}
-
-.form-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.form-row label {
-  margin: 0 0 0 20px; flex-basis: 102px;
-  font-weight: bold;
-  margin-right: 7px;
-  flex-basis: 90px;
-}
-
-.form-row input,
-.form-row select {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
-  outline: none;
-}
-
-span {
-  margin: 0 5px; /* Esse span é o "a" da data */
 }
 
 .butao {

@@ -70,6 +70,9 @@ class PrincipalController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
+
         //Cadastrar no banco de dados.
         $novaGuia = new GuiasRecolhimento;
         $novaGuia->fill($request->all());
@@ -186,7 +189,7 @@ class PrincipalController extends Controller
             'empresa' => $empresa,
             'documento' => $documento
            
-        ]);
+        ])->with('success', 'Guia de recolhimento alterado com sucesso.');
             
     } 
  
