@@ -22,6 +22,7 @@
 .btn-primary {
   padding: 1em;
 }
+
 </style>
 
 @if (session('success'))
