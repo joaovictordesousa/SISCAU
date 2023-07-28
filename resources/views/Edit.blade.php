@@ -1,10 +1,11 @@
 @include('navbar.cabecalho');
 
 <style>
-  form {
+  #form_edit {
     box-shadow: 0px 1px 10px 0px gray;
     padding: 4em; 
     background-color: white;
+    width: 80%;
   }
   
   .form-control {
@@ -26,16 +27,17 @@
   }
   
   @media only screen and (max-width: 600px){
-    #form_cadastro {
-    box-shadow: none;
-    background-color: white;
+    #form_edit {
+      width: 100%;
+      box-shadow: none;
+      background-color: white;
   }
   
   }
   
   </style>
 
-    <form action="{{ route('principal.update', ['GuiasRecolhimento'=>$GuiasRecolhimento->id]) }}" class="row g-3" method="POST" style="width: 80%; margin: 5em auto;">
+    <form action="{{ route('principal.update', ['GuiasRecolhimento'=>$GuiasRecolhimento->id]) }}" class="row g-3" method="POST" id="form_edit">
       <h1 class="titulo_edit">Guias de recolhimento <span style="font-size: 20px; color: rgb(120, 120, 120);"> - (Editar)</span></h1><br> 
       @csrf
       <input type="hidden" name="_method" value="PUT">

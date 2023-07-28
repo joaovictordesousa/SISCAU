@@ -1,7 +1,9 @@
 @include('navbar.cabecalho')
     
 <style>
-form {
+ #form_cadastro  {
+  width: 80%;
+  margin: 5em auto;
   box-shadow: 0px 1px 10px 0px gray;
   padding: 4em; 
   background-color: white;
@@ -28,15 +30,16 @@ form {
 
 @media only screen and (max-width: 600px){
   #form_cadastro {
-  box-shadow: none;
-  background-color: white;
+    width: 100%;
+    box-shadow: none;
+    background-color: white;
 }
 
 }
 
 </style>
 
-    <form class="row g-3" id="form_cadastro" action="{{ route('Principal.store')}}" method="POST" style="width: 80%; margin: 5em auto;">
+    <form class="row g-3" id="form_cadastro" action="{{ route('Principal.store')}}" method="POST">
       <h1 class="titulo_cadastro">Guias de recolhimentos<span style="font-size: 20px; color: rgb(120, 120, 120);"> - (Cadastro)</span></h1>
       @csrf
       <div class="col-md-4">
