@@ -66,7 +66,7 @@
   
       <div class="col-md-6">
         <label class="form-label"><b>Tipo de recolhimento</b></label>
-        <select class="form-select" id="auxtiporecolhimento" name="auxtiporecolhimento">
+        <select class="form-select" id="auxtiporecolhimentoid" name="auxtiporecolhimentoid">
           <option selected disabled value="">Selecione...</option>
           @foreach($recolhimentos as $recolhimento)
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
