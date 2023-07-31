@@ -18,7 +18,7 @@
       </tr>
     </thead>
     <tbody class="table-group-divider">
-      @foreach($paginate as $histo)
+      @foreach($historico as $histo)
       <tr>
         {{-- Mudar nome para os do filtro --}}
         <td>{{ $histo->auxtiporecolhimento }}</td>
@@ -33,9 +33,9 @@
     </tbody>
   </table> 
   {{-- paginate passando os parametros que estão pesquisando' --}}
-     {{$paginate->appends([
+     {{-- {{$paginate->appends([
         'search' => request()->get('search','')
-     ])->links()}} 
+     ])->links()}}  --}}
 
   </div>
 <br><br>

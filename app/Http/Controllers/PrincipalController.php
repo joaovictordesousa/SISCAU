@@ -154,14 +154,14 @@ class PrincipalController extends Controller
             'tipoconsulta' => $tipoconsulta
         ]);
 
-		$historicoCollection = collect($historico);
-		$perPage = 10;
+		// $historicoCollection = collect($historico);
+		// $perPage = 10;
 
-		$paginate = new Paginator($historicoCollection, $perPage);
-       
+		// $paginate = new Paginator($historicoCollection, $perPage);
+        
 
             return view('historico', [
-                'paginate' => $paginate
+                'historico' => $historico
             ]);
 
             // 00001/1996
