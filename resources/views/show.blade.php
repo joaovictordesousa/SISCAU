@@ -4,10 +4,7 @@
 {{-- estou chamando os dados do GuiasRecolhimento trazendo os dados que foram cadastrados --}}
         <table class="table show_show">
             <tbody>
-              <tr>
-                <td><b>Numero:</b></td>
-                <td>{{ $GuiasRecolhimento->numero }}</td>
-              </tr>
+              
               <tr>
                 <td><b>Tipo recolhimento:</b></td>
                 <td>{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</td>
@@ -16,26 +13,27 @@
                 <td><b>Instituição financeira:</b></td>
                 <td>{{ $GuiasRecolhimento->auxinstituicaofinanceiraid }}</td>
               </tr>
-              <tr>
-                <td><b>Numero do contrato:</b></td>
-                <td>{{ $GuiasRecolhimento->numerocontrato }}</td>
-              </tr>
+              
               <tr>
                 <td><b>Agência:</b></td>
                 <td>{{ $GuiasRecolhimento->auxagenciaid }}</td>
               </tr>
+                   
               <tr>
-                <td><b>Numero do documento:</b></td>
-                <td>{{ $GuiasRecolhimento->numerodocumento }}</td>
+                <td><b>Conta:</b></td>
+                <td>{{ $GuiasRecolhimento->conta }}</td>
               </tr>
+
               <tr>
-                <td><b>Empresa CNPJ:</b></td>
-                <td>{{ $GuiasRecolhimento->auxempresacnpj }}</td>
+                <td><b>Contrato:</b></td>
+                <td>{{ $GuiasRecolhimento->acontrato }}</td>
               </tr>
+
               <tr>
-                <td><b>Razão social:</b></td>
-                <td>{{ $GuiasRecolhimento->razaosocial }}</td> 
+                <td><b>Aditivo:</b></td>
+                <td>{{ $GuiasRecolhimento->aditivo }}</td>
               </tr>
+
               <tr>
                 <td><b>Data GR:</b></td>
                 <td>{{ $GuiasRecolhimento->datagr }}</td>
@@ -49,41 +47,34 @@
                 <td>{{ $GuiasRecolhimento->auxtipodocumento }}</td>
               </tr>
               <tr>
-                <td><b>Numero conta:</b></td>
-                <td>{{ $GuiasRecolhimento->numeroconta }}</td>
+                <td><b>Numero:</b></td>
+                <td>{{ $GuiasRecolhimento->numero }}</td>
               </tr>
               <tr>
-                <td><b>Aditivo:</b></td>
-                <td>{{ $GuiasRecolhimento->aditivo }}</td>
+                <td><b>Empresa:</b></td>
+                <td>{{ $GuiasRecolhimento->empresa }}</td>
               </tr>
+              
               <tr>
-                <td><b>Código:</b></td>
-                <td>{{ $GuiasRecolhimento->codigo }}</td>
+                <td><b>Valor:</b></td>
+                <td>{{ $GuiasRecolhimento->valor }}</td>
               </tr>
+
+              <tr>
+                <td><b>Documento:</b></td>
+                <td>{{ $GuiasRecolhimento->documento }}</td>
+              </tr>
+              
               <tr>
                 <td><b>Numero NL:</b></td>
                 <td>{{ $GuiasRecolhimento->numeronl }}</td>
               </tr>
+                                          
               <tr>
-                <td><b>Baixa processo:</b></td>
-                <td>{{ $GuiasRecolhimento->baixaprocesso }}</td>
+                <td><b>Historico:</b></td>
+                <td>{{ $GuiasRecolhimento->historico }}</td>
               </tr>
-              <tr>
-                <td><b>Baixa data:</b></td>
-                <td>{{ $GuiasRecolhimento->Baixadata }}</td>
-              </tr>
-              <tr>
-                <td><b>Baixa NL:</b></td>
-                <td>{{ $GuiasRecolhimento->baixanl }}</td>
-              </tr>
-              <tr>
-                <td><b>Baixa mensagem:</b></td>
-                <td>{{ $GuiasRecolhimento->Baixamensagem }}</td>
-              </tr>
-              <tr>
-                <td><b>Valor:</b></td>
-                <td>{{ $GuiasRecolhimento->valor }}</td>
-              </tr><br><br>
+              <br><br>
 
             </tbody>
           </table>
