@@ -66,7 +66,7 @@
   
       <div class="col-md-6">
         <label class="form-label"><b>Tipo de recolhimento</b></label>
-        <select class="form-select" id="auxtiporecolhimentoid" name="auxtiporecolhimentoid">
+        <select class="form-select" id="auxtiporecolhimentoid " name="auxtiporecolhimentoid">
           <option selected disabled value="">Selecione...</option>
           @foreach($recolhimentos as $recolhimento)
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
@@ -90,7 +90,7 @@
       </div>
       <div class="col-md-6">
         <label for="inputPassword4" class="form-label"><b>CPF/CNPJ</b></label>
-        <input type="password" class="form-control" id="nrcpfcnpj" name="nrcpfcnpj">
+        <input type="text" class="form-control" id="nrcpfcnpj" name="nrcpfcnpj">
       </div>
   
       <div class="col-12"> 
