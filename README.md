@@ -25,12 +25,6 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 - [x] _**Pesquisa**_
 
 - [x] _**Cadastro**_
-<<<<<<< HEAD
-
-- [x] _**Histórico**_
-----
-=======
->>>>>>> 88977aaab9253bcd5780fd4cd2bbf2da61f550d6
 
 - [x] _**Histórico**_
 ----
@@ -47,10 +41,6 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 
 * **CSS**
 ----
-<<<<<<< HEAD
-
-=======
->>>>>>> 88977aaab9253bcd5780fd4cd2bbf2da61f550d6
 # Clonar, organizar e instalar para iniciar localmente
 
 1. >Run git clone
@@ -63,14 +53,9 @@ O _**SISCAU**_ é acessível e fornece as ferramentas necessárias para cadastra
 >
 ----
 
-<<<<<<< HEAD
 ----
 
 _**PROPRIEDADES**_ | _**DESCRIÇÃO**_
-=======
-
-_*PROPRIEDADES*_ | _*DESCRIÇÃO*_
->>>>>>> 88977aaab9253bcd5780fd4cd2bbf2da61f550d6
 ----------- | -----------
 *Novacap Ouvidoria* |  https://ouvidoria.df.gov.br/ 
 *Sujestão* | https://ouvidoria.df.gov.br/carta-servico-cidadao/
@@ -78,16 +63,8 @@ _*PROPRIEDADES*_ | _*DESCRIÇÃO*_
 *Reclamações* | _162_
 >
 >
-<<<<<<< HEAD
 ----
 _**COLABORADORES**_ | _**GITHUB PAGE**_
-=======
->
-----
-
-
-_*COLABORADORES*_ | _*GITHUB PAGE*_
->>>>>>> 88977aaab9253bcd5780fd4cd2bbf2da61f550d6
 -------------- | ----------------
 **João Victor Sousa Ribeiro** | https://github.com/joaovictodesousa 
 **Rafael Alencar do Amaral** | https://github.com/RafaelOsama
