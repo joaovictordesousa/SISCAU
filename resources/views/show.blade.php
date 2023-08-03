@@ -26,7 +26,7 @@
 
               <tr>
                 <td><b>Contrato:</b></td>
-                <td>{{ $GuiasRecolhimento->acontrato }}</td>
+                <td>{{ $GuiasRecolhimento->contrato }}</td>
               </tr>
 
               <tr>
