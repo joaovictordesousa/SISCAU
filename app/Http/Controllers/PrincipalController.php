@@ -188,7 +188,7 @@ class PrincipalController extends Controller
             'agencia' => $agencia,
             'empresa' => $empresa,
             'documento' => $documento
-           
+
         ]);
             
     } 
@@ -231,25 +231,39 @@ class PrincipalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
+    // public function destroy(string $id)
+    // {
        
-        // Apagar registro
-        GuiasRecolhimento::where('id', $id)->delete();
+    //     // Apagar registro
+    //     GuiasRecolhimento::where('id', $id)->delete();
 
-        // Definir mensagem de sucesso na sessão
-        session()->flash('success', 'Registro excluído com sucesso.');
+    //     // Definir mensagem de sucesso na sessão
+    //     session()->flash('success', 'Registro excluído com sucesso.');
     
-        return redirect()->route('pesquisa');
+    //     return redirect()->route('pesquisa');
 
+    // }
+
+    public function destroy($id)
+{
+    $guiasrecolhimento = GuiasRecolhimento::find($id);
+
+    if (!$guiasrecolhimento) {
+        return redirect()->route('principal.destroy')->with('error', 'GuiasRecolhimento não encontrado.');
     }
 
-    public function confirmdestroy(GuiasRecolhimento $GuiasRecolhimento)
-    {
-        return view('destroy', [
-            'GuiasRecolhimento' => $GuiasRecolhimento
-        ]);
+    $guiasrecolhimento->ativo = false; // Define o GuiasRecolhimento$GuiasRecolhimento como inativo
+    $guiasrecolhimento->save();
 
-    }
+    return redirect()->route('principal.destroy', [ 'GuiasRecolhimento' => $guiasrecolhimento ])->with('success', 'GuiasRecolhimento excluído com sucesso.');
+}
+
+    // public function confirmdestroy(GuiasRecolhimento $GuiasRecolhimento)
+    // {
+    //     return view('destroy', [
+    //         'GuiasRecolhimento' => $GuiasRecolhimento
+    //     ]);
+
+    // }
 
 }
