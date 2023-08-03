@@ -30,12 +30,14 @@ class GuiasRecolhimento extends Model
         'valor',
         'numerodocumento',
         'numeronl',
-        'historico'
+        'historico',
+        'ativo'
     ];
 
     public function TipoRecolhimento():BelongsTo {
         return $this->belongsTo(AuxTipoRecolhimento::class, 'auxtiporecolhimentoid', 'id');
     }
+
     public function Financas():BelongsTo {
         return $this->belongsTo(AuxInstituicoesFinanceiras::class, 'auxinstituicaofinanceiraid', 'id');
     }

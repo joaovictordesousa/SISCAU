@@ -27,6 +27,12 @@
         <td>
           <a href=" {{ route('editardados', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-light btn-sm">Editar</a>
           <a href=" {{ route('principal.show', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-success btn-sm">ver mais</a>
+          <form action="{{ route('principal.destroy', ['GuiasRecolhimento' => $GuiasRecolhimento->id]) }}" method="post">
+            @csrf
+            @method('delete')
+            <button type="submit">Excluir</button>
+        </form>
+        
         </td>
       </tr>
       @endforeach
