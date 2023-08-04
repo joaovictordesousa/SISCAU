@@ -81,7 +81,7 @@
           <br><br>
 
         <div class="containerbutton">
-            <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $GuiasRecolhimento->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em; margin: 0 10px;"> Excluir</a>
+            {{-- <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $GuiasRecolhimento->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em; margin: 0 10px;"> Excluir</a> --}}
             <a href=" {{ route('principal_historico') }} " class="btn btn-success" style="padding: 0.8em 1.2em">Voltar</a> 
         </div>
 

@@ -24,15 +24,15 @@
         <td>{{ $histo->auxtiporecolhimento }}</td>
         <td>{{ $histo->razaosocial }}</td>
         <td>R$ {{ $histo->valor }}</td>
-        <td>
-          <a href=" {{ route('editardados', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-light btn-sm">Editar</a>
+        <td style="display: flex; gap: 10px;">
+          <a href=" {{ route('editardados', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-warning btn-sm">Editar</a>
           <a href=" {{ route('principal.show', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-success btn-sm">ver mais</a>
-          <form action="{{ route('principal.destroy', ['GuiasRecolhimento' => $GuiasRecolhimento->id]) }}" method="post">
+          <form action="{{ route('principal.destroy', ['GuiasRecolhimento' => $histo->id]) }}" method="post">
             @csrf
             @method('delete')
-            <button type="submit">Excluir</button>
+            <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
         </form>
-        
+        {{-- <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $histo->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em; margin: 0 10px;"> Excluir</a> --}}
         </td>
       </tr>
       @endforeach

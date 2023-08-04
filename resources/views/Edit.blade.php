@@ -6,6 +6,7 @@
     padding: 4em; 
     background-color: white;
     width: 80%;
+    margin: 2em auto;
   }
   
   .form-control {
