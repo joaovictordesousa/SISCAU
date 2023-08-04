@@ -19,6 +19,11 @@ class PrincipalController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function historico() {
+        return view('retornar_historico')->redirect()->back();
+    }
+
     public function index()
     {
 

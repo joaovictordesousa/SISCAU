@@ -1,92 +1,115 @@
 @include('navbar.cabecalho')
 
-    <div class="ContainerShow">
-{{-- estou chamando os dados do GuiasRecolhimento trazendo os dados que foram cadastrados --}}
-        <table class="table show_show">
-            <tbody>
-              
-              <tr>
-                <td><b>Tipo recolhimento:</b></td>
-                <td>{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</td>
-              </tr>
-              <tr>
-                <td><b>Instituição financeira:</b></td>
-                <td>{{ $GuiasRecolhimento->auxinstituicaofinanceiraid }}</td>
-              </tr>
-              
-              <tr>
-                <td><b>Agência:</b></td>
-                <td>{{ $GuiasRecolhimento->auxagenciaid }}</td>
-              </tr>
-                   
-              <tr>
-                <td><b>Conta:</b></td>
-                <td>{{ $GuiasRecolhimento->conta }}</td>
-              </tr>
+<style>
+  .card {
+    width: 40%;
+    box-shadow: 0px 0px 10px 5px gray;
+    margin: 5em auto;
+  }
 
-              <tr>
-                <td><b>Contrato:</b></td>
-                <td>{{ $GuiasRecolhimento->contrato }}</td>
-              </tr>
+  @media only screen and (max-width: 600px){
+    .card {
+      width: 100%;
+      box-shadow: none;
+      border: none;
+      margin: 0;
+    }
 
-              <tr>
-                <td><b>Aditivo:</b></td>
-                <td>{{ $GuiasRecolhimento->aditivo }}</td>
-              </tr>
+    table {
+      width: 60%;
+    }
 
-              <tr>
-                <td><b>Data GR:</b></td>
-                <td>{{ $GuiasRecolhimento->datagr }}</td>
-              </tr>
-              <tr>
-                <td><b>Data validade:</b></td>
-                <td>{{ $GuiasRecolhimento->datavalidade }}</td>
-              </tr>
-              <tr>
-                <td><b>Tipo do documento:</b></td>
-                <td>{{ $GuiasRecolhimento->auxtipodocumento }}</td>
-              </tr>
-              <tr>
-                <td><b>Numero:</b></td>
-                <td>{{ $GuiasRecolhimento->numero }}</td>
-              </tr>
-              <tr>
-                <td><b>Empresa:</b></td>
-                <td>{{ $GuiasRecolhimento->empresa }}</td>
-              </tr>
-              
-              <tr>
-                <td><b>Valor:</b></td>
-                <td>{{ $GuiasRecolhimento->valor }}</td>
-              </tr>
+    td {
+      text-align: none;
+    }
+  }
 
-              <tr>
-                <td><b>Documento:</b></td>
-                <td>{{ $GuiasRecolhimento->documento }}</td>
-              </tr>
-              
-              <tr>
-                <td><b>Numero NL:</b></td>
-                <td>{{ $GuiasRecolhimento->numeronl }}</td>
-              </tr>
-                                          
-              <tr>
-                <td><b>Historico:</b></td>
-                <td>{{ $GuiasRecolhimento->historico }}</td>
-              </tr>
-              <br><br>
+</style>
 
-            </tbody>
-          </table>
-          <br><br>
-
-        <div class="containerbutton">
-            {{-- <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $GuiasRecolhimento->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em; margin: 0 10px;"> Excluir</a> --}}
-            <a href=" {{ route('principal_historico') }} " class="btn btn-success" style="padding: 0.8em 1.2em">Voltar</a> 
-        </div>
-
+<div class="card">
+      <h4 class="card-title" style="text-align: center; margin: 1em 0;">Guia completa</h4>
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <table class="table table-striped">
+                      <tbody>
+                        <tr>
+                          <th><b>Tipo recolhimento:</b></th>
+                          <td>{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</td>
+                        </tr>
+                        <tr>
+                          <th><b>Instituição financeira:</b></th>
+                          <td>{{ $GuiasRecolhimento->auxinstituicaofinanceiraid }}</td>
+                        </tr>
+                        
+                        <tr>
+                          <th><b>Agência:</b></th>
+                          <td>{{ $GuiasRecolhimento->auxagenciaid }}</td>
+                        </tr>
+                             
+                        <tr>
+                          <th><b>Conta:</b></th>
+                          <td>{{ $GuiasRecolhimento->numeroconta }}</td>
+                        </tr>
+          
+                        <tr>
+                          <th><b>Contrato:</b></th>
+                          <td>{{ $GuiasRecolhimento->numerocontrato }}</td>
+                        </tr>
+          
+                        <tr>
+                          <th><b>Aditivo:</b></th>
+                          <td>{{ $GuiasRecolhimento->aditivo }}</td>
+                        </tr>
+          
+                        <tr>
+                          <th><b>Data GR:</b></th>
+                          <td>{{ $GuiasRecolhimento->datagr }}</td>
+                        </tr>
+                        <tr>
+                          <th><b>Data validade:</b></th>
+                          <td>{{ $GuiasRecolhimento->datavalidade }}</td>
+                        </tr>
+                        <tr>
+                          <th><b>Tipo do documento:</b></th>
+                          <td>{{ $GuiasRecolhimento->auxtipodocumentoid }}</td>
+                        </tr>
+                        <tr>
+                          <th><b>Numero:</b></th>
+                          <td>{{ $GuiasRecolhimento->numero }}</td>
+                        </tr>
+                        <tr>
+                          <th><b>Empresa:</b></th>
+                          <td>{{ $GuiasRecolhimento->auxempresaid }}</td>
+                        </tr>
+                        
+                        <tr>
+                          <th><b>Valor:</b></th>
+                          <th>{{ $GuiasRecolhimento->valor }}</th>
+                        </tr>
+          
+                        <tr>
+                          <th><b>Documento:</b></th>
+                          <td>{{ $GuiasRecolhimento->numerodocumento }}</td>
+                        </tr>
+                        
+                        <tr>
+                          <th><b>Numero NL:</b></th>
+                          <td> {{ $GuiasRecolhimento->numeronl }}</td>
+                        </tr>
+                                                    
+                        <tr>
+                          <th><b>Historico:</b></th>
+                          <td>{{ $GuiasRecolhimento->historico }}</td>
+                        </tr>
+          
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+          <br>
+      <a href=" {{ route('principal_historico') }} " class="btn btn-primary" style="padding: 10px 2em; margin: 0 0 0 2em; ">Voltar</a>
+      <br><br>
 </div>
-<br><br><br>
-
-</body>
-</html>
+</div>
+<br><br>
