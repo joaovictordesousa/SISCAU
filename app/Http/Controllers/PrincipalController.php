@@ -164,7 +164,6 @@ class PrincipalController extends Controller
                 'historico' => $historico
             ]);
 
-            // 00001/1996
     }
 
     /**
@@ -255,7 +254,9 @@ class PrincipalController extends Controller
     $guiasrecolhimento->ativo = false; // Define o GuiasRecolhimento$GuiasRecolhimento como inativo
     $guiasrecolhimento->save();
 
-    return redirect()->route('principal.destroy', [ 'GuiasRecolhimento' => $guiasrecolhimento ])->with('success', 'GuiasRecolhimento excluído com sucesso.');
+    return redirect()->route('principal.destroy', [ 
+        'GuiasRecolhimento' => $guiasrecolhimento 
+        ])->with('success', 'GuiasRecolhimento excluído com sucesso.');
 }
 
     // public function confirmdestroy(GuiasRecolhimento $GuiasRecolhimento)
