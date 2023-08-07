@@ -7,6 +7,11 @@
     margin: 5em auto;
   }
 
+  td {
+      text-align: center;
+      width: 60%
+    }
+
   @media only screen and (max-width: 600px){
     .card {
       width: 100%;
@@ -20,7 +25,7 @@
     }
 
     td {
-      text-align: none;
+      text-align: center;
     }
   }
 
@@ -85,7 +90,7 @@
                         
                         <tr>
                           <th><b>Valor:</b></th>
-                          <th>{{ $GuiasRecolhimento->valor }}</th>
+                          <td>{{ $GuiasRecolhimento->valor }}</td>
                         </tr>
           
                         <tr>
