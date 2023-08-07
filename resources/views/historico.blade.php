@@ -26,7 +26,7 @@
         <td>R$ {{ $histo->valor }}</td>
         <td style="display: flex; gap: 10px;">
           <a href=" {{ route('editardados', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-warning btn-sm">Editar</a>
-          <a href=" {{ route('principal.show', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-success btn-sm">ver mais</a>
+          <a href=" {{ route('principal.show', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-info ssbtn-sm">ver mais</a>
           <form action="{{ route('principal.destroy', ['GuiasRecolhimento' => $histo->id]) }}" method="post">
             @csrf
             @method('delete')
