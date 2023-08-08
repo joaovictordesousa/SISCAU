@@ -1,12 +1,7 @@
 <?php
 
 use App\Http\Controllers\PrincipalController;
-use App\Models\GuiasRecolhimento;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PesquisaController;
-use App\Http\Controllers\CadastroController;
-use App\Http\Controllers\HistoricoController;
-use App\Models\AuxTipoRecolhimento;
 
 
 /*
