@@ -28,7 +28,7 @@ class PrincipalController extends Controller
         $recolhimentos = AuxTipoRecolhimento::all();
         $agencias = AuxAgencias::all();
         $documentos = AuxTipoDocumento::all();
-
+ 
         return view('pesquisa', [
             'recolhimentos' => $recolhimentos,
             'agencias' => $agencias,
@@ -44,9 +44,9 @@ class PrincipalController extends Controller
 
         //Quando não tiver o select seria somente o retorn view('cadastro')
 
-        //A função create em si é usada para exibir o formulário de criação de um recurso, ou seja, 
-        //é usada para exibir um formulário no qual os usuários podem preencher os dados necessários 
-        //para criar um novo registro no banco de dados.
+    //A função create em si é usada para exibir o formulário de criação de um recurso, ou seja, 
+    //é usada para exibir um formulário no qual os usuários podem preencher os dados necessários 
+    //para criar um novo registro no banco de dados.
 
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
@@ -57,7 +57,7 @@ class PrincipalController extends Controller
         // dd($recolhimentos);
 
         return view('cadastro', [
-            'recolhimentos' => $recolhimentos,
+            'recolhimentos' => $recolhimentos, 
             'financas' => $financas,
             'agencia' => $agencia,
             'documento' => $documento,
@@ -84,16 +84,16 @@ class PrincipalController extends Controller
     /**z
      * Display the specified resource.
      */
-    public function show(GuiasRecolhimento $GuiasRecolhimento)
+    public function show( GuiasRecolhimento $GuiasRecolhimento )
     {
         // dd($historico);
-
+        
 
         return view('show', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
         ]);
 
-        // view para mostrar o view show
+            // view para mostrar o view show
     }
 
     public function filtrar(Request $request)
@@ -114,7 +114,7 @@ class PrincipalController extends Controller
         $nrauxtipodocumentoid = $request->input('nrauxtipodocumentoid');
         $nrnumeronl = $request->input('nrnumeronl');
         $tipoconsulta = $request->input('tipoconsulta');
-
+                
         $historico = DB::select("
             SELECT * FROM pesquisa(
                 :nr,
@@ -139,7 +139,7 @@ class PrincipalController extends Controller
             'nr' => $nr,
             'nrcontrato' => $nrcontrato,
             'nrdocumento' => $nrdocumento,
-            'auxtiporecolhimentoid' => $auxtiporecolhimentoid,
+            'auxtiporecolhimentoid' => $auxtiporecolhimentoid, 
             'codigoagencia' => $codigoagencia,
             'nrbaixaprocesso' => $nrbaixaprocesso,
             'nrcpfcnpj' => $nrcpfcnpj,
@@ -154,15 +154,15 @@ class PrincipalController extends Controller
             'tipoconsulta' => $tipoconsulta
         ]);
 
-        // $historicoCollection = collect($historico);
-        // $perPage = 10;
+		// $historicoCollection = collect($historico);
+		// $perPage = 10;
 
-        // $paginate = new Paginator($historicoCollection, $perPage);
+		// $paginate = new Paginator($historicoCollection, $perPage);
+        
 
-
-        return view('historico', [
-            'historico' => $historico
-        ]);
+            return view('historico', [
+                'historico' => $historico
+            ]);
 
     }
 
@@ -171,27 +171,27 @@ class PrincipalController extends Controller
      */
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
-        //  dd($GuiasRecolhimento);
+                //  dd($GuiasRecolhimento);
 
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
         $agencia = AuxAgencias::all();
         $empresa = AuxEmpresas::all();
         $documento = AuxTipoDocumento::all();
-
+        
 
         return view('edit', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
-            'recolhimentos' => $recolhimentos,
+            'recolhimentos' => $recolhimentos, 
             'financas' => $financas,
             'agencia' => $agencia,
             'empresa' => $empresa,
             'documento' => $documento
 
         ]);
-
-    }
-
+            
+    } 
+ 
     /**
      * Update the specified resource in storage.
      */
@@ -200,7 +200,7 @@ class PrincipalController extends Controller
 
         // dd($request);
         $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
-
+        
         $NewGuiaRecolhimento = [
             'auxtiporecolhimentoid' => $request->input('auxtiporecolhimentoid'),
             'auxinstituicaofinanceiraid' => $request->input('auxinstituicaofinanceiraid'),
@@ -232,32 +232,32 @@ class PrincipalController extends Controller
      */
     // public function destroy(string $id)
     // {
-
+       
     //     // Apagar registro
     //     GuiasRecolhimento::where('id', $id)->delete();
 
     //     // Definir mensagem de sucesso na sessão
     //     session()->flash('success', 'Registro excluído com sucesso.');
-
+    
     //     return redirect()->route('pesquisa');
 
     // }
 
     public function destroy($id)
-    {
-        $guiasrecolhimento = GuiasRecolhimento::find($id);
+{
+    $guiasrecolhimento = GuiasRecolhimento::find($id);
 
-        if (!$guiasrecolhimento) {
-            return redirect()->route('principal.destroy')->with('error', 'GuiasRecolhimento não encontrado.');
-        }
-
-        $guiasrecolhimento->ativo = false; // Define o GuiasRecolhimento$GuiasRecolhimento como inativo
-        $guiasrecolhimento->save();
-
-        return redirect()->route('principal.destroy', [
-            'GuiasRecolhimento' => $guiasrecolhimento
-        ])->with('success', 'GuiasRecolhimento excluído com sucesso.');
+    if (!$guiasrecolhimento) {
+        return redirect()->route('principal.destroy')->with('error', 'GuiasRecolhimento não encontrado.');
     }
+
+    $guiasrecolhimento->ativo = false; // Define o GuiasRecolhimento$GuiasRecolhimento como inativo
+    $guiasrecolhimento->save();
+
+    return redirect()->route('principal.destroy', [ 
+        'GuiasRecolhimento' => $guiasrecolhimento 
+        ])->with('success', 'GuiasRecolhimento excluído com sucesso.');
+}
 
     // public function confirmdestroy(GuiasRecolhimento $GuiasRecolhimento)
     // {
