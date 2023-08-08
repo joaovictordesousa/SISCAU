@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('numerodocumento', 25);
             $table->string('numeronl', 11);
             $table->string('historico', 512);
+            $table->bit('ativo')->default(1);
             $table->timestamps();
 
             $table->foreign('auxtiporecolhimentoid')->references('id')->on('auxtiporecolhimento');

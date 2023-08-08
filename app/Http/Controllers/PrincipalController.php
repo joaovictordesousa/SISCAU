@@ -38,7 +38,6 @@ class PrincipalController extends Controller
             'recolhimentos' => $recolhimentos,
             'agencias' => $agencias,
             'documentos' => $documentos,
-            // 'historico' => $historico
         ]);
     }
 
@@ -76,14 +75,14 @@ class PrincipalController extends Controller
     public function store(Request $request)
     {
 
-        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no 
+        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
 
         //Cadastrar no banco de dados.
         $novaGuia = new GuiasRecolhimento;
         $novaGuia->fill($request->all());
         $novaGuia->save();
 
-        return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento cadastrada com sucesso.');
+        return redirect()->route('principal.mostrardados', ['GuiasRecolhimento' => $novaGuia->id])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
     }
 
     /**
@@ -162,13 +161,11 @@ class PrincipalController extends Controller
 		// $historicoCollection = collect($historico);
 		// $perPage = 10;
 
-		// $paginate = new Paginator($historicoCollection, $perPage);
-        
+		// $paginate = new Paginator($historicoCollection, $perPage)
 
             return view('historico', [
                 'historico' => $historico
             ]);
-
     }
 
     /**
@@ -253,16 +250,15 @@ class PrincipalController extends Controller
     $guiasrecolhimento = GuiasRecolhimento::find($id);
 
     if (!$guiasrecolhimento) {
-        return redirect()->route('principal.destroy')->with('error', 'GuiasRecolhimento não encontrado.');
+        return redirect()->route('pesquisa')->with('error', 'GuiasRecolhimento não encontrado.');
     }
 
-    $guiasrecolhimento->ativo = false; // Define o GuiasRecolhimento$GuiasRecolhimento como inativo
+    $guiasrecolhimento->ativo = false; // Define o GuiasRecolhimento como inativo
     $guiasrecolhimento->save();
 
-    return redirect()->route('principal.destroy', [ 
-        'GuiasRecolhimento' => $guiasrecolhimento 
-        ])->with('success', 'GuiasRecolhimento excluído com sucesso.');
+    return redirect()->route('pesquisa')->with('success', 'GuiasRecolhimento excluído com sucesso.');
 }
+
 
     // public function confirmdestroy(GuiasRecolhimento $GuiasRecolhimento)
     // {
@@ -271,5 +267,12 @@ class PrincipalController extends Controller
     //     ]);
 
     // }
+
+    public function mostrardados(GuiasRecolhimento $GuiasRecolhimento) {
+
+        $novaGuia = GuiasRecolhimento::find($GuiasRecolhimento);
+
+        return view('principal.mostrardados', ['novaGuia' => $novaGuia]);
+    }
 
 }
