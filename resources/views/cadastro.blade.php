@@ -128,12 +128,10 @@
         <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" maxlength="18" required>
       </div>
   
-  
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Documento</b></label>
         <input type="text" class="form-control" id="numerodocumento" name="numerodocumento" maxlength="25" required>
       </div>
-  
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Numero da NL</b></label>
@@ -147,28 +145,11 @@
       </div>
       <div class="button">
           <button class="btn btn-primary" style="padding:  15px 20px;">Salvar</button>
-          <a href="{{ route('pesquisa')  }}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
+          <a href="{{ route('principal.mostrardados')  }}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
       </div>
 
     </form>
     <br><br><br><br>
-
-    <script>
-      function formatarValor() {
-        // Obtém o valor digitado no input
-        let valor = document.getElementById('valor').value;
-  
-        // Remove todos os caracteres não numéricos (exceto ponto decimal, se houver)
-        valor = valor.replace(/\D/g, '');
-  
-        // Formata o valor como dinheiro (adicionando ponto decimal e vírgula)
-        valor = (parseFloat(valor) / 100).toFixed(2).replace('.', ',');
-  
-        // Atualiza o valor formatado no input
-        document.getElementById('valor').value = valor;
-      }
-    </script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="../js/cadastro.js"></script>
 </body>

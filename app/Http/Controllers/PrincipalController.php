@@ -76,23 +76,17 @@ class PrincipalController extends Controller
     {
 
         $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
-
-        //Cadastrar no banco de dados.
+        
         $novaGuia = new GuiasRecolhimento;
         $novaGuia->fill($request->all());
         $novaGuia->save();
 
-        return redirect()->route('principal.mostrardados', ['GuiasRecolhimento' => $novaGuia->id])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
+        return redirect()->route('principal.mostrardados', ['id' => $novaGuia->id])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show( GuiasRecolhimento $GuiasRecolhimento )
     {
-        // dd($historico);
         
-
         return view('show', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
         ]);
@@ -173,7 +167,6 @@ class PrincipalController extends Controller
      */
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
-                //  dd($GuiasRecolhimento);
 
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
@@ -194,13 +187,8 @@ class PrincipalController extends Controller
             
     } 
  
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-
-        // dd($request);
         $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
         
         $NewGuiaRecolhimento = [
@@ -222,16 +210,12 @@ class PrincipalController extends Controller
         ];
 
         // Atualização de resultado
-        // dd($request);
 
         GuiasRecolhimento::where('id', $id)->update($NewGuiaRecolhimento);
 
         return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento alterado com sucesso.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     // public function destroy(string $id)
     // {
        
@@ -254,7 +238,7 @@ class PrincipalController extends Controller
     }
 
     $guiasrecolhimento->ativo = false; // Define o GuiasRecolhimento como inativo
-    $guiasrecolhimento->save();
+    $guiasrecolhimento->save(); // salvar como inativas
 
     return redirect()->route('pesquisa')->with('success', 'GuiasRecolhimento excluído com sucesso.');
 }
@@ -268,11 +252,12 @@ class PrincipalController extends Controller
 
     // }
 
-    public function mostrardados(GuiasRecolhimento $GuiasRecolhimento) {
-
-        $novaGuia = GuiasRecolhimento::find($GuiasRecolhimento);
+    public function mostrardados($id)
+    {
+        $novaGuia = GuiasRecolhimento::find($id);
 
         return view('principal.mostrardados', ['novaGuia' => $novaGuia]);
-    }
+
+    } // função de mostrar dados que foram acabados de cadastrar, em uma nova view.
 
 }
