@@ -26,12 +26,21 @@
         <td>R$ {{ $histo->valor }}</td>
         <td style="display: flex; gap: 10px;">
           <a href=" {{ route('editardados', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-warning btn-sm">Editar</a>
-          <a href=" {{ route('principal.show', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-info ssbtn-sm">ver mais</a>
-          <form action="{{ route('principal.destroy', ['GuiasRecolhimento' => $histo->id]) }}" method="post">
+          <a href=" {{ route('principal.show', ['GuiasRecolhimento'=> $histo->id] ) }} " class="btn btn-success btn-sm">ver mais</a>
+          <form action="{{ route('principal.destroy', ['GuiasRecolhimento' => $histo->id]) }}" method="POST">
             @csrf
-            @method('delete')
-            <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger btn-sm" onclick="excluirRegistro()">Excluir</button>
         </form>
+        <script>
+          function excluirRegistro() {
+              if (confirm('Tem certeza que deseja excluir este registro?')) {
+                  document.getElementById('formExcluir').submit();
+              }
+
+            
+          }
+        </script>
         {{-- <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $histo->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em; margin: 0 10px;"> Excluir</a> --}}
         </td>
       </tr>
