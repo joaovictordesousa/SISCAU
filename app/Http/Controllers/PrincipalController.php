@@ -90,16 +90,19 @@ class PrincipalController extends Controller
 
         ]);
 
-        $ultimoDado = GuiasRecolhimento::latest()->first();
+        // $ultimoDado = GuiasRecolhimento::latest()->first();
     
-        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
+    $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o "." no ","
 
         $novaGuia = new GuiasRecolhimento;
         $novaGuia->fill($request->all());
         $novaGuia->save();
+        // dd($novaGuia->id);
 
-        return redirect()->route('principal.mostrardados', ['id' => $novaGuia->id, 'ultimoDado' => $ultimoDado->id])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
+        return redirect()->route('principal.mostrarcadastro', ['id' => $novaGuia->id])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
     }
+
+
 
     public function show(GuiasRecolhimento $GuiasRecolhimento)
     {
@@ -269,12 +272,10 @@ class PrincipalController extends Controller
 
     // }
 
-    public function mostrardados($id, $ultimoDado)
+    public function mostrarcadastro ()
     {
-        $novaGuia = GuiasRecolhimento::find($id);
-        $ultimoDado = GuiasRecolhimento::find($ultimoDado);
+        return view('principal.mostrarcadastro');
 
-        return view('principal.mostrardados', ['novaGuia' => $novaGuia, 'ultimoDado' => $ultimoDado]);
     }
 
 }

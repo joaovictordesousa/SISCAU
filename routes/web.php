@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PrincipalController::class, 'index'])->name('pesquisa');
 Route::get('/principal', [PrincipalController::class, 'index'])->name('pesquisa');
 Route::get('/principal/create', [PrincipalController::class, 'create'])->name('NovaGuia');
-Route::post('/principal', [PrincipalController::class, 'store'])->name('Principal.store');
+Route::post('/principal', [PrincipalController::class, 'store'])->name('principal.store');
 Route::get('/principal/historico', [PrincipalController::class, 'filtrar'])->name('principal_historico');
 Route::post('/principal/historico', [PrincipalController::class, 'filtrar'])->name('principal.historico');
 route::get('/principal/{GuiasRecolhimento}/edit', [PrincipalController::class, 'edit'])->name('editardados');
@@ -26,6 +26,6 @@ route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'updat
 route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');
 route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
 // route::get('/principal/{GuiasRecolhimento}/confirmdestroy', [PrincipalController::class, 'confirmdestroy'])->name('principal.confirmdestroy');
-route::get('/principal/mostrardados/{id}/{ultimoDado}', [PrincipalController::class, 'mostrardados'])->name('principal.mostrardados');
+route::get('/principal/mostrarcadastro/{GuiasRecolhimento}', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
 
 
