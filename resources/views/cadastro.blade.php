@@ -44,7 +44,7 @@
       @csrf
       <div class="col-md-4">
         <label class="form-label"><b>Tipo de recolhimento</b></label>
-        <select class="form-select" id="recolhimento" name="auxtiporecolhimentoid" required>
+        <select class="form-select" id="recolhimento" name="auxtiporecolhimentoid" oninput="formatarValor()" required maxlength="10">
           <option selected disabled value="">Selecione...</option>
           @foreach($recolhimentos as $recolhimento)
           <option value="{{ $recolhimento->id }}">{{ $recolhimento->descricao }}</option>
@@ -54,7 +54,7 @@
   
       <div class="col-md-4">
         <label class="form-label"><b>Instituição financeira</b></label>
-        <select class="form-select" id="financeira" name="auxinstituicaofinanceiraid" required>
+        <select class="form-select" id="financeira" name="auxinstituicaofinanceiraid" oninput="formatarValor()" required maxlength="10">
           <option selected disabled value="">Selecione...</option>
           @foreach($financas as $fin)
           <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
@@ -64,7 +64,7 @@
   
       <div class="col-md-4">
         <label class="form-label"><b>Agência</b></label>
-        <select class="form-select" id="agencias" name="auxagenciaid" required>
+        <select class="form-select" id="agencias" name="auxagenciaid" oninput="formatarValor()" required maxlength="10">
           <option selected disabled value="">Selecione...</option>
           @foreach($agencia as $agen)
           <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
@@ -74,33 +74,33 @@
   <br><br>
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Conta</b></label>
-        <input type="text" class="form-control" id="numeroconta" name="numeroconta" maxlength="10" required>
+        <input type="text" class="form-control" id="numeroconta" name="numeroconta" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Contrato</b></label>
-        <input type="text" class="form-control" id="numerocontrato" name="numerocontrato" maxlength="10" required>
+        <input type="text" class="form-control" id="numerocontrato" name="numerocontrato" oninput="formatarValor()" required maxlength="10">
       </div>
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Aditivo</b></label>
-        <input type="text" class="form-control" id="aditivo" name="aditivo" maxlength="25" required>
+        <input type="text" class="form-control" id="aditivo" name="aditivo" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Data do GR</b></label>
-        <input type="date" class="form-control" id="datagr" name="datagr" style="padding: 9px 10px" required>
+        <input type="date" class="form-control" id="datagr" name="datagr" style="padding: 9px 10px" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Data de validade</b></label>
-        <input type="date" class="form-control" id="datavalidade" name="datavalidade" style="padding: 9px 10px" required>
+        <input type="date" class="form-control" id="datavalidade" name="datavalidade" style="padding: 9px 10px" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="col-md-4">
         <label class="form-label"><b>Tipo de documento</b></label>
-        <select class="form-select" name="auxtipodocumentoid" id="documentos"> required>
+        <select class="form-select" name="auxtipodocumentoid" id="documentos"oninput="formatarValor()" required maxlength="10">> 
           <option selected disabled value="">Selecione...</option>
           @foreach($documento as $docu)
           <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
@@ -110,12 +110,12 @@
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Numero</b></label>
-        <input type="text" class="form-control" id="numero" name="numero" maxlength="10" required>
+        <input type="text" class="form-control" id="numero" name="numero" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="col-md-8">
         <label for="validationDefault04" class="form-label"><b>Empresa</b></label>
-        <select class="form-select" id="empresa" name="auxempresaid" required>
+        <select class="form-select" id="empresa" name="auxempresaid" oninput="formatarValor()" required maxlength="10">
           <option selected disabled value="">Selecione...</option>
           @foreach($empresa as $empre)
           <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>
@@ -125,21 +125,21 @@
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Valor</b></label>
-        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" maxlength="18" required>
+        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Documento</b></label>
-        <input type="text" class="form-control" id="numerodocumento" name="numerodocumento" maxlength="25" required>
+        <input type="text" class="form-control" id="numerodocumento" name="numerodocumento" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Numero da NL</b></label>
-        <input type="text" class="form-control" id="numeros_nls" name="numeronl" required>
+        <input type="text" class="form-control" id="numeros_nls" name="numeronl" oninput="formatarValor()" required maxlength="10">
       </div>
   
       <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="historico" name="historico" maxlength="512"
+        <textarea class="form-control" placeholder="Leave a comment here" id="historico" name="historico" 
           style="height: 100px"></textarea>
         <label for="floatingTextarea2"><b>Histórico</b></label>
       </div>

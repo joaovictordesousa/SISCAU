@@ -9,72 +9,72 @@
                     <tbody>
                         <tr>
                             <th><b>Tipo recolhimento:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</td>
+                            <td>{{ $novaGuia->auxtiporecolhimentoid }}</td>
                         </tr>
                         <tr>
                             <th><b>Instituição financeira:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxinstituicaofinanceiraid }}</td>
+                            <td>{{ $novaGuia->auxinstituicaofinanceiraid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Agência:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxagenciaid }}</td>
+                            <td>{{ $novaGuia->auxagenciaid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Conta:</b></th>
-                            <td>{{ $GuiasRecolhimento->numeroconta }}</td>
+                            <td>{{ $novaGuia->numeroconta }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Contrato:</b></th>
-                            <td>{{ $GuiasRecolhimento->numerocontrato }}</td>
+                            <td>{{ $novaGuia->numerocontrato }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Aditivo:</b></th>
-                            <td>{{ $GuiasRecolhimento->aditivo }}</td>
+                            <td>{{ $novaGuia->aditivo }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Data GR:</b></th>
-                            <td>{{ $GuiasRecolhimento->datagr }}</td>
+                            <td>{{ $novaGuia->datagr }}</td>
                         </tr>
                         <tr>
                             <th><b>Data validade:</b></th>
-                            <td>{{ $GuiasRecolhimento->datavalidade }}</td>
+                            <td>{{ $novaGuia->datavalidade }}</td>
                         </tr>
                         <tr>
                             <th><b>Tipo do documento:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxtipodocumentoid }}</td>
+                            <td>{{ $novaGuia->auxtipodocumentoid }}</td>
                         </tr>
                         <tr>
                             <th><b>Numero:</b></th>
-                            <td>{{ $GuiasRecolhimento->numero }}</td>
+                            <td>{{ $novaGuia->numero }}</td>
                         </tr>
                         <tr>
                             <th><b>Empresa:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxempresaid }}</td>
+                            <td>{{ $novaGuia->auxempresaid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Valor:</b></th>
-                            <td>{{ $GuiasRecolhimento->valor }}</td>
+                            <td>{{ $novaGuia->valor }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Documento:</b></th>
-                            <td>{{ $GuiasRecolhimento->numerodocumento }}</td>
+                            <td>{{ $novaGuia->numerodocumento }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Numero NL:</b></th>
-                            <td> {{ $GuiasRecolhimento->numeronl }}</td>
+                            <td> {{ $novaGuia->numeronl }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Historico:</b></th>
-                            <td>{{ $GuiasRecolhimento->historico }}</td>
+                            <td>{{ $novaGuia->historico }}</td>
                         </tr>
 
                     </tbody>
