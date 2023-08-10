@@ -4,7 +4,6 @@
  #form_cadastro  {
   width: 80%;
   margin: 5em auto;
-  box-shadow: 0px 1px 10px 0px gray;
   padding: 4em; 
   background-color: white;
 }
@@ -39,7 +38,7 @@
 
 </style>
 
-    <form class="row g-3" id="form_cadastro" action="{{ route('Principal.store')}}" method="POST">
+    <form class="row g-3" id="form_cadastro" action="{{ route('principal.store')}}" method="POST">
       <h1 class="titulo_cadastro">Guias de recolhimentos<span style="font-size: 20px; color: rgb(120, 120, 120);"> - (Cadastro)</span></h1>
       @csrf
       <div class="col-md-4">
@@ -144,8 +143,10 @@
         <label for="floatingTextarea2"><b>Histórico</b></label>
       </div>
       <div class="button">
+        
           <button class="btn btn-primary" style="padding:  15px 20px;">Salvar</button>
-          <a href="{{ route('principal.mostrardados')  }}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
+
+          <a href="{{ route('pesquisa')}}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
       </div>
 
     </form>

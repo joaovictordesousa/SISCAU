@@ -82,7 +82,7 @@
             </div>
         </div>
         <br>
-        <a href=" {{ route('principal_historico') }} " class="btn btn-primary"
+        <a href=" {{ route('NovaGuia') }} " class="btn btn-primary"
             style="padding: 10px 2em; margin: 0 0 0 2em; ">Voltar</a>
         <br><br>
     </div>
