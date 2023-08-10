@@ -25,8 +25,10 @@ route::get('/principal/{GuiasRecolhimento}/edit', [PrincipalController::class, '
 route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'update'])->name('principal.update');
 route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');
 route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
+route::get('/principal/{GuiasRecolhimento}/mostrardados', [PrincipalController::class, 'mostrardados'])->name('principal.mostrardados');
+
 // route::get('/principal/{GuiasRecolhimento}/confirmdestroy', [PrincipalController::class, 'confirmdestroy'])->name('principal.confirmdestroy');
-//route::get('/principal/{GuiasRecolhimento}/mostrardados', [PrincipalController::class, 'mostrardados'])->name('principal.mostrardados');
-Route::get('principal/{GuiasRecolhimento}/mostrardados', [PrincipalController::class, 'mostrardados'])->name('principal.mostrardados');
+
+
 
 
