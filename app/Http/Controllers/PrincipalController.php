@@ -86,9 +86,7 @@ class PrincipalController extends Controller
      */
     public function show( GuiasRecolhimento $GuiasRecolhimento )
     {
-        // dd($historico);
         
-
         return view('show', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
         ]);
@@ -171,7 +169,6 @@ class PrincipalController extends Controller
      */
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
-                //  dd($GuiasRecolhimento);
 
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
@@ -192,13 +189,8 @@ class PrincipalController extends Controller
             
     } 
  
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-
-        // dd($request);
         $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
         
         $NewGuiaRecolhimento = [
@@ -220,16 +212,12 @@ class PrincipalController extends Controller
         ];
 
         // Atualização de resultado
-        // dd($request);
 
         GuiasRecolhimento::where('id', $id)->update($NewGuiaRecolhimento);
 
         return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento alterado com sucesso.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     // public function destroy(string $id)
     // {
        
