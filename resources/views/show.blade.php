@@ -1,8 +1,8 @@
 @include('navbar.cabecalho')
 
 <style>
-  /*.card {
-    width: 80%;
+  .card {
+    width: 40%;
     margin: 5em auto;
   }*/
 
@@ -112,7 +112,7 @@
               </div>
           </div>
           <br>
-      <a href=" {{ route('principal_historico') }} " class="btn btn-primary" style="padding: 10px 2em; margin: 0 0 0 2em; ">Voltar</a>
+      <a href="{{ route('pesquisa') }} " class="btn btn-primary" style="padding: 10px 2em; margin: 0 0 0 2em; ">Voltar</a>
       <br><br>
 </div>
 </div>

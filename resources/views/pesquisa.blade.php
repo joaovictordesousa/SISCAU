@@ -3,12 +3,12 @@
 <style>
   .form-control {
   padding: 9px 10px;
-  border: none
+  border: 1px solid rgb(200, 200, 200)
 }
 
 .form-select {
   padding: 9px 10px;
-  border: none
+  border: 1px solid rgb(200, 200, 200)
 }
 
 .input-group-text {
@@ -21,6 +21,18 @@
 
 .btn-primary {
   padding: 1em;
+}
+
+@media only screen and (max-width: 600px){
+  #form-pesquisa {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .pesquisa_titulo {
+    text-align: center;
+  }
+
 }
 
 </style>
@@ -47,7 +59,7 @@
     </div>
     <!--  -->
     
-    <form class="row g-3" action="{{ route('principal.historico') }}" method="POST">
+    <form class="row g-3" id="form-pesquisa" action="{{ route('principal.historico') }}" method="POST">
       @csrf
       <div class="col-md-4">
         <label class="form-label"><b>Numero</b></label>

@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class GuiasRecolhimento extends Model
 {
     use HasFactory;
-    public $incrementing = false;
+    public $incrementing = true;
 
     protected $table = 'guiasrecolhimento';
     protected $fillable = [

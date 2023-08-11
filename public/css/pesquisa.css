@@ -26,11 +26,9 @@
 }
 
 .form-container {
-  max-width: 80%; /* Ajuste a largura conforme necessário */
-  margin: 5em auto;
-  padding: 50px;
+  max-width: 70%; /* Ajuste a largura conforme necessário */
+  margin: 0 auto;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 1px 10px 0px gray;
 }
 
 .butao {
