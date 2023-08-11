@@ -32,14 +32,6 @@
             @method('DELETE')
             <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
         </form>
-        {{-- <script>
-          function excluirRegistro() {              
-              if (confirmacao) {
-                  document.getElementById('formExcluir').submit();
-              }
-          }
-      </script> --}}
-        {{-- <a href="{{ route('principal.confirmdestroy', ['GuiasRecolhimento' => $histo->id]) }}" class="btn btn-danger btn-sm" style="padding: 1em 1.2em; margin: 0 10px;"> Excluir</a> --}}
         </td>
       </tr>
       @endforeach
