@@ -10,12 +10,12 @@
 
 .form-control {
   padding: 9px 10px;
-  border: 1px solid gray
+  border: 1px solid rgb(200, 200, 200)
 }
 
 .form-select {
   padding: 9px 10px;
-  border: 1px solid gray
+  border: 1px solid rgb(200, 200, 200)
 }
 
 .titulo_cadastro {

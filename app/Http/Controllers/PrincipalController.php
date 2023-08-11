@@ -272,9 +272,14 @@ class PrincipalController extends Controller
 
     // }
 
-    public function mostrarcadastro ()
+    public function mostrarcadastro (GuiasRecolhimento $guiasrecolhimento)
     {
-        return view('principal.mostrarcadastro');
+
+        
+        return view('mostrarcadastro', [
+            'GuiasRecolhimento' => $guiasrecolhimento
+        ]);
+    
 
     }
 

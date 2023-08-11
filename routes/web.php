@@ -26,6 +26,6 @@ route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'updat
 route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');
 route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
 // route::get('/principal/{GuiasRecolhimento}/confirmdestroy', [PrincipalController::class, 'confirmdestroy'])->name('principal.confirmdestroy');
-route::get('/principal/mostrarcadastro/{GuiasRecolhimento}', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
+route::get('/principal/{GuiasRecolhimento}/mostrarcadastro', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
 
 

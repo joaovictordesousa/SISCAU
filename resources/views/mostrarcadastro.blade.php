@@ -1,7 +1,13 @@
 @include('navbar.cabecalho')
 
+<style>
+    .container {
+        width: 40%;
+    }
+</style>
+
 <div class="card">
-    <h4 class="card-title" style="text-align: center; margin: 1em 0;">CADASTRADO</h4>
+    <h4 class="card-title" style="text-align: center; margin: 1em 0;">CADASTRADOS</h4>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -9,72 +15,72 @@
                     <tbody>
                         <tr>
                             <th><b>Tipo recolhimento:</b></th>
-                            <td>{{ $novaGuia->auxtiporecolhimentoid }}</td>
+                            <td>{{ $guiasrecolhimento->auxtiporecolhimentoid }}</td>guiasRecolhimento
                         </tr>
                         <tr>
                             <th><b>Instituição financeira:</b></th>
-                            <td>{{ $novaGuia->auxinstituicaofinanceiraid }}</td>
+                            <td>{{ $guiasrecolhimento->auxinstituicaofinanceiraid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Agência:</b></th>
-                            <td>{{ $novaGuia->auxagenciaid }}</td>
+                            <td>{{ $guiasrecolhimento->auxagenciaid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Conta:</b></th>
-                            <td>{{ $novaGuia->numeroconta }}</td>
+                            <td>{{ $guiasrecolhimento->numeroconta }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Contrato:</b></th>
-                            <td>{{ $novaGuia->numerocontrato }}</td>
+                            <td>{{ $guiasrecolhimento->numerocontrato }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Aditivo:</b></th>
-                            <td>{{ $novaGuia->aditivo }}</td>
+                            <td>{{ $guiasrecolhimento->aditivo }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Data GR:</b></th>
-                            <td>{{ $novaGuia->datagr }}</td>
+                            <td>{{ $guiasrecolhimento->datagr }}</td>
                         </tr>
                         <tr>
                             <th><b>Data validade:</b></th>
-                            <td>{{ $novaGuia->datavalidade }}</td>
+                            <td>{{ $guiasrecolhimento->datavalidade }}</td>
                         </tr>
                         <tr>
                             <th><b>Tipo do documento:</b></th>
-                            <td>{{ $novaGuia->auxtipodocumentoid }}</td>
+                            <td>{{ $guiasrecolhimento->auxtipodocumentoid }}</td>
                         </tr>
                         <tr>
                             <th><b>Numero:</b></th>
-                            <td>{{ $novaGuia->numero }}</td>
+                            <td>{{ $guiasrecolhimento->numero }}</td>
                         </tr>
                         <tr>
                             <th><b>Empresa:</b></th>
-                            <td>{{ $novaGuia->auxempresaid }}</td>
+                            <td>{{ $guiasrecolhimento->auxempresaid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Valor:</b></th>
-                            <td>{{ $novaGuia->valor }}</td>
+                            <td>{{ $guiasrecolhimento->valor }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Documento:</b></th>
-                            <td>{{ $novaGuia->numerodocumento }}</td>
+                            <td>{{ $guiasrecolhimento->numerodocumento }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Numero NL:</b></th>
-                            <td> {{ $novaGuia->numeronl }}</td>
+                            <td> {{ $guiasrecolhimento->numeronl }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Historico:</b></th>
-                            <td>{{ $novaGuia->historico }}</td>
+                            <td>{{ $guiasrecolhimento->historico }}</td>
                         </tr>
 
                     </tbody>
