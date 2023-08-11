@@ -4,7 +4,6 @@
  #form_cadastro  {
   width: 80%;
   margin: 5em auto;
-  box-shadow: 0px 1px 10px 0px gray;
   padding: 4em; 
   background-color: white;
 }

@@ -3,12 +3,12 @@
 <style>
   .form-control {
   padding: 9px 10px;
-  border: 1px solid gray
+  border: none
 }
 
 .form-select {
   padding: 9px 10px;
-  border: 1px solid gray
+  border: none
 }
 
 .input-group-text {

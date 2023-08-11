@@ -1,15 +1,14 @@
 @include('navbar.cabecalho')
 
 <style>
-  .card {
-    width: 40%;
-    box-shadow: 0px 0px 10px 5px gray;
+  /*.card {
+    width: 80%;
     margin: 5em auto;
-  }
+  }*/
 
   td {
       text-align: center;
-      width: 60%
+      width: 40%
     }
 
   @media only screen and (max-width: 600px){
@@ -32,7 +31,7 @@
 </style>
 
 <div class="card">
-      <h4 class="card-title" style="text-align: center; margin: 1em 0;">Guia completa</h4>
+      <h2 class="card-title" style="text-align: center; margin: 1em 0;">Guia completa</h2>
       <div class="container">
           <div class="row">
               <div class="col">
