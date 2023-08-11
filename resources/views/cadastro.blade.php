@@ -144,7 +144,7 @@
       </div>
       <div class="button">
         
-          <button class="btn btn-primary" style="padding:  15px 20px;">Salvar</button>
+          <button class="btn btn-success" style="padding:  15px 20px;">Salvar</button>
 
           <a href="{{ route('pesquisa')}}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
       </div>
