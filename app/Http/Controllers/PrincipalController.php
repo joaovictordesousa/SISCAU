@@ -173,7 +173,7 @@ class PrincipalController extends Controller
         ]);
 
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $perPage = 10; // Number of items per page
+        $perPage = 15; // Number of items per page
         $path = LengthAwarePaginator::resolveCurrentPath();
     
         $historicoCollection = collect($historico);
