@@ -2,7 +2,6 @@
 
 <style>
   #form_edit {
-    box-shadow: 0px 1px 10px 0px gray;
     padding: 4em; 
     background-color: white;
     width: 80%;
