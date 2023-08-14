@@ -12,6 +12,7 @@ use App\Models\AuxEmpresas;
 use App\Models\GuiasRecolhimento;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 
 class PrincipalController extends Controller
@@ -171,14 +172,17 @@ class PrincipalController extends Controller
             'tipoconsulta' => $tipoconsulta
         ]);
 
-        // $historicoCollection = collect($historico);
-        // $perPage = 10;
-
-
-        // $paginate = new Paginator($historicoCollection, $perPage)
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 10; // Number of items per page
+        $path = LengthAwarePaginator::resolveCurrentPath();
+    
+        $historicoCollection = collect($historico);
+        $currentPageItems = $historicoCollection->slice(($currentPage - 1) * $perPage, $perPage)->all();
+    
+        $historicoPaginated = new LengthAwarePaginator($currentPageItems, count($historicoCollection), $perPage, $currentPage, ['path' => $path]);
 
         return view('historico', [
-            'historico' => $historico
+            'historico' => $historicoPaginated
         ]);
 
     }
