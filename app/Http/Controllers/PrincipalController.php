@@ -39,6 +39,7 @@ class PrincipalController extends Controller
             'recolhimentos' => $recolhimentos,
             'agencias' => $agencias,
             'documentos' => $documentos,
+            // 'historico' => $historico
         ]);
     }
 
@@ -100,10 +101,7 @@ class PrincipalController extends Controller
         $GuiasRecolhimento->save();
 
         return redirect()->route('principal.mostrarcadastro', [ 'GuiasRecolhimento' => $GuiasRecolhimento ])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
-
     }
-
-
 
     public function show(GuiasRecolhimento $GuiasRecolhimento)
     {
@@ -176,11 +174,13 @@ class PrincipalController extends Controller
         // $historicoCollection = collect($historico);
         // $perPage = 10;
 
+
         // $paginate = new Paginator($historicoCollection, $perPage)
 
         return view('historico', [
             'historico' => $historico
         ]);
+
     }
 
     /**
@@ -254,7 +254,6 @@ class PrincipalController extends Controller
     public function mostrarcadastro(GuiasRecolhimento $GuiasRecolhimento)
     {    
         return view('mostrarcadastro', ['GuiasRecolhimento' => $GuiasRecolhimento]);
-
     }
-
-}
+  
+  }
