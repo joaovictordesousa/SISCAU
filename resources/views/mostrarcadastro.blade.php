@@ -6,6 +6,17 @@
     }
 </style>
 
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.alert-success').style.display = 'none';
+        }, {{ session('display_time', 5000) }});
+    </script>
+@endif
+
 <div class="card">
     <h4 class="card-title" style="text-align: center; margin: 1em 0;">CADASTRADOS</h4>
     <div class="container">
@@ -15,72 +26,72 @@
                     <tbody>
                         <tr>
                             <th><b>Tipo recolhimento:</b></th>
-                            <td>{{ $guiasrecolhimento->auxtiporecolhimentoid }}</td>guiasRecolhimento
+                            <td>{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</td>
                         </tr>
                         <tr>
                             <th><b>Instituição financeira:</b></th>
-                            <td>{{ $guiasrecolhimento->auxinstituicaofinanceiraid }}</td>
+                            <td>{{ $GuiasRecolhimento->auxinstituicaofinanceiraid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Agência:</b></th>
-                            <td>{{ $guiasrecolhimento->auxagenciaid }}</td>
+                            <td>{{ $GuiasRecolhimento->auxagenciaid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Conta:</b></th>
-                            <td>{{ $guiasrecolhimento->numeroconta }}</td>
+                            <td>{{ $GuiasRecolhimento->numeroconta }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Contrato:</b></th>
-                            <td>{{ $guiasrecolhimento->numerocontrato }}</td>
+                            <td>{{ $GuiasRecolhimento->numerocontrato }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Aditivo:</b></th>
-                            <td>{{ $guiasrecolhimento->aditivo }}</td>
+                            <td>{{ $GuiasRecolhimento->aditivo }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Data GR:</b></th>
-                            <td>{{ $guiasrecolhimento->datagr }}</td>
+                            <td>{{ $GuiasRecolhimento->datagr }}</td>
                         </tr>
                         <tr>
                             <th><b>Data validade:</b></th>
-                            <td>{{ $guiasrecolhimento->datavalidade }}</td>
+                            <td>{{ $GuiasRecolhimento->datavalidade }}</td>
                         </tr>
                         <tr>
                             <th><b>Tipo do documento:</b></th>
-                            <td>{{ $guiasrecolhimento->auxtipodocumentoid }}</td>
+                            <td>{{ $GuiasRecolhimento->auxtipodocumentoid }}</td>
                         </tr>
                         <tr>
                             <th><b>Numero:</b></th>
-                            <td>{{ $guiasrecolhimento->numero }}</td>
+                            <td>{{ $GuiasRecolhimento->numero }}</td>
                         </tr>
                         <tr>
                             <th><b>Empresa:</b></th>
-                            <td>{{ $guiasrecolhimento->auxempresaid }}</td>
+                            <td>{{ $GuiasRecolhimento->auxempresaid }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Valor:</b></th>
-                            <td>{{ $guiasrecolhimento->valor }}</td>
+                            <td>{{ $GuiasRecolhimento->valor }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Documento:</b></th>
-                            <td>{{ $guiasrecolhimento->numerodocumento }}</td>
+                            <td>{{ $GuiasRecolhimento->numerodocumento }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Numero NL:</b></th>
-                            <td> {{ $guiasrecolhimento->numeronl }}</td>
+                            <td> {{ $GuiasRecolhimento->numeronl }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Historico:</b></th>
-                            <td>{{ $guiasrecolhimento->historico }}</td>
+                            <td>{{ $GuiasRecolhimento->historico }}</td>
                         </tr>
 
                     </tbody>

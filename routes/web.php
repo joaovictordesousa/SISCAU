@@ -28,4 +28,3 @@ route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'de
 // route::get('/principal/{GuiasRecolhimento}/confirmdestroy', [PrincipalController::class, 'confirmdestroy'])->name('principal.confirmdestroy');
 route::get('/principal/{GuiasRecolhimento}/mostrarcadastro', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
 
-

@@ -77,7 +77,8 @@ class PrincipalController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'numeroconta' => 'required|string|max:10', // Máximo de 10 caracteres
+            'numeroconta' => 'required|string|max:10',
+            // Máximo de 10 caracteres
             'numerocontrato' => 'required|string|max:10',
             'aditivo' => 'required|string|max:10',
             'datagr' => 'required|string|max:10',
@@ -91,15 +92,14 @@ class PrincipalController extends Controller
         ]);
 
         // $ultimoDado = GuiasRecolhimento::latest()->first();
-    
-    $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o "." no ","
 
-        $novaGuia = new GuiasRecolhimento;
-        $novaGuia->fill($request->all());
-        $novaGuia->save();
-        // dd($novaGuia->id);
+        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o "." no ","
 
-        return redirect()->route('principal.mostrarcadastro', ['id' => $novaGuia->id])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
+        $GuiasRecolhimento = new GuiasRecolhimento;
+        $GuiasRecolhimento->fill($request->all());
+        $GuiasRecolhimento->save();
+        return redirect()->route('principal.mostrarcadastro', [ 'GuiaRecolhimento' => $GuiasRecolhimento ])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
+
     }
 
 
@@ -185,6 +185,7 @@ class PrincipalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
 
@@ -193,7 +194,6 @@ class PrincipalController extends Controller
         $agencia = AuxAgencias::all();
         $empresa = AuxEmpresas::all();
         $documento = AuxTipoDocumento::all();
-
 
         return view('edit', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
@@ -236,19 +236,6 @@ class PrincipalController extends Controller
         return redirect()->route('pesquisa')->with('success', 'Guia de recolhimento alterado com sucesso.');
     }
 
-    // public function destroy(string $id)
-    // {
-
-    //     // Apagar registro
-    //     GuiasRecolhimento::where('id', $id)->delete();
-
-    //     // Definir mensagem de sucesso na sessão
-    //     session()->flash('success', 'Registro excluído com sucesso.');
-
-    //     return redirect()->route('pesquisa');
-
-    // }
-
     public function destroy($id)
     {
         $guiasrecolhimento = GuiasRecolhimento::find($id);
@@ -263,23 +250,9 @@ class PrincipalController extends Controller
         return redirect()->route('pesquisa')->with('success', 'GuiasRecolhimento excluído com sucesso.');
     }
 
-
-    // public function confirmdestroy(GuiasRecolhimento $GuiasRecolhimento)
-    // {
-    //     return view('destroy', [
-    //         'GuiasRecolhimento' => $GuiasRecolhimento
-    //     ]);
-
-    // }
-
-    public function mostrarcadastro (GuiasRecolhimento $guiasrecolhimento)
-    {
-
-        
-        return view('mostrarcadastro', [
-            'GuiasRecolhimento' => $guiasrecolhimento
-        ]);
-    
+    public function mostrarcadastro(GuiasRecolhimento $GuiasRecolhimento)
+    {    
+        return view('principal.mostrarcadastro', ['GuiasRecolhimento' => $GuiasRecolhimento]);
 
     }
 
