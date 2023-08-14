@@ -99,8 +99,8 @@ class PrincipalController extends Controller
         $GuiasRecolhimento = new GuiasRecolhimento;
         $GuiasRecolhimento->fill($request->all());
         $GuiasRecolhimento->save();
-        return redirect()->route('principal.mostrarcadastro', [ 'GuiaRecolhimento' => $GuiasRecolhimento ])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
-      
+
+        return redirect()->route('principal.mostrarcadastro', [ 'GuiasRecolhimento' => $GuiasRecolhimento ])->with('success', 'Guia de recolhimento cadastrada com sucesso.');
     }
 
     public function show(GuiasRecolhimento $GuiasRecolhimento)
@@ -253,7 +253,7 @@ class PrincipalController extends Controller
 
     public function mostrarcadastro(GuiasRecolhimento $GuiasRecolhimento)
     {    
-        return view('principal.mostrarcadastro', ['GuiasRecolhimento' => $GuiasRecolhimento]);
+        return view('mostrarcadastro', ['GuiasRecolhimento' => $GuiasRecolhimento]);
     }
   
   }
