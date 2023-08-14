@@ -45,17 +45,20 @@
       <div class="col-md-4">
         <label class="form-label"><b>Tipo de recolhimento</b></label>
         <select class="form-select" id="recolhimento" name="auxtiporecolhimentoid" required>
-          @foreach($recolhimentos as $reco)
-            <option value="{{ $reco->id }}">{{ $reco->descricao }}</option>
-          @endforeach
+            @foreach($recolhimentos as $reco)
+                <option value="{{ $reco->id }}" {{ $reco->id == $GuiasRecolhimento->auxtiporecolhimentoid ? 'selected' : '' }}>
+                    {{ $reco->descricao }}
+                </option>
+            @endforeach
         </select>
-      </div>
+    </div>
+    
   
       <div class="col-md-4">
         <label class="form-label"><b>Instituição financeira</b></label>
         <select class="form-select" id="financeira" name="auxinstituicaofinanceiraid" required>
           @foreach($financas as $fin)
-          <option value="{{ $fin->id }}">{{ $fin->descricao }}</option>
+          <option value="{{ $fin->id }}" {{ $GuiasRecolhimento->auxinstituicaofinanceiraid == $fin->id ? 'selected' : '' }}>{{ $fin->descricao }}</option>
           @endforeach
         </select>
       </div>
@@ -64,7 +67,7 @@
         <label class="form-label"><b>Agência</b></label>
         <select class="form-select" id="agencias" name="auxagenciaid" required>
           @foreach($agencia as $agen)
-            <option value="{{ $agen->id }}">{{ $agen->descricao }}</option>
+            <option value="{{ $agen->id }}" {{ $GuiasRecolhimento->auxagenciaid == $agen->id ? 'selected' : '' }}>{{ $agen->descricao }}</option>
           @endforeach
         </select>
       </div>
@@ -99,7 +102,7 @@
         <label class="form-label"><b>Tipo de documento</b></label>
         <select class="form-select" name="auxtipodocumentoid" id="documentos" required>
           @foreach($documento as $docu)
-            <option value="{{ $docu->id }}">{{ $docu->descricao }}</option>
+            <option value="{{ $docu->id }}"  {{ $GuiasRecolhimento->auxtipodocumentoid == $docu->id ? 'selected' : '' }}>{{ $docu->descricao }}</option>
           @endforeach
         </select>
       </div>
@@ -112,7 +115,7 @@
         <label class="form-label"><b>Empresa</b></label>
         <select id="empresa" name="auxempresaid" class="form-select">
           @foreach($empresa as $empre)       
-          <option value="{{ $empre->id }}">{{ $empre->razaosocial }}</option>     
+          <option value="{{ $empre->id }}" {{ $GuiasRecolhimento->auxempresaid == $empre->id ? 'selected' : '' }}>{{ $empre->razaosocial }}</option>     
         @endforeach
         </select>
       </div>
@@ -134,7 +137,9 @@
       </div>
   
       <div class="form-floating">
-        <textarea value="{{ $GuiasRecolhimento->historico }}" class="form-control" placeholder="Leave a comment here" id="historico" name="historico" maxlength="512" style="height: 100px" required></textarea>
+        <textarea class="form-control" placeholder="Leave a comment here" id="historico" name="historico" maxlength="512" style="height: 100px" required>
+          {{ $GuiasRecolhimento->historico }}
+        </textarea>
         <label for="floatingTextarea2"><b>Histórico</b></label>
       </div>
 
