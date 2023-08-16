@@ -4,12 +4,16 @@
   .card {
     width: 40%;
     margin: 5em auto;
-  }*/
+  }
 
   td {
       text-align: center;
-      width: 40%
+      width: 60%
     }
+
+  .campohisto {
+    text-align: none;
+  }
 
   @media only screen and (max-width: 600px){
     .card {

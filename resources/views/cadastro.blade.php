@@ -84,7 +84,7 @@
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Aditivo</b></label>
-        <input type="text" class="form-control" id="aditivo" name="aditivo" oninput="formatarValor()" required maxlength="10">
+        <input type="text" class="form-control" id="aditivo" name="aditivo" oninput="formatarValor()" required maxlength="25">
       </div>
   
       <div class="col-md-4">
@@ -124,22 +124,22 @@
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Valor</b></label>
-        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" oninput="formatarValor()" required maxlength="10">
+        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" oninput="formatarValor()" required maxlength="18">
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Documento</b></label>
-        <input type="text" class="form-control" id="numerodocumento" name="numerodocumento" oninput="formatarValor()" required maxlength="10">
+        <input type="text" class="form-control" id="numerodocumento" name="numerodocumento" oninput="formatarValor()" required maxlength="25">
       </div>
   
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label"><b>Numero da NL</b></label>
-        <input type="text" class="form-control" id="numeros_nls" name="numeronl" oninput="formatarValor()" required maxlength="10">
+        <input type="text" class="form-control" id="numeros_nls" name="numeronl" oninput="formatarValor()" required maxlength="512">
       </div>
   
       <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="historico" name="historico" 
-          style="height: 100px"></textarea>
+        <textarea class="form-control" placeholder="Leave a comment here" id="historico" name="historico" maxlength="512"
+          style="height: 100px" required></textarea>
         <label for="floatingTextarea2"><b>Histórico</b></label>
       </div>
       <div class="button">
