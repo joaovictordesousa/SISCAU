@@ -116,6 +116,8 @@ class PrincipalController extends Controller
 
     public function filtrar(Request $request)
     {
+
+        // Passando a variavel para cada input do campo de pesquisa
         $nr = $request->input('nr');
         $nrcontrato = $request->input('nrcontrato');
         $nrdocumento = $request->input('nrdocumento');
@@ -133,6 +135,7 @@ class PrincipalController extends Controller
         $nrnumeronl = $request->input('nrnumeronl');
         $tipoconsulta = $request->input('tipoconsulta');
 
+        //Função do PROSDURE
         $historico = DB::select("
             SELECT * FROM pesquisa(
                 :nr,
@@ -152,7 +155,7 @@ class PrincipalController extends Controller
                 :nrnumeronl,
                 :tipoconsulta
             )
-
+                
         ", [
             'nr' => $nr,
             'nrcontrato' => $nrcontrato,
@@ -170,8 +173,9 @@ class PrincipalController extends Controller
             'nrauxtipodocumentoid' => $nrauxtipodocumentoid,
             'nrnumeronl' => $nrnumeronl,
             'tipoconsulta' => $tipoconsulta
-        ]);
+        ]); //Acima estamos passando a os nomes da função para variavel para saber onde vai funcionar cada nome da pesquisa
 
+        //Função de paginação
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
         $perPage = 15; // Number of items per page
         $path = LengthAwarePaginator::resolveCurrentPath();
@@ -180,9 +184,10 @@ class PrincipalController extends Controller
         $currentPageItems = $historicoCollection->slice(($currentPage - 1) * $perPage, $perPage)->all();
     
         $historicoPaginated = new LengthAwarePaginator($currentPageItems, count($historicoCollection), $perPage, $currentPage, ['path' => $path]);
+        //Final da paginação 
 
         return view('historico', [
-            'historico' => $historicoPaginated
+            'historico' => $historicoPaginated //Nome passado para armazenar a paginção
         ]);
 
     }
