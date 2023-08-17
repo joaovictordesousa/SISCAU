@@ -143,7 +143,6 @@
         <label for="floatingTextarea2"><b>Histórico</b></label>
       </div>
       <div class="button">
-        
           <button class="btn btn-success" style="padding:  15px 20px;">Salvar</button>
 
           <a href="{{ route('pesquisa')}}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
