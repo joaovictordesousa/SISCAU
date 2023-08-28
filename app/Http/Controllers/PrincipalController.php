@@ -14,7 +14,6 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-
 class PrincipalController extends Controller
 {
     /**
@@ -198,6 +197,7 @@ class PrincipalController extends Controller
 
     public function edit(GuiasRecolhimento $GuiasRecolhimento)
     {
+        //mostrar os dados no input que vai trazer, no caso os que vai trazer para o blade
 
         $recolhimentos = AuxTipoRecolhimento::all();
         $financas = AuxInstituicoesFinanceiras::all();
@@ -205,7 +205,7 @@ class PrincipalController extends Controller
         $empresa = AuxEmpresas::all();
         $documento = AuxTipoDocumento::all();
 
-        return view('edit', [
+        return view('Edit', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
             'recolhimentos' => $recolhimentos,
             'financas' => $financas,
@@ -219,6 +219,8 @@ class PrincipalController extends Controller
 
     public function update(Request $request, string $id)
     {
+
+        //Esse é o que vai fazer as alterações, que vai mudar no banco.
         $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o . no ,
 
         $NewGuiaRecolhimento = [
@@ -248,6 +250,7 @@ class PrincipalController extends Controller
 
     public function destroy($id)
     {
+        //Código para deixar como ativo e inativo
         $guiasrecolhimento = GuiasRecolhimento::find($id);
 
         if (!$guiasrecolhimento) {

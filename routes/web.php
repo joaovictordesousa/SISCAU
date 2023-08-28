@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\BaixasController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,10 +22,11 @@ Route::get('/principal/create', [PrincipalController::class, 'create'])->name('N
 Route::post('/principal', [PrincipalController::class, 'store'])->name('principal.store');
 Route::get('/principal/historico', [PrincipalController::class, 'filtrar'])->name('principal_historico');
 Route::post('/principal/historico', [PrincipalController::class, 'filtrar'])->name('principal.historico');
-route::get('/principal/{GuiasRecolhimento}/edit', [PrincipalController::class, 'edit'])->name('editardados');
-route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'update'])->name('principal.update');
-route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');
-route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
-// route::get('/principal/{GuiasRecolhimento}/confirmdestroy', [PrincipalController::class, 'confirmdestroy'])->name('principal.confirmdestroy');
-route::get('/principal/{GuiasRecolhimento}/mostrarcadastro', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
+Route::get('/principal/{GuiasRecolhimento}/edit', [PrincipalController::class, 'edit'])->name('editardados');
+Route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'update'])->name('principal.update');
+Route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');Route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
+Route::get('/principal/{GuiasRecolhimento}/mostrarcadastro', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
 
+
+Route::get('/baixascreate', [BaixasController::class, 'baixas'])->name('baixas.criar');
+Route::get('/baixas/{GuiasRecolhimento}', [BaixasController::class, 'store'])->name('baixas.store');

@@ -34,6 +34,11 @@ class GuiasRecolhimento extends Model
         'ativo'
     ];
 
+    public function baixas()
+    {
+        return $this->hasMany(Baixa::class, 'guiaderecolhimentoid');
+    }
+    
     public function TipoRecolhimento():BelongsTo {
         return $this->belongsTo(AuxTipoRecolhimento::class, 'auxtiporecolhimentoid', 'id');
     }
