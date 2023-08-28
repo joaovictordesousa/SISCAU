@@ -3,7 +3,7 @@
 <style>
  #form_cadastro  {
   width: 80%;
-  margin: 5em auto;
+  margin: 1em auto;
   padding: 4em; 
   background-color: white;
 }
@@ -19,11 +19,11 @@
 }
 
 .titulo_cadastro {
-  margin: 5px 0 50px 0;
+  margin: 0 0 50px 0;
   font-size: 25px;
 }
 
-.form-floating {
+.form-floating { 
   margin: 2em 0 0 0;
 }
 
@@ -144,7 +144,6 @@
       </div>
       <div class="button">
           <button class="btn btn-success" style="padding:  15px 20px;">Salvar</button>
-
           <a href="{{ route('pesquisa')}}" class="btn btn-danger" style="padding:  15px 20px;">Cancelar</a>
       </div>
 

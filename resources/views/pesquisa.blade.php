@@ -98,7 +98,7 @@
   
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label"><b>Processos de baixa</b></label>
-        <input type="email" class="form-control" id="nrbaixaprocesso" name="nrbaixaprocesso">
+        <input type="text" class="form-control" id="nrbaixaprocesso" name="nrbaixaprocesso">
       </div>
       <div class="col-md-6">
         <label for="inputPassword4" class="form-label"><b>CPF/CNPJ</b></label>
@@ -152,10 +152,10 @@
               <label class="form-label"><b>Tipo do consulta</b></label>
               <select class="form-select" id="tipoconsulta" name="tipoconsulta">
                 <option selected disabled value="">Selecione...</option>
-                <option value="baixadas">Baixadas</option>
-                <option value="baixadas antes do vencimento">Baixadas antes do vencimento</option>
-                <option value="nao baixadas">Não baixadas</option>
-                <option value="vencidas e nao baixadas">Vencidas e não baixadas</option>
+                <option value="baixadas">BAIXADAS</option>
+                <option value="baixadas antes do vencimento">BAIXADAS ANTES DO VENCIMENTO</option>
+                <option value="nao baixadas">NÃO BAIXADAS</option>
+                <option value="vencidas e nao baixadas">VENCIDAS E NÃO BAIXADAS</option>
               </select>
             </div>
 
@@ -164,10 +164,7 @@
       </div>
     </form>
   </div>
-
     <br><br><br>
-    
-
 </section>
 
 </body>

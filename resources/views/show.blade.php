@@ -115,7 +115,7 @@
                     </table>
               </div>
           </div>
-          <br>
+          s<br>
       <a href="{{ route('pesquisa') }} " class="btn btn-primary" style="padding: 10px 2em; margin: 0 0 0 2em; ">Voltar</a>
       <br><br>
 </div>

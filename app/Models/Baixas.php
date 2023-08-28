@@ -19,4 +19,9 @@ class Baixas extends Model
         'datamensagem'
     ];
 
+    public function guiaRecolhimento()
+    {
+        return $this->belongsTo(GuiaRecolhimento::class, 'guiaderecolhimentoid');
+    }
+    
 }

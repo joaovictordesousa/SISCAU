@@ -14,7 +14,6 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-
 class PrincipalController extends Controller
 {
     /**
@@ -206,7 +205,7 @@ class PrincipalController extends Controller
         $empresa = AuxEmpresas::all();
         $documento = AuxTipoDocumento::all();
 
-        return view('edit', [
+        return view('Edit', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
             'recolhimentos' => $recolhimentos,
             'financas' => $financas,
