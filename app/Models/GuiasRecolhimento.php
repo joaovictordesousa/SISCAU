@@ -43,20 +43,22 @@ class GuiasRecolhimento extends Model
         return $this->belongsTo(AuxTipoRecolhimento::class, 'auxtiporecolhimentoid', 'id');
     }
 
+    
+
     public function Financas():BelongsTo {
-        return $this->belongsTo(AuxInstituicoesFinanceiras::class, 'auxinstituicaofinanceira', 'id');
+        return $this->belongsTo(AuxInstituicoesFinanceiras::class, 'auxinstituicaofinanceiraid', 'id');
     }
 
     public function Agencias():BelongsTo {
-        return $this->belongsTo(AuxAgencias::class, 'auxagencia', 'id');
+        return $this->belongsTo(AuxAgencias::class, 'auxagenciaid', 'id');
     }
 
     public function Empresas():BelongsTo {
-        return $this->belongsTo(AuxEmpresas::class, 'auxempresa', 'id');
+        return $this->belongsTo(AuxEmpresas::class, 'auxempresaid', 'id');
     }
 
     public function Documento():BelongsTo {
-        return $this->belongsTo(AuxTipoDocumento::class, 'auxtipodocumento', 'id');
+        return $this->belongsTo(AuxTipoDocumento::class, 'auxtipodocumentoid', 'id');
     }
     
 }

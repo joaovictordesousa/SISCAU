@@ -40,18 +40,17 @@
             <div class="col">
                 <table class="table table-striped">
                     <tbody>
-                        @foreach($GuiasRecolhimento as $Guias)
                         <tr>
                             <th><b>Tipo recolhimento:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxtiporecolhimento->descricao }}</td>
+                            <td>{{ $GuiasRecolhimento->TipoRecolhimento->descricao }}</td>
                         </tr>
                         <tr>
                             <th><b>Instituição financeira:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxinstituicaofinanceira->descricao }}</td>
+                            <td>{{ $GuiasRecolhimento->Financas->descricao }}</td>
                         </tr>
                         <tr>
                             <th><b>Agência:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxagencia->descricao }}</td>
+                            <td>{{ $GuiasRecolhimento->Agencias->descricao }}</td>
                         </tr>
                         <tr>
                             <th><b>Conta:</b></th>
@@ -75,7 +74,7 @@
                         </tr>
                         <tr>
                             <th><b>Tipo do documento:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxtipodocumentoid }}</td>
+                            <td>{{ $GuiasRecolhimento->Documento->descricao }}</td>
                         </tr>
                         <tr>
                             <th><b>Numero:</b></th>
@@ -83,7 +82,7 @@
                         </tr>
                         <tr>
                             <th><b>Empresa:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxempresaid }}</td>
+                            <td>{{ $GuiasRecolhimento->Empresas->razaosocial }}</td>
                         </tr>
                         <tr>
                             <th><b>Valor:</b></th>
@@ -101,7 +100,6 @@
                             <th><b>Historico:</b></th>
                             <td>{{ $GuiasRecolhimento->historico }}</td>
                         </tr>
-                        @endforeach
                     </tbody>
                 </table>
             </div>

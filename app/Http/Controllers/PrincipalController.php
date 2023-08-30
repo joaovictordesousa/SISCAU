@@ -110,6 +110,8 @@ class PrincipalController extends Controller
         $documento = AuxTipoDocumento::all();
         $empresa = AuxEmpresas::all();
 
+        //dd($GuiasRecolhimento->TipoRecolhimento->descricao);
+
         return view('show', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
             'recolhimentos' => $recolhimentos,
@@ -117,8 +119,7 @@ class PrincipalController extends Controller
             'agencia' => $agencia,
             'documento' => $documento,
             'empresa' => $empresa
-        ]);
-
+        ]);      
         // view para mostrar o view show
     }
 
