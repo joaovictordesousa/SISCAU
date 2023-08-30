@@ -105,7 +105,7 @@
         <input type="text" class="form-control" id="nrcpfcnpj" name="nrcpfcnpj">
       </div>
   
-      <div class="col-12"> 
+      <div class="col-4"> 
         <label for="inputAddress" class="form-label"><b>Data de GR</b></label>
         <div class="input-group mb-3">
             <input type="date" class="form-control" id="datagrinicio" name="datagrinicio">
@@ -114,7 +114,7 @@
           </div>
         </div>
     
-        <div class="col-12"> 
+        <div class="col-4"> 
           <label for="inputAddress" class="form-label"><b>Data de validade</b></label>
           <div class="input-group mb-3">
               <input type="date" class="form-control" id="datavalidadeinicio" name="datavalidadeinicio">
@@ -123,7 +123,7 @@
             </div>
           </div>
   
-          <div class="col-12"> 
+          <div class="col-4"> 
             <label for="inputAddress" class="form-label"><b>Data da baixa</b></label>
             <div class="input-group mb-3">
                 <input type="date" class="form-control" id="databaixainicio" name="databaixainicio">
