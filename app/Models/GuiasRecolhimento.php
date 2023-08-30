@@ -39,20 +39,24 @@ class GuiasRecolhimento extends Model
         return $this->hasMany(Baixa::class, 'guiaderecolhimentoid');
     }
     
-    public function TipoRecolhimento():BelongsTo {
+    public function TipoRecolhimento(): BelongsTo {
         return $this->belongsTo(AuxTipoRecolhimento::class, 'auxtiporecolhimentoid', 'id');
     }
 
     public function Financas():BelongsTo {
-        return $this->belongsTo(AuxInstituicoesFinanceiras::class, 'auxinstituicaofinanceiraid', 'id');
+        return $this->belongsTo(AuxInstituicoesFinanceiras::class, 'auxinstituicaofinanceira', 'id');
     }
+
     public function Agencias():BelongsTo {
-        return $this->belongsTo(AuxAgencias::class, 'auxagenciaid', 'id');
+        return $this->belongsTo(AuxAgencias::class, 'auxagencia', 'id');
     }
+
     public function Empresas():BelongsTo {
-        return $this->belongsTo(AuxEmpresas::class, 'auxempresaid', 'id');
+        return $this->belongsTo(AuxEmpresas::class, 'auxempresa', 'id');
     }
+
     public function Documento():BelongsTo {
-        return $this->belongsTo(AuxTipoDocumento::class, 'auxtipodocumentoid', 'id');
+        return $this->belongsTo(AuxTipoDocumento::class, 'auxtipodocumento', 'id');
     }
+    
 }
