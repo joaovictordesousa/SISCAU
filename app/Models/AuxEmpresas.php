@@ -25,4 +25,5 @@ class AuxEmpresas extends Model
         return $this->belongsTo(GuiasRecolhimento::class, 'auxempresaid', 'id');
     }
 
+
 }
