@@ -26,16 +26,16 @@
                     <tbody>
                         <tr>
                             <th><b>Tipo recolhimento:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxtiporecolhimentoid }}</td>
+                            <td>{{ $GuiasRecolhimento->TipoRecolhimento->descricao }}</td>
                         </tr>
                         <tr>
                             <th><b>Instituição financeira:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxinstituicaofinanceiraid }}</td>
+                            <td>{{ $GuiasRecolhimento->Financas->descricao }}</td>
                         </tr>
 
                         <tr>
                             <th><b>Agência:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxagenciaid }}</td>
+                            <td>{{ $GuiasRecolhimento->Agencias->descricao }}</td>
                         </tr>
 
                         <tr>
@@ -63,7 +63,7 @@
                         </tr>
                         <tr>
                             <th><b>Tipo do documento:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxtipodocumentoid }}</td>
+                            <td>{{ $GuiasRecolhimento->Documento->descricao }}</td>
                         </tr>
                         <tr>
                             <th><b>Numero:</b></th>
@@ -71,7 +71,7 @@
                         </tr>
                         <tr>
                             <th><b>Empresa:</b></th>
-                            <td>{{ $GuiasRecolhimento->auxempresaid }}</td>
+                            <td>{{ $GuiasRecolhimento->Empresas->razaosocial }}</td>
                         </tr>
 
                         <tr>

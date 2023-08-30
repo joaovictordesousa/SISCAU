@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class AuxAgencias extends Model
 {
@@ -12,8 +13,12 @@ class AuxAgencias extends Model
     protected $table = 'auxagencias';
 
     protected $fillable = [
-        'auxinstituicoesfinanceiraid',
+        'auxinstituicaofinanceiraid',
         'codigo',
         'descricao'
     ];
+
+    public function GuiasRecolhimento(): BelongsTo {
+        return $this->belongsTo(GuiasRecolhimento::class, 'auxagenciaid', 'id');
+    }
 }
