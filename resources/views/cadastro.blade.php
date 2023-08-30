@@ -123,8 +123,8 @@
       </div>
   
       <div class="col-md-4">
-        <label for="validationDefault02" class="form-label"><b>Valor</b></label>
-        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" oninput="formatarValor()" required maxlength="18">
+        <label class="form-label"><b>Valor</b></label>
+        <input type="text" class="form-control" id="valor" name="valor" oninput="formatarValor()" required maxlength="18">
       </div>
   
       <div class="col-md-4">
