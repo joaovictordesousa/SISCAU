@@ -105,7 +105,7 @@
         <input type="text" class="form-control" id="nrcpfcnpj" name="nrcpfcnpj">
       </div>
   
-      <div class="col-12"> 
+      <div class="col-4"> 
         <label for="inputAddress" class="form-label"><b>Data de GR</b></label>
         <div class="input-group mb-3">
             <input type="date" class="form-control" id="datagrinicio" name="datagrinicio">
@@ -114,7 +114,7 @@
           </div>
         </div>
     
-        <div class="col-12"> 
+        <div class="col-4"> 
           <label for="inputAddress" class="form-label"><b>Data de validade</b></label>
           <div class="input-group mb-3">
               <input type="date" class="form-control" id="datavalidadeinicio" name="datavalidadeinicio">
@@ -123,7 +123,7 @@
             </div>
           </div>
   
-          <div class="col-12"> 
+          <div class="col-4"> 
             <label for="inputAddress" class="form-label"><b>Data da baixa</b></label>
             <div class="input-group mb-3">
                 <input type="date" class="form-control" id="databaixainicio" name="databaixainicio">
@@ -150,12 +150,13 @@
         
             <div class="col-md-4">
               <label class="form-label"><b>Tipo do consulta</b></label>
-              <select class="form-select" id="tipoconsulta" name="tipoconsulta">
+              <select class="form-select" id="tipoconsulta" name="tipoconsulta" required>
                 <option selected disabled value="">Selecione...</option>
-                <option value="baixadas">BAIXADAS</option>
-                <option value="baixadas antes do vencimento">BAIXADAS ANTES DO VENCIMENTO</option>
-                <option value="nao baixadas">NÃO BAIXADAS</option>
-                <option value="vencidas e nao baixadas">VENCIDAS E NÃO BAIXADAS</option>
+                <option value="1">baixadas</option>
+                <option value="2">baixadas antes do vencimento</option>
+                <option value="3">baixadas após o vencimento</option>
+                <option value="4">não baixadas</option>
+                <option value="5">vencidas não baixadas</option>
               </select>
             </div>
 

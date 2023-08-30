@@ -13,8 +13,6 @@ class BaixasController extends Controller
      */
     public function baixas()
     {
-        
-
         return view('baixas');
     }
 

@@ -5,7 +5,7 @@
     <h1 class="titulo_baixas">Cadastrar Baixas</h1>
 </div>
 
-<form class="row g-3 needs-validation" action="{{ route('baixas.store')}}" method="POST">
+<form class="row g-3 needs-validation" method="POST">
     <hr>
     @csrf
     <div class="col-md-4">

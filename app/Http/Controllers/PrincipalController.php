@@ -89,12 +89,11 @@ class PrincipalController extends Controller
             'numerodocumento' => 'required|string|max:10',
             'numeronl' => 'required|string|max:10',
             'historico' => 'required|string|max:10'
-
         ]);
 
         // $ultimoDado = GuiasRecolhimento::latest()->first();
 
-        $request['valor'] = str_replace(',', '.', $request['valor']); // função de colocar o "." no ","
+        $request['valor'] = str_replace(',', '.', $request['valor']);
 
         $GuiasRecolhimento = new GuiasRecolhimento;
         $GuiasRecolhimento->fill($request->all());
@@ -105,9 +104,19 @@ class PrincipalController extends Controller
 
     public function show(GuiasRecolhimento $GuiasRecolhimento)
     {
+        $recolhimentos = AuxTipoRecolhimento::all();
+        $financas = AuxInstituicoesFinanceiras::all();
+        $agencia = AuxAgencias::all();
+        $documento = AuxTipoDocumento::all();
+        $empresa = AuxEmpresas::all();
 
         return view('show', [
             'GuiasRecolhimento' => $GuiasRecolhimento,
+            'recolhimentos' => $recolhimentos,
+            'financas' => $financas,
+            'agencia' => $agencia,
+            'documento' => $documento,
+            'empresa' => $empresa
         ]);
 
         // view para mostrar o view show
@@ -175,20 +184,25 @@ class PrincipalController extends Controller
         ]); //Acima estamos passando a os nomes da função para variavel para saber onde vai funcionar cada nome da pesquisa
 
         //Função de paginação
-        $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $perPage = 15; // Number of items per page
-        $path = LengthAwarePaginator::resolveCurrentPath();
-    
         $historicoCollection = collect($historico);
+
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 15;
         $currentPageItems = $historicoCollection->slice(($currentPage - 1) * $perPage, $perPage)->all();
     
-        $historicoPaginated = new LengthAwarePaginator($currentPageItems, count($historicoCollection), $perPage, $currentPage, ['path' => $path]);
-        //Final da paginação 
-
+        $historicoPaginated = new LengthAwarePaginator(
+            $currentPageItems,
+            count($historicoCollection),
+            $perPage,
+            $currentPage,
+            ['path' => $request->fullUrl(), 'query' => $request->query()]
+        );
+    
+        $historicoPaginated = $historicoPaginated->appends(request()->except('page'));
+    
         return view('historico', [
-            'historico' => $historicoPaginated //Nome passado para armazenar a paginção
+            'historico' => $historicoPaginated
         ]);
-
     }
 
     /**
