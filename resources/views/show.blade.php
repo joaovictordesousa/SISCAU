@@ -50,8 +50,7 @@
                         </tr>
                         <tr>
                             <th><b>Agência:</b></th>
-                            <td>{{ $GuiasRecolhimento->Agencias->descricao }}</td>
-                        </tr>
+                            <td>{{ $GuiasRecolhimento->Agencias->descricao ?? '' }}</td>                        </tr>
                         <tr>
                             <th><b>Conta:</b></th>
                             <td>{{ $GuiasRecolhimento->numeroconta }}</td>
