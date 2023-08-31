@@ -8,12 +8,12 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class PdfController extends Controller
 {
-    public function geraPdf(){
-        
+    public function geraPdf()
+    {
+
         $GuiasRecolhimento = GuiasRecolhimento::all();
 
         $pdf = Pdf::loadView('pdf', compact('GuiasRecolhimento'));
-
         return $pdf->setPaper('a4')->stream('pdf');
     }
 }

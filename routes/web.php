@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\BaixasController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\PrincipalController;
 use Illuminate\Support\Facades\Route;
 
 

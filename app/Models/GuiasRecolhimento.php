@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\AuxAgencia;
@@ -34,6 +35,10 @@ class GuiasRecolhimento extends Model
         'ativo'
     ];
 
+    // public function pdf()
+    // {
+    //     return $this->hasMany(Pdf::class, 'guiaderecolhimentoid');
+    // }
     public function baixas()
     {
         return $this->hasMany(Baixa::class, 'guiaderecolhimentoid');
