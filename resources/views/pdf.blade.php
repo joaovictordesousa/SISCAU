@@ -8,7 +8,7 @@
 </head>
 <body>
     @foreach ($GuiasRecolhimento as $Guias)
-        <h2>Nome: {{$Guias->nome}}</h2><br>
+        <h2>Nome: {{$Guias->auxtiporecolhimento}}</h2><br>
     @endforeach
 </body>
 </html>

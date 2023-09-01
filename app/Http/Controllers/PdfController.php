@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Filtro;
 use Illuminate\Http\Request;
 use App\Models\GuiasRecolhimento;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -11,9 +12,9 @@ class PdfController extends Controller
     public function geraPdf()
     {
 
-        $GuiasRecolhimento = GuiasRecolhimento::all();
+        $historico = Filtro::get();
 
-        $pdf = Pdf::loadView('pdf', compact('GuiasRecolhimento'));
-        return $pdf->setPaper('a4')->stream('pdf');
+        $pdf = Pdf::loadView('gerapdf', compact('historico'));
+        return $pdf->setPaper('a4')->stream('gerapdf');
     }
 }

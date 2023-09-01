@@ -35,10 +35,7 @@ class GuiasRecolhimento extends Model
         'ativo'
     ];
 
-    // public function pdf()
-    // {
-    //     return $this->hasMany(Pdf::class, 'guiaderecolhimentoid');
-    // }
+   
     public function baixas()
     {
         return $this->hasMany(Baixa::class, 'guiaderecolhimentoid');

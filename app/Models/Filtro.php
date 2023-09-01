@@ -12,10 +12,10 @@ class Filtro extends Model
 {
     use HasFactory;
 
-    protected $table = 'filtro';
+    protected $table = 'Filtro';
 
     protected $fillable = [
-						'nr',
+					   'nr',
         			   'nrdocumento',
 					   'auxtiporecolhimentoid',
 					   'codigoagencia',
@@ -32,7 +32,4 @@ class Filtro extends Model
 					   'tipoconsulta'
     ];
 
-	public static function filtrar(Request $request) {
-		
-	}
 }
