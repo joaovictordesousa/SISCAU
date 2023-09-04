@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\BaixasController;
+use App\Http\Controllers\PdfController;
+use App\Http\Controllers\PrincipalController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,5 +28,9 @@ Route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'updat
 Route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');Route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
 Route::get('/principal/{GuiasRecolhimento}/mostrarcadastro', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
 
+Route::get('/principal/historico/{Filtro}/gerapdf',[PdfController::class,'gerapdf'])->name('principal.gerapdf');
 
-Route::get('/principal/historico/baixas/{GuiasRecolhimento}', [BaixasController::class, 'baixas'])->name('baixas.criar');
+
+Route::get('/baixascreate', [BaixasController::class, 'baixas'])->name('baixas.criar');
+Route::get('/baixas/{GuiasRecolhimento}', [BaixasController::class, 'store'])->name('baixas.store');
+
