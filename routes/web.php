@@ -27,6 +27,7 @@ Route::get('/principal/{GuiasRecolhimento}/edit', [PrincipalController::class, '
 Route::put('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'update'])->name('principal.update');
 Route::get('/principal/{GuiasRecolhimento}/show', [PrincipalController::class, 'show'])->name('principal.show');Route::delete('/principal/{GuiasRecolhimento}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
 Route::get('/principal/{GuiasRecolhimento}/mostrarcadastro', [PrincipalController::class, 'mostrarcadastro'])->name('principal.mostrarcadastro');
+
 Route::get('/principal/historico/{Filtro}/gerapdf',[PdfController::class,'gerapdf'])->name('principal.gerapdf');
 
 

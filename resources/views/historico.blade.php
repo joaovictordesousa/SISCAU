@@ -69,7 +69,7 @@
 </div>
 <br><br>
       <div class="container_botoes">
-          <a href="{{ route('principal.gerapdf', [$historico=>Filtro]) }}" class="btn btn-primary" style="padding: 12px 20px;">Imprimir</a>
+          {{-- <a href="{{ route('principal.gerapdf', [$historico=>Filtro]) }}" class="btn btn-primary" style="padding: 12px 20px;">Imprimir</a> --}}
           <a href="{{ route('pesquisa') }}" class="btn btn-danger" style="padding: 12px 20px;">Voltar</a>
       </div>
     <br><br>
