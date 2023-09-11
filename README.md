@@ -68,4 +68,4 @@ _**COLABORADORES**_ | _**GITHUB PAGE**_
 -------------- | ----------------
 **João Victor Sousa Ribeiro** | https://github.com/joaovictodesousa 
 **Rafael Alencar do Amaral** | https://github.com/RafaelOsama
-**Fillipe Vitor Figueiredo Ramos** | https:github.com/Fillipe-Figueiredo-Ramos
+**Fillipe Vitor Figueiredo Ramos** | https://github.com/Fillipe-Figueiredo-Ramos
